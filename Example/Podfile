@@ -9,4 +9,6 @@ target 'TabBarPicker_Tests', :exclusive => true do
   pod "TabBarPicker", :path => "../"
 
   pod 'FBSnapshotTestCase'
+  pod 'PureLayout'
+  pod 'pop', '~> 1.0'
 end

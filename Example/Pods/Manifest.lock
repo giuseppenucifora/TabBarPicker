@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.0.2):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.2)
+  - FBSnapshotTestCase/Core (2.0.2)
+  - FBSnapshotTestCase/SwiftSupport (2.0.2):
+    - FBSnapshotTestCase/Core
+  - pop (1.0.7)
+  - PureLayout (2.0.6)
+  - TabBarPicker (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - pop (~> 1.0)
+  - PureLayout
+  - TabBarPicker (from `../`)
+
+EXTERNAL SOURCES:
+  TabBarPicker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: fd500d5b282c4ec60215d26d0b58b0cf271dd0d6
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
+  TabBarPicker: f26d10a5d9f460b5a5a2d5ce5b48635c802577c5
+
+COCOAPODS: 0.37.2

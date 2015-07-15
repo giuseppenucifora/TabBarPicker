@@ -1,0 +1,1815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00618A922B4BF903CD3FB0FB /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DAEFB09BBB3604EF2B6FAC /* ALView+PureLayout.m */; };
+		056FF56B0E3FFCD1569FE5FA /* POPAnimationRuntime.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2A821FBF4A3AC98022EE500 /* POPAnimationRuntime.mm */; };
+		08E83A3AAFD5A55C25D691EB /* TabBarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 624F4B8D72BCA2E5B0B97961 /* TabBarPicker.m */; };
+		09A4D4FD25C7CF71000BFD2F /* POPAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = BFC8C255D5605A64BC77DDCE /* POPAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09CF26836A1B5FFE7F41C3EB /* TabBarSubItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AA84C2A069A2176400C2DE /* TabBarSubItem.m */; };
+		0AB2B13C89C0504EA2809C41 /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65A05347063995FDAF01B670 /* POPAnimatableProperty.mm */; };
+		0E6A3ED7F51A2B603FC8AA84 /* TransformationMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = B7FEAF540E638E9AEB5DAF2A /* TransformationMatrix.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0E6AA18FEDB5F876D193D4A0 /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F712C1311B5EE5C36D455BD0 /* TransformationMatrix.cpp */; };
+		0F8A059B32D797853970DD24 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BA42E3BA28325313FB2B2A3 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		100967E31D4539EDC982A5DB /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6270ED8D95D5EDF4008F37 /* NSArray+PureLayout.m */; };
+		108142577EB2C6F99ADA8C61 /* POPAnimationEventInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 5885BAE70442B3B09EDAA0EE /* POPAnimationEventInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		10CD87106DC803FFAE595FF3 /* POPBasicAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 685A2F2C951CB89EDD363751 /* POPBasicAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		124D751F1A50BADA38571F52 /* TabBarPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 148DB42881C2CA9E8E5EE6E1 /* TabBarPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14F43215C15DD385DC37FCC7 /* POPGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A5344894FEF98D9616959AF /* POPGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		162BEA745AAA759206480273 /* POPPropertyAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = E03638B659A2C5164CF04D30 /* POPPropertyAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		16D4A319EB5B6BA724F18A14 /* Pods-TabBarPicker_Tests-PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B507E9F463795031E3CEA800 /* Pods-TabBarPicker_Tests-PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19E2E13BF272C622A6212CDF /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D70593152E0AAA16D569EAA1 /* NSLayoutConstraint+PureLayout.m */; };
+		1B7951918B590B9BE7451E47 /* POPSpringAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 544127507DF529D623BCD492 /* POPSpringAnimation.mm */; };
+		1E8C432521038851EDD5B9F3 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E952AE82AA42C9BBBE86C72B /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2116A6EA200DC1D2328AB03A /* Pods-TabBarPicker_Tests-pop-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF1FD88252CA3BCEBBAC8FF /* Pods-TabBarPicker_Tests-pop-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		238EC5BEDA39C6E0C2C86E02 /* POPGeometry.mm in Sources */ = {isa = PBXBuildFile; fileRef = 22F51E2B500C2FF5D08D50C0 /* POPGeometry.mm */; };
+		24ABCA32BE6380A98CF98E28 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 76BB8DE64767732CFE4A8B40 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27A0DF5F969CB972F019D658 /* TabBarSubItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F38CB30BE32060FBD8C51A75 /* TabBarSubItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DB8E0125011E2555B599F6F /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = A2E37F810A8B379AF9A5ED62 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E5474CD0D2321F240A9DFE8 /* POPVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 413FD75D9BC7519CFE72E73B /* POPVector.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		324C7320C2ABF43BA6DEEFFE /* POPCustomAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA8D04C3ECD5B2B3C79AF0FD /* POPCustomAnimation.mm */; };
+		33C553DA18FDC7D9B3978AB1 /* POPAnimationRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C1E962465F636A50709B5CB /* POPAnimationRuntime.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		352A750A926CD6A3FD798789 /* TabBarPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D645E5697216C1033B02AFF8 /* TabBarPicker.bundle */; };
+		3B3B0386FC06E752FE9DAAC5 /* Pods-TabBarPicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB087DA29AB726C4E4DD1E /* Pods-TabBarPicker_Tests-dummy.m */; };
+		3B3B3B4D7F1F2407A7BB8F06 /* POPPropertyAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C709287CB08F14A495E907E /* POPPropertyAnimation.mm */; };
+		3BD54709283F3AACAABAEF9B /* POPAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = B247360918A92665C18E2F93 /* POPAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3E6ABA6E976EE9F358D84207 /* TabBarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 624F4B8D72BCA2E5B0B97961 /* TabBarPicker.m */; };
+		3EE6AB8DD62DB60E64D05A0C /* POPAnimationPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CD00ACD98CB3EF2D5A11D2B /* POPAnimationPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		44933988DCE544FCDE73C91C /* Pods-TabBarPicker_Tests-TabBarPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9332766E99EE0F5D2A1FBA61 /* Pods-TabBarPicker_Tests-TabBarPicker-dummy.m */; };
+		45625B69AC49546CDDF3354E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836C19BF80C4FF0F04846DAE /* Foundation.framework */; };
+		491B2C383677E49A8B176870 /* Pods-TabBarPicker_Tests-pop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C046D94936BFF08C7EB8A799 /* Pods-TabBarPicker_Tests-pop-dummy.m */; };
+		4F168F8645C1E934DD6F1BC2 /* POPCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C154F503C254677106143FA /* POPCustomAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		519595A4F772637BFA8F84B7 /* POPMath.h in Headers */ = {isa = PBXBuildFile; fileRef = D67D2099C65F165EB6A984A3 /* POPMath.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		53160D4212932FC7C56D3EF2 /* POPAnimatableProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = E900DEC840C6736872C2F7A3 /* POPAnimatableProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55D74730D1FB242A78A3C0E2 /* POPAnimationEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = D9DED1AB470D76F7CAA0E99B /* POPAnimationEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58202E9C720A5DA7AC69572C /* POPPropertyAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D8B474F14DDE4F4D52409E /* POPPropertyAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58C14E475C19C9C5F963EBAF /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76CBBC331037069F49A1481B /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58F869B2B16B8D3A5BE0A964 /* POPSpringAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = A33E846EF6A35C4CEB1811B3 /* POPSpringAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5A94D7E53BF242DED78CFAA0 /* POPAnimationTracerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = EA227E173AB2AE183693AE43 /* POPAnimationTracerInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C89C0AA72C233E829573398 /* TabBarPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 148DB42881C2CA9E8E5EE6E1 /* TabBarPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CBC2056C4A92853FB8D6FC1 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBDC1DFE7F73BBFA25A3874 /* FBSnapshotTestController.m */; };
+		5D73A845AC7211A277B2B3B4 /* POPAnimationTracer.h in Headers */ = {isa = PBXBuildFile; fileRef = 89A1433A66EAC56F78C55709 /* POPAnimationTracer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61852B1EC5A79D61D09833D8 /* Pods-TabBarPicker_Tests-PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E42D397953D1C3C95F9408EC /* Pods-TabBarPicker_Tests-PureLayout-dummy.m */; };
+		6223D7701E616A12B9886220 /* Pods-TabBarPicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AD1999225A10120E5B02995 /* Pods-TabBarPicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62E823E5143EB6A31CA83F64 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B7E6397D072295FE0A5F54 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63284F345CEB86A51188CD4C /* POPAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7CE93A7A2D53987E699A82E0 /* POPAnimation.mm */; };
+		65B31B3C4504F32874FBFD98 /* POPAnimatorPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 937BA8EE0828B170DD0E088B /* POPAnimatorPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6629264412C2FE52A1169348 /* UnitBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = 5937D50E458DE19FAFF1C2CB /* UnitBezier.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6636FFF6FFBCCE668F3E9F87 /* POPDecayAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0621F69BD40BD272EB5A92E6 /* POPDecayAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69EF0AF9146AABC83DD15197 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836C19BF80C4FF0F04846DAE /* Foundation.framework */; };
+		6AF6567DABEF6C271FBB18EF /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC1B5068EBE1625BCF263B5 /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-dummy.m */; };
+		6C1750B6604BA8C954F15225 /* POPLayerExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EE713E3695F83812F704460 /* POPLayerExtras.mm */; };
+		6C7DD001B76A2341D3B3516A /* POPCGUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4A88A51750716CC9AB53D9 /* POPCGUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6C7EC292AC2406906C89C702 /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB8B46D2F315D0F612EE6D /* TabBarItem.m */; };
+		6E93B61EB2DEDE0964E3B1EE /* Pods-TabBarPicker_Tests-TabBarPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 483BA47373CDB5DCE7469742 /* Pods-TabBarPicker_Tests-TabBarPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F4F6E1692E952C3DF70CC77 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D051E1BBACBD2556FEDC84 /* FBSnapshotTestCase.m */; };
+		7247D3BD1744F25683AD5F8D /* POPAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 428D4B3163A29F10062580F2 /* POPAction.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		777C0B3EE3BF68B1B878885A /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = B5700F2D4F531E07A88381D3 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77ADA9D3C1DB1B0AEDFF1113 /* POPDecayAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = FD6E18FA54DF8FB7CF9BCE73 /* POPDecayAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7A23C9B612EBF9AD343CE1E2 /* FloatConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3467B4DD11D47F7D324E3BCC /* FloatConversion.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7E2F911B68DDD100F76D2D90 /* POPAnimationExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = D81EB44F93B7D8FCBB471993 /* POPAnimationExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EEFD4EEF35DCB13D8049996 /* POPAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FFBBE368E09DDA2C9F47256 /* POPAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85DEB4C5BC1A258172B2D9C9 /* Pods-TabBarPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE25E08DA798F46C5C345BD /* Pods-TabBarPicker_Example-dummy.m */; };
+		87E34772E3D5DC2A38D13DCC /* TabBarSubItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AA84C2A069A2176400C2DE /* TabBarSubItem.m */; };
+		8F4C1C2AB5F72BD79C715288 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA996C8534E12C67AFFCB4 /* SwiftSupport.swift */; };
+		90FCFA53B151BE9EFDCB409B /* POP.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A5AABEEC9D765E78544C8A /* POP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		912985F63EFD09B575DF6149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836C19BF80C4FF0F04846DAE /* Foundation.framework */; };
+		9647BD594D454AA36B317BCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836C19BF80C4FF0F04846DAE /* Foundation.framework */; };
+		9668EE579FCE6F10E8E7530B /* POPAnimationTracer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD06508EAD678C349CAA93 /* POPAnimationTracer.mm */; };
+		A44C43086F269C7D7447CB70 /* POPBasicAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 899203F65224A417FA8DF792 /* POPBasicAnimation.mm */; };
+		A8ABDEDC714A994B6B36A4F1 /* Pods-TabBarPicker_Example-TabBarPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4BAA120AA13A1D02FAA23A4 /* Pods-TabBarPicker_Example-TabBarPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B116AAD6A555AEA1B6301C0B /* POPVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F9248C014BA85DA9E62985C /* POPVector.mm */; };
+		B1514CE9C56F3D9A14947483 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 494A2E44D3C1B4593C09F080 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4998C8B2DFBD10D384BEDAB /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB8D808D64C356B89F2B4F2 /* UIImage+Compare.m */; };
+		B858BAD455D0DB8F907F3128 /* POPSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = F055371F054FE9B88F18F289 /* POPSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEE9747F66B393FEEFE81E35 /* TabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1371413CE12B3C17738BA8D2 /* TabBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C108F31F0426C3C4141B2A3A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A709C0164EDF439E429804C /* XCTest.framework */; };
+		C230EF663C8B2E9AA75BB7C7 /* POPSpringSolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A20EB35B02DAC09E6DB5A03 /* POPSpringSolver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C24C05FE7938E208BC25AB47 /* Pods-TabBarPicker_Example-TabBarPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 271C3F17E60FF4A971EB7D6C /* Pods-TabBarPicker_Example-TabBarPicker-dummy.m */; };
+		C3D2D049AB16D5AB12B9D2D4 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 384CEA765776C7069B6E3A0A /* UIImage+Diff.m */; };
+		C4A5D52AB2139FA5A09919D9 /* POPLayerExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F75A1B9295C04A7E96EF69E /* POPLayerExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C591C499E7FB0CF3D776512B /* TabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1371413CE12B3C17738BA8D2 /* TabBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD7065E574AC2C89F9C3C91E /* POPAnimator.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1BC25112DD2DB4E6681FCAF /* POPAnimator.mm */; };
+		CDC7C637CE560B20F11D500B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836C19BF80C4FF0F04846DAE /* Foundation.framework */; };
+		D15A957FA849695B2BC0E2BA /* TabBarSubItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F38CB30BE32060FBD8C51A75 /* TabBarSubItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3052435A90B887C4E7AEAC0 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = F09E62CF4421B4574210C522 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D32535025C6A0066C7FDF4C7 /* Pods-TabBarPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD58BB786DB0FA8E5986CF62 /* Pods-TabBarPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4B8AA680BDB18DE67139A6C /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B8C5A5AD41DCC1AA5383DD /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4D8565B5B52B5E6C0D1E23E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836C19BF80C4FF0F04846DAE /* Foundation.framework */; };
+		D713143B8698238B22FF78F8 /* POPCGUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = D72B37CBCBB5AC9907A07492 /* POPCGUtils.mm */; };
+		D87F6826919FDDA6D85A58A7 /* POPBasicAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = FFCA0749279D282CA89A3BBB /* POPBasicAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D9249B401EAFBC7E735A59E1 /* POPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 647AEE8412687956E96EC00C /* POPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DED28AA986D5385272CCB19A /* POPMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B80285B23944F6871DB8605 /* POPMath.mm */; };
+		DF4005BF055A0E8B8ED44A2E /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A49D478E89B97BAC285F9 /* FBSnapshotTestCasePlatform.m */; };
+		DFFD167800AA5C7FB04156CE /* TabBarPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E8E7A5081A9B7120430EB1C /* TabBarPicker.bundle */; };
+		E03EE333F599DDEAC8D54CBA /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB8B46D2F315D0F612EE6D /* TabBarItem.m */; };
+		E1646D029B083ACD4AA09A1A /* POPAnimationEvent.mm in Sources */ = {isa = PBXBuildFile; fileRef = F9272C6C8510653C958CE89A /* POPAnimationEvent.mm */; };
+		E171CC4952BB865125F56FC4 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BBC4E67C2F854A90B1F635 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E273ABADFA0DFA5557EDFE90 /* POPDecayAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = A79541B5C564B095A7F4DF34 /* POPDecayAnimation.mm */; };
+		F2E41845989F5902E0EA80F2 /* POPAnimationExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2CE514EAF053F4D716B7AAD9 /* POPAnimationExtras.mm */; };
+		F66B3044416BCD206343E08A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836C19BF80C4FF0F04846DAE /* Foundation.framework */; };
+		FD8BF6D2DA1679CE61A6F527 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 37709ECBB155458EFBFFED39 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EA9D3ECCF74DE7F75274BD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9442BE4A2137345B01F164F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3998475720C1C47684180202;
+			remoteInfo = "Pods-TabBarPicker_Tests-PureLayout";
+		};
+		1530225FC7A44B1ACA588ECC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9442BE4A2137345B01F164F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CA46A24F79F8A2591154DC8;
+			remoteInfo = "Pods-TabBarPicker_Example-TabBarPicker-TabBarPicker";
+		};
+		6A2372653D3E44E2B0D68BC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9442BE4A2137345B01F164F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 561939E4515B71341136E16E;
+			remoteInfo = "Pods-TabBarPicker_Tests-TabBarPicker";
+		};
+		851C37FE16A19DB70AA57891 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9442BE4A2137345B01F164F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C26F15991223F90FD04DB84A;
+			remoteInfo = "Pods-TabBarPicker_Tests-TabBarPicker-TabBarPicker";
+		};
+		B025178FEAD646D2229BDD0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9442BE4A2137345B01F164F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE841CD8269D52D367EBAEBB;
+			remoteInfo = "Pods-TabBarPicker_Example-TabBarPicker";
+		};
+		B244F2E681508765E9F87E57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9442BE4A2137345B01F164F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25EC7DE4FAEEEF84395686BD;
+			remoteInfo = "Pods-TabBarPicker_Tests-FBSnapshotTestCase";
+		};
+		F28FCFE320A7C1F1C2A78D0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9442BE4A2137345B01F164F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF3DCEB04961FDED1CAC4B7D;
+			remoteInfo = "Pods-TabBarPicker_Tests-pop";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02A5AABEEC9D765E78544C8A /* POP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POP.h; path = pop/POP.h; sourceTree = "<group>"; };
+		032060E06DB91F8976AB60CF /* Pods-TabBarPicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabBarPicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		0621F69BD40BD272EB5A92E6 /* POPDecayAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimation.h; path = pop/POPDecayAnimation.h; sourceTree = "<group>"; };
+		0A709C0164EDF439E429804C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0C7F9C9E234CA6AAF7F5EABE /* Pods-TabBarPicker_Example-TabBarPicker-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Example-TabBarPicker-Private.xcconfig"; sourceTree = "<group>"; };
+		0CE25E08DA798F46C5C345BD /* Pods-TabBarPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabBarPicker_Example-dummy.m"; sourceTree = "<group>"; };
+		0E0E8BDE68D27DEFCD8D9F6B /* Pods-TabBarPicker_Tests-PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Tests-PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		0EAD06508EAD678C349CAA93 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationTracer.mm; path = pop/POPAnimationTracer.mm; sourceTree = "<group>"; };
+		0EE713E3695F83812F704460 /* POPLayerExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = pop/POPLayerExtras.mm; sourceTree = "<group>"; };
+		0F8E0704B30253CCB523DFF4 /* Pods-TabBarPicker_Tests-TabBarPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-TabBarPicker_Tests-TabBarPicker-prefix.pch"; path = "../Pods-TabBarPicker_Tests-TabBarPicker/Pods-TabBarPicker_Tests-TabBarPicker-prefix.pch"; sourceTree = "<group>"; };
+		12300671483B509921D820E8 /* TabBarPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabBarPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1371413CE12B3C17738BA8D2 /* TabBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarItem.h; sourceTree = "<group>"; };
+		148DB42881C2CA9E8E5EE6E1 /* TabBarPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarPicker.h; sourceTree = "<group>"; };
+		161B25D132E8619C8D506575 /* Pods-TabBarPicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TabBarPicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		17A33E2AEC69B6B15FC91A29 /* TabBarPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabBarPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17F187FE6CA6214158010BBE /* Pods-TabBarPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		1876E0BBAF9B5083750B89AC /* Pods-TabBarPicker_Example-TabBarPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TabBarPicker_Example-TabBarPicker.modulemap"; sourceTree = "<group>"; };
+		194CECDFA9C949AF055914C0 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED204870830BC4632D23D4D /* Pods-TabBarPicker_Tests-PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TabBarPicker_Tests-PureLayout.modulemap"; sourceTree = "<group>"; };
+		1FBA8CEEED1A1191F4961320 /* Pods-TabBarPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TabBarPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		1FFBBE368E09DDA2C9F47256 /* POPAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimator.h; path = pop/POPAnimator.h; sourceTree = "<group>"; };
+		2097A7EF439D99B2BE1C3D1C /* Pods-TabBarPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		20DAEFB09BBB3604EF2B6FAC /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		22F51E2B500C2FF5D08D50C0 /* POPGeometry.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPGeometry.mm; path = pop/POPGeometry.mm; sourceTree = "<group>"; };
+		270A861F7A2BE44EAE04DC87 /* Pods_TabBarPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		271C3F17E60FF4A971EB7D6C /* Pods-TabBarPicker_Example-TabBarPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabBarPicker_Example-TabBarPicker-dummy.m"; sourceTree = "<group>"; };
+		2ADB8B46D2F315D0F612EE6D /* TabBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarItem.m; sourceTree = "<group>"; };
+		2BA42E3BA28325313FB2B2A3 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		2BFE000294D8DE222A710C85 /* Pods-TabBarPicker_Tests-TabBarPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-TabBarPicker_Tests-TabBarPicker.modulemap"; path = "../Pods-TabBarPicker_Tests-TabBarPicker/Pods-TabBarPicker_Tests-TabBarPicker.modulemap"; sourceTree = "<group>"; };
+		2CE514EAF053F4D716B7AAD9 /* POPAnimationExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationExtras.mm; path = pop/POPAnimationExtras.mm; sourceTree = "<group>"; };
+		2D2A49D478E89B97BAC285F9 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
+		313943159DCA0E810CAB0726 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3467B4DD11D47F7D324E3BCC /* FloatConversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = pop/WebCore/FloatConversion.h; sourceTree = "<group>"; };
+		3608461BC17424EEE0E93928 /* Pods-TabBarPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		37709ECBB155458EFBFFED39 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/UIImage+Compare.h"; sourceTree = "<group>"; };
+		384CEA765776C7069B6E3A0A /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/UIImage+Diff.m"; sourceTree = "<group>"; };
+		3C1E962465F636A50709B5CB /* POPAnimationRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationRuntime.h; path = pop/POPAnimationRuntime.h; sourceTree = "<group>"; };
+		3C33525CA958D87B88D87327 /* Pods-TabBarPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TabBarPicker_Example.modulemap"; sourceTree = "<group>"; };
+		3F75A1B9295C04A7E96EF69E /* POPLayerExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = pop/POPLayerExtras.h; sourceTree = "<group>"; };
+		3FEB087DA29AB726C4E4DD1E /* Pods-TabBarPicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabBarPicker_Tests-dummy.m"; sourceTree = "<group>"; };
+		413FD75D9BC7519CFE72E73B /* POPVector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPVector.h; path = pop/POPVector.h; sourceTree = "<group>"; };
+		428D4B3163A29F10062580F2 /* POPAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAction.h; path = pop/POPAction.h; sourceTree = "<group>"; };
+		4393F7BB04FA06DE7A438D20 /* Pods-TabBarPicker_Tests-PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Tests-PureLayout.xcconfig"; sourceTree = "<group>"; };
+		4629D4C5444BF9939BD7F95E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		483BA47373CDB5DCE7469742 /* Pods-TabBarPicker_Tests-TabBarPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-TabBarPicker_Tests-TabBarPicker-umbrella.h"; path = "../Pods-TabBarPicker_Tests-TabBarPicker/Pods-TabBarPicker_Tests-TabBarPicker-umbrella.h"; sourceTree = "<group>"; };
+		494A2E44D3C1B4593C09F080 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/UIImage+Diff.h"; sourceTree = "<group>"; };
+		49EB4C8F7F91F1C7083115B9 /* Pods-TabBarPicker_Tests-FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TabBarPicker_Tests-FBSnapshotTestCase.modulemap"; sourceTree = "<group>"; };
+		4A07698F08BB4ED55DF68B7E /* Pods-TabBarPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TabBarPicker_Tests.modulemap"; sourceTree = "<group>"; };
+		4AC1B5068EBE1625BCF263B5 /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabBarPicker_Tests-FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		4C154F503C254677106143FA /* POPCustomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCustomAnimation.h; path = pop/POPCustomAnimation.h; sourceTree = "<group>"; };
+		4C6270ED8D95D5EDF4008F37 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		4F9248C014BA85DA9E62985C /* POPVector.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPVector.mm; path = pop/POPVector.mm; sourceTree = "<group>"; };
+		544127507DF529D623BCD492 /* POPSpringAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPSpringAnimation.mm; path = pop/POPSpringAnimation.mm; sourceTree = "<group>"; };
+		565784FDAE1E1414A1BB9D6A /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Tests-FBSnapshotTestCase-Private.xcconfig"; sourceTree = "<group>"; };
+		5885BAE70442B3B09EDAA0EE /* POPAnimationEventInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationEventInternal.h; path = pop/POPAnimationEventInternal.h; sourceTree = "<group>"; };
+		5937D50E458DE19FAFF1C2CB /* UnitBezier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnitBezier.h; path = pop/WebCore/UnitBezier.h; sourceTree = "<group>"; };
+		5AD1999225A10120E5B02995 /* Pods-TabBarPicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Tests-umbrella.h"; sourceTree = "<group>"; };
+		60DC3FB0AE4DE499C831C2EF /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		624F4B8D72BCA2E5B0B97961 /* TabBarPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarPicker.m; sourceTree = "<group>"; };
+		625B087FFE47848ACCB8EE55 /* Pods-TabBarPicker_Example-TabBarPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Example-TabBarPicker-prefix.pch"; sourceTree = "<group>"; };
+		647AEE8412687956E96EC00C /* POPDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDefines.h; path = pop/POPDefines.h; sourceTree = "<group>"; };
+		65A05347063995FDAF01B670 /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimatableProperty.mm; path = pop/POPAnimatableProperty.mm; sourceTree = "<group>"; };
+		66133E6E58B8A5577EDE7D48 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		685A2F2C951CB89EDD363751 /* POPBasicAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimation.h; path = pop/POPBasicAnimation.h; sourceTree = "<group>"; };
+		697CCDD05A97A526EC9005BA /* Pods-TabBarPicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TabBarPicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6B80285B23944F6871DB8605 /* POPMath.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPMath.mm; path = pop/POPMath.mm; sourceTree = "<group>"; };
+		76BB8DE64767732CFE4A8B40 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		76CBBC331037069F49A1481B /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Tests-FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
+		7A20EB35B02DAC09E6DB5A03 /* POPSpringSolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringSolver.h; path = pop/POPSpringSolver.h; sourceTree = "<group>"; };
+		7A5344894FEF98D9616959AF /* POPGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPGeometry.h; path = pop/POPGeometry.h; sourceTree = "<group>"; };
+		7C783CBED75A0003C424981F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CE93A7A2D53987E699A82E0 /* POPAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimation.mm; path = pop/POPAnimation.mm; sourceTree = "<group>"; };
+		824E767F35FFF27587C2FC32 /* Pods-TabBarPicker_Tests-FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Tests-FBSnapshotTestCase.xcconfig"; sourceTree = "<group>"; };
+		836C19BF80C4FF0F04846DAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		85D051E1BBACBD2556FEDC84 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
+		899203F65224A417FA8DF792 /* POPBasicAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPBasicAnimation.mm; path = pop/POPBasicAnimation.mm; sourceTree = "<group>"; };
+		89A1433A66EAC56F78C55709 /* POPAnimationTracer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = pop/POPAnimationTracer.h; sourceTree = "<group>"; };
+		8C709287CB08F14A495E907E /* POPPropertyAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPPropertyAnimation.mm; path = pop/POPPropertyAnimation.mm; sourceTree = "<group>"; };
+		8CD00ACD98CB3EF2D5A11D2B /* POPAnimationPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationPrivate.h; path = pop/POPAnimationPrivate.h; sourceTree = "<group>"; };
+		8E8E7A5081A9B7120430EB1C /* TabBarPicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9332766E99EE0F5D2A1FBA61 /* Pods-TabBarPicker_Tests-TabBarPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-TabBarPicker_Tests-TabBarPicker-dummy.m"; path = "../Pods-TabBarPicker_Tests-TabBarPicker/Pods-TabBarPicker_Tests-TabBarPicker-dummy.m"; sourceTree = "<group>"; };
+		937BA8EE0828B170DD0E088B /* POPAnimatorPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimatorPrivate.h; path = pop/POPAnimatorPrivate.h; sourceTree = "<group>"; };
+		95ADC5EB5A022DC3684CE488 /* Pods-TabBarPicker_Tests-TabBarPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarPicker_Tests-TabBarPicker.xcconfig"; path = "../Pods-TabBarPicker_Tests-TabBarPicker/Pods-TabBarPicker_Tests-TabBarPicker.xcconfig"; sourceTree = "<group>"; };
+		97AA84C2A069A2176400C2DE /* TabBarSubItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarSubItem.m; sourceTree = "<group>"; };
+		9ACD1B64DC358C440E53AF49 /* Pods-TabBarPicker_Tests-PureLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Tests-PureLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		9C4234366D3D9B62F83646DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1BC25112DD2DB4E6681FCAF /* POPAnimator.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimator.mm; path = pop/POPAnimator.mm; sourceTree = "<group>"; };
+		A2E37F810A8B379AF9A5ED62 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
+		A33E846EF6A35C4CEB1811B3 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = pop/POPSpringAnimationInternal.h; sourceTree = "<group>"; };
+		A79541B5C564B095A7F4DF34 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = pop/POPDecayAnimation.mm; sourceTree = "<group>"; };
+		A7B7E6397D072295FE0A5F54 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		AA5C35296813C2034F80213B /* Pods-TabBarPicker_Tests-pop-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Tests-pop-prefix.pch"; sourceTree = "<group>"; };
+		ACB75DA6D5B099B35278F7F9 /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Tests-FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		AD58BB786DB0FA8E5986CF62 /* Pods-TabBarPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Example-umbrella.h"; sourceTree = "<group>"; };
+		AD8368EA285B47BC5E4FC67A /* Pods-TabBarPicker_Tests-pop-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Tests-pop-Private.xcconfig"; sourceTree = "<group>"; };
+		B247360918A92665C18E2F93 /* POPAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationInternal.h; path = pop/POPAnimationInternal.h; sourceTree = "<group>"; };
+		B507E9F463795031E3CEA800 /* Pods-TabBarPicker_Tests-PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Tests-PureLayout-umbrella.h"; sourceTree = "<group>"; };
+		B5700F2D4F531E07A88381D3 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
+		B7B0A65C6AFDDBCE9B44D159 /* pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7B8C5A5AD41DCC1AA5383DD /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		B7FEAF540E638E9AEB5DAF2A /* TransformationMatrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TransformationMatrix.h; path = pop/WebCore/TransformationMatrix.h; sourceTree = "<group>"; };
+		B822F80A2F008599B37496AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9F0FDA3FAB24BDE735A32FE /* Pods-TabBarPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabBarPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BCC83FB56BCBE92BEB16B7A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-TabBarPicker_Tests-TabBarPicker/Info.plist"; sourceTree = "<group>"; };
+		BDF1FD88252CA3BCEBBAC8FF /* Pods-TabBarPicker_Tests-pop-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Tests-pop-umbrella.h"; sourceTree = "<group>"; };
+		BE648A487E547B56B5FA6092 /* Pods_TabBarPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC8C255D5605A64BC77DDCE /* POPAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimation.h; path = pop/POPAnimation.h; sourceTree = "<group>"; };
+		C046D94936BFF08C7EB8A799 /* Pods-TabBarPicker_Tests-pop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabBarPicker_Tests-pop-dummy.m"; sourceTree = "<group>"; };
+		C5BBC4E67C2F854A90B1F635 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		C6116B0D5A3B5F584BBC044D /* Pods-TabBarPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		CAB8D808D64C356B89F2B4F2 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/UIImage+Compare.m"; sourceTree = "<group>"; };
+		CADE0F42874C0D1AA6813512 /* Pods-TabBarPicker_Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Tests-environment.h"; sourceTree = "<group>"; };
+		D2A821FBF4A3AC98022EE500 /* POPAnimationRuntime.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationRuntime.mm; path = pop/POPAnimationRuntime.mm; sourceTree = "<group>"; };
+		D645E5697216C1033B02AFF8 /* TabBarPicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D67D2099C65F165EB6A984A3 /* POPMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPMath.h; path = pop/POPMath.h; sourceTree = "<group>"; };
+		D70593152E0AAA16D569EAA1 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		D72B37CBCBB5AC9907A07492 /* POPCGUtils.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCGUtils.mm; path = pop/POPCGUtils.mm; sourceTree = "<group>"; };
+		D80FE7B13075DD9F1A1A659E /* Pods-TabBarPicker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabBarPicker_Example-resources.sh"; sourceTree = "<group>"; };
+		D81EB44F93B7D8FCBB471993 /* POPAnimationExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationExtras.h; path = pop/POPAnimationExtras.h; sourceTree = "<group>"; };
+		D9AAC91D9567C501A8A72779 /* Pods-TabBarPicker_Tests-pop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Tests-pop.xcconfig"; sourceTree = "<group>"; };
+		D9DED1AB470D76F7CAA0E99B /* POPAnimationEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationEvent.h; path = pop/POPAnimationEvent.h; sourceTree = "<group>"; };
+		D9FD69A24E629E9731159547 /* Pods-TabBarPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TabBarPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E03638B659A2C5164CF04D30 /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimationInternal.h; path = pop/POPPropertyAnimationInternal.h; sourceTree = "<group>"; };
+		E42D397953D1C3C95F9408EC /* Pods-TabBarPicker_Tests-PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabBarPicker_Tests-PureLayout-dummy.m"; sourceTree = "<group>"; };
+		E4BAA120AA13A1D02FAA23A4 /* Pods-TabBarPicker_Example-TabBarPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Example-TabBarPicker-umbrella.h"; sourceTree = "<group>"; };
+		E5D8B474F14DDE4F4D52409E /* POPPropertyAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimation.h; path = pop/POPPropertyAnimation.h; sourceTree = "<group>"; };
+		E7E28C15EC58288F48C746F1 /* Pods-TabBarPicker_Tests-TabBarPicker-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarPicker_Tests-TabBarPicker-Private.xcconfig"; path = "../Pods-TabBarPicker_Tests-TabBarPicker/Pods-TabBarPicker_Tests-TabBarPicker-Private.xcconfig"; sourceTree = "<group>"; };
+		E900DEC840C6736872C2F7A3 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimatableProperty.h; path = pop/POPAnimatableProperty.h; sourceTree = "<group>"; };
+		E952AE82AA42C9BBBE86C72B /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		EA227E173AB2AE183693AE43 /* POPAnimationTracerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracerInternal.h; path = pop/POPAnimationTracerInternal.h; sourceTree = "<group>"; };
+		EE4A88A51750716CC9AB53D9 /* POPCGUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCGUtils.h; path = pop/POPCGUtils.h; sourceTree = "<group>"; };
+		EEBDC1DFE7F73BBFA25A3874 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
+		EF80A2171E26518439E2FE95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F055371F054FE9B88F18F289 /* POPSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimation.h; path = pop/POPSpringAnimation.h; sourceTree = "<group>"; };
+		F09E62CF4421B4574210C522 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
+		F0CA996C8534E12C67AFFCB4 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
+		F38CB30BE32060FBD8C51A75 /* TabBarSubItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarSubItem.h; sourceTree = "<group>"; };
+		F6F1A79CEC592DA416504BC6 /* Pods-TabBarPicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabBarPicker_Tests-resources.sh"; sourceTree = "<group>"; };
+		F712C1311B5EE5C36D455BD0 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = TransformationMatrix.cpp; path = pop/WebCore/TransformationMatrix.cpp; sourceTree = "<group>"; };
+		F81EB2A3140776A97E772415 /* Pods-TabBarPicker_Example-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Example-environment.h"; sourceTree = "<group>"; };
+		F8F7F7A98DB8365AB6F2CE16 /* Pods-TabBarPicker_Tests-pop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TabBarPicker_Tests-pop.modulemap"; sourceTree = "<group>"; };
+		F9272C6C8510653C958CE89A /* POPAnimationEvent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationEvent.mm; path = pop/POPAnimationEvent.mm; sourceTree = "<group>"; };
+		FA8D04C3ECD5B2B3C79AF0FD /* POPCustomAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCustomAnimation.mm; path = pop/POPCustomAnimation.mm; sourceTree = "<group>"; };
+		FC2BA9782BDD678A4FCAF56E /* Pods-TabBarPicker_Example-TabBarPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Example-TabBarPicker.xcconfig"; sourceTree = "<group>"; };
+		FD6E18FA54DF8FB7CF9BCE73 /* POPDecayAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimationInternal.h; path = pop/POPDecayAnimationInternal.h; sourceTree = "<group>"; };
+		FFCA0749279D282CA89A3BBB /* POPBasicAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimationInternal.h; path = pop/POPBasicAnimationInternal.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D464096B0A2D21F8A1DD8BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9647BD594D454AA36B317BCA /* Foundation.framework in Frameworks */,
+				C108F31F0426C3C4141B2A3A /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25A9733B9CFD86B0B9C49FBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				912985F63EFD09B575DF6149 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D7AA1B2CA10A369CC3E7B47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85C9FF86C8C7E0EC83C0B974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F66B3044416BCD206343E08A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B82488D27970757F1D39B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45625B69AC49546CDDF3354E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62B044A344674144742B21F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D8565B5B52B5E6C0D1E23E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0370C6D90D456531F5F6F7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D44EE62EA83C8C9C25C6399B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69EF0AF9146AABC83DD15197 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB037F553812273A6399BD13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC7C637CE560B20F11D500B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01F3BF7BC7DD474B94707B54 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1371413CE12B3C17738BA8D2 /* TabBarItem.h */,
+				2ADB8B46D2F315D0F612EE6D /* TabBarItem.m */,
+				148DB42881C2CA9E8E5EE6E1 /* TabBarPicker.h */,
+				624F4B8D72BCA2E5B0B97961 /* TabBarPicker.m */,
+				F38CB30BE32060FBD8C51A75 /* TabBarSubItem.h */,
+				97AA84C2A069A2176400C2DE /* TabBarSubItem.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0205E7CAF4A61F37B52562E2 /* SwiftSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F0CA996C8534E12C67AFFCB4 /* SwiftSupport.swift */,
+			);
+			name = SwiftSupport;
+			sourceTree = "<group>";
+		};
+		0385D20860AF501CBBC0AA7B /* Pods-TabBarPicker_Example */ = {
+			isa = PBXGroup;
+			children = (
+				7C783CBED75A0003C424981F /* Info.plist */,
+				3C33525CA958D87B88D87327 /* Pods-TabBarPicker_Example.modulemap */,
+				D9FD69A24E629E9731159547 /* Pods-TabBarPicker_Example-acknowledgements.markdown */,
+				1FBA8CEEED1A1191F4961320 /* Pods-TabBarPicker_Example-acknowledgements.plist */,
+				0CE25E08DA798F46C5C345BD /* Pods-TabBarPicker_Example-dummy.m */,
+				F81EB2A3140776A97E772415 /* Pods-TabBarPicker_Example-environment.h */,
+				B9F0FDA3FAB24BDE735A32FE /* Pods-TabBarPicker_Example-frameworks.sh */,
+				D80FE7B13075DD9F1A1A659E /* Pods-TabBarPicker_Example-resources.sh */,
+				AD58BB786DB0FA8E5986CF62 /* Pods-TabBarPicker_Example-umbrella.h */,
+				3608461BC17424EEE0E93928 /* Pods-TabBarPicker_Example.debug.xcconfig */,
+				17F187FE6CA6214158010BBE /* Pods-TabBarPicker_Example.release.xcconfig */,
+			);
+			name = "Pods-TabBarPicker_Example";
+			path = "Target Support Files/Pods-TabBarPicker_Example";
+			sourceTree = "<group>";
+		};
+		218C143A3163FA8EDC1EE306 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				836C19BF80C4FF0F04846DAE /* Foundation.framework */,
+				0A709C0164EDF439E429804C /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		397FCCCB6925294507E12DB4 /* Pods-TabBarPicker_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4629D4C5444BF9939BD7F95E /* Info.plist */,
+				4A07698F08BB4ED55DF68B7E /* Pods-TabBarPicker_Tests.modulemap */,
+				697CCDD05A97A526EC9005BA /* Pods-TabBarPicker_Tests-acknowledgements.markdown */,
+				161B25D132E8619C8D506575 /* Pods-TabBarPicker_Tests-acknowledgements.plist */,
+				3FEB087DA29AB726C4E4DD1E /* Pods-TabBarPicker_Tests-dummy.m */,
+				CADE0F42874C0D1AA6813512 /* Pods-TabBarPicker_Tests-environment.h */,
+				032060E06DB91F8976AB60CF /* Pods-TabBarPicker_Tests-frameworks.sh */,
+				F6F1A79CEC592DA416504BC6 /* Pods-TabBarPicker_Tests-resources.sh */,
+				5AD1999225A10120E5B02995 /* Pods-TabBarPicker_Tests-umbrella.h */,
+				2097A7EF439D99B2BE1C3D1C /* Pods-TabBarPicker_Tests.debug.xcconfig */,
+				C6116B0D5A3B5F584BBC044D /* Pods-TabBarPicker_Tests.release.xcconfig */,
+			);
+			name = "Pods-TabBarPicker_Tests";
+			path = "Target Support Files/Pods-TabBarPicker_Tests";
+			sourceTree = "<group>";
+		};
+		4AD6C808057F1BE0276F747D = {
+			isa = PBXGroup;
+			children = (
+				66133E6E58B8A5577EDE7D48 /* Podfile */,
+				99707A55F723E8B66BFE9BF3 /* Development Pods */,
+				D93D22476D14850AAD02077A /* Frameworks */,
+				8D3D7A55D8BD002686107DC9 /* Pods */,
+				B4203E66B10EC56449A50D56 /* Products */,
+				8383C26D7994F98614FBD4C1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8383C26D7994F98614FBD4C1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0385D20860AF501CBBC0AA7B /* Pods-TabBarPicker_Example */,
+				397FCCCB6925294507E12DB4 /* Pods-TabBarPicker_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8CF4A5196671D817A4BDE283 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B822F80A2F008599B37496AF /* Info.plist */,
+				1ED204870830BC4632D23D4D /* Pods-TabBarPicker_Tests-PureLayout.modulemap */,
+				4393F7BB04FA06DE7A438D20 /* Pods-TabBarPicker_Tests-PureLayout.xcconfig */,
+				9ACD1B64DC358C440E53AF49 /* Pods-TabBarPicker_Tests-PureLayout-Private.xcconfig */,
+				E42D397953D1C3C95F9408EC /* Pods-TabBarPicker_Tests-PureLayout-dummy.m */,
+				0E0E8BDE68D27DEFCD8D9F6B /* Pods-TabBarPicker_Tests-PureLayout-prefix.pch */,
+				B507E9F463795031E3CEA800 /* Pods-TabBarPicker_Tests-PureLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TabBarPicker_Tests-PureLayout";
+			sourceTree = "<group>";
+		};
+		8D3D7A55D8BD002686107DC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF192C6DE1F84C1874CDCC57 /* FBSnapshotTestCase */,
+				F19EC70F0AB3444190CC7A52 /* PureLayout */,
+				B585245BE73FECCC9755DC09 /* pop */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		99707A55F723E8B66BFE9BF3 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2A9ABF63E2A0DA6ED9A8D04 /* TabBarPicker */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A2A9ABF63E2A0DA6ED9A8D04 /* TabBarPicker */ = {
+			isa = PBXGroup;
+			children = (
+				EEBBC423387915EF18233718 /* Pod */,
+				CF3D20C822A1D9F69E628C0C /* Support Files */,
+			);
+			name = TabBarPicker;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		AF192C6DE1F84C1874CDCC57 /* FBSnapshotTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				BCED8B602F7C202CDABFF944 /* Core */,
+				FBB7136015A603F89C430027 /* Support Files */,
+				0205E7CAF4A61F37B52562E2 /* SwiftSupport */,
+			);
+			path = FBSnapshotTestCase;
+			sourceTree = "<group>";
+		};
+		B4203E66B10EC56449A50D56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				194CECDFA9C949AF055914C0 /* FBSnapshotTestCase.framework */,
+				270A861F7A2BE44EAE04DC87 /* Pods_TabBarPicker_Example.framework */,
+				BE648A487E547B56B5FA6092 /* Pods_TabBarPicker_Tests.framework */,
+				60DC3FB0AE4DE499C831C2EF /* PureLayout.framework */,
+				D645E5697216C1033B02AFF8 /* TabBarPicker.bundle */,
+				8E8E7A5081A9B7120430EB1C /* TabBarPicker.bundle */,
+				12300671483B509921D820E8 /* TabBarPicker.framework */,
+				17A33E2AEC69B6B15FC91A29 /* TabBarPicker.framework */,
+				B7B0A65C6AFDDBCE9B44D159 /* pop.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B585245BE73FECCC9755DC09 /* pop */ = {
+			isa = PBXGroup;
+			children = (
+				3467B4DD11D47F7D324E3BCC /* FloatConversion.h */,
+				02A5AABEEC9D765E78544C8A /* POP.h */,
+				428D4B3163A29F10062580F2 /* POPAction.h */,
+				E900DEC840C6736872C2F7A3 /* POPAnimatableProperty.h */,
+				65A05347063995FDAF01B670 /* POPAnimatableProperty.mm */,
+				BFC8C255D5605A64BC77DDCE /* POPAnimation.h */,
+				7CE93A7A2D53987E699A82E0 /* POPAnimation.mm */,
+				D9DED1AB470D76F7CAA0E99B /* POPAnimationEvent.h */,
+				F9272C6C8510653C958CE89A /* POPAnimationEvent.mm */,
+				5885BAE70442B3B09EDAA0EE /* POPAnimationEventInternal.h */,
+				D81EB44F93B7D8FCBB471993 /* POPAnimationExtras.h */,
+				2CE514EAF053F4D716B7AAD9 /* POPAnimationExtras.mm */,
+				B247360918A92665C18E2F93 /* POPAnimationInternal.h */,
+				8CD00ACD98CB3EF2D5A11D2B /* POPAnimationPrivate.h */,
+				3C1E962465F636A50709B5CB /* POPAnimationRuntime.h */,
+				D2A821FBF4A3AC98022EE500 /* POPAnimationRuntime.mm */,
+				89A1433A66EAC56F78C55709 /* POPAnimationTracer.h */,
+				0EAD06508EAD678C349CAA93 /* POPAnimationTracer.mm */,
+				EA227E173AB2AE183693AE43 /* POPAnimationTracerInternal.h */,
+				1FFBBE368E09DDA2C9F47256 /* POPAnimator.h */,
+				A1BC25112DD2DB4E6681FCAF /* POPAnimator.mm */,
+				937BA8EE0828B170DD0E088B /* POPAnimatorPrivate.h */,
+				685A2F2C951CB89EDD363751 /* POPBasicAnimation.h */,
+				899203F65224A417FA8DF792 /* POPBasicAnimation.mm */,
+				FFCA0749279D282CA89A3BBB /* POPBasicAnimationInternal.h */,
+				EE4A88A51750716CC9AB53D9 /* POPCGUtils.h */,
+				D72B37CBCBB5AC9907A07492 /* POPCGUtils.mm */,
+				4C154F503C254677106143FA /* POPCustomAnimation.h */,
+				FA8D04C3ECD5B2B3C79AF0FD /* POPCustomAnimation.mm */,
+				0621F69BD40BD272EB5A92E6 /* POPDecayAnimation.h */,
+				A79541B5C564B095A7F4DF34 /* POPDecayAnimation.mm */,
+				FD6E18FA54DF8FB7CF9BCE73 /* POPDecayAnimationInternal.h */,
+				647AEE8412687956E96EC00C /* POPDefines.h */,
+				7A5344894FEF98D9616959AF /* POPGeometry.h */,
+				22F51E2B500C2FF5D08D50C0 /* POPGeometry.mm */,
+				3F75A1B9295C04A7E96EF69E /* POPLayerExtras.h */,
+				0EE713E3695F83812F704460 /* POPLayerExtras.mm */,
+				D67D2099C65F165EB6A984A3 /* POPMath.h */,
+				6B80285B23944F6871DB8605 /* POPMath.mm */,
+				E5D8B474F14DDE4F4D52409E /* POPPropertyAnimation.h */,
+				8C709287CB08F14A495E907E /* POPPropertyAnimation.mm */,
+				E03638B659A2C5164CF04D30 /* POPPropertyAnimationInternal.h */,
+				F055371F054FE9B88F18F289 /* POPSpringAnimation.h */,
+				544127507DF529D623BCD492 /* POPSpringAnimation.mm */,
+				A33E846EF6A35C4CEB1811B3 /* POPSpringAnimationInternal.h */,
+				7A20EB35B02DAC09E6DB5A03 /* POPSpringSolver.h */,
+				413FD75D9BC7519CFE72E73B /* POPVector.h */,
+				4F9248C014BA85DA9E62985C /* POPVector.mm */,
+				F712C1311B5EE5C36D455BD0 /* TransformationMatrix.cpp */,
+				B7FEAF540E638E9AEB5DAF2A /* TransformationMatrix.h */,
+				5937D50E458DE19FAFF1C2CB /* UnitBezier.h */,
+				CE04CBEBC849953A8BBF6D6D /* Support Files */,
+			);
+			path = pop;
+			sourceTree = "<group>";
+		};
+		BCED8B602F7C202CDABFF944 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A2E37F810A8B379AF9A5ED62 /* FBSnapshotTestCase.h */,
+				85D051E1BBACBD2556FEDC84 /* FBSnapshotTestCase.m */,
+				B5700F2D4F531E07A88381D3 /* FBSnapshotTestCasePlatform.h */,
+				2D2A49D478E89B97BAC285F9 /* FBSnapshotTestCasePlatform.m */,
+				F09E62CF4421B4574210C522 /* FBSnapshotTestController.h */,
+				EEBDC1DFE7F73BBFA25A3874 /* FBSnapshotTestController.m */,
+				37709ECBB155458EFBFFED39 /* UIImage+Compare.h */,
+				CAB8D808D64C356B89F2B4F2 /* UIImage+Compare.m */,
+				494A2E44D3C1B4593C09F080 /* UIImage+Diff.h */,
+				384CEA765776C7069B6E3A0A /* UIImage+Diff.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		CE04CBEBC849953A8BBF6D6D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C4234366D3D9B62F83646DF /* Info.plist */,
+				F8F7F7A98DB8365AB6F2CE16 /* Pods-TabBarPicker_Tests-pop.modulemap */,
+				D9AAC91D9567C501A8A72779 /* Pods-TabBarPicker_Tests-pop.xcconfig */,
+				AD8368EA285B47BC5E4FC67A /* Pods-TabBarPicker_Tests-pop-Private.xcconfig */,
+				C046D94936BFF08C7EB8A799 /* Pods-TabBarPicker_Tests-pop-dummy.m */,
+				AA5C35296813C2034F80213B /* Pods-TabBarPicker_Tests-pop-prefix.pch */,
+				BDF1FD88252CA3BCEBBAC8FF /* Pods-TabBarPicker_Tests-pop-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TabBarPicker_Tests-pop";
+			sourceTree = "<group>";
+		};
+		CF3D20C822A1D9F69E628C0C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF80A2171E26518439E2FE95 /* Info.plist */,
+				BCC83FB56BCBE92BEB16B7A4 /* Info.plist */,
+				1876E0BBAF9B5083750B89AC /* Pods-TabBarPicker_Example-TabBarPicker.modulemap */,
+				FC2BA9782BDD678A4FCAF56E /* Pods-TabBarPicker_Example-TabBarPicker.xcconfig */,
+				0C7F9C9E234CA6AAF7F5EABE /* Pods-TabBarPicker_Example-TabBarPicker-Private.xcconfig */,
+				271C3F17E60FF4A971EB7D6C /* Pods-TabBarPicker_Example-TabBarPicker-dummy.m */,
+				625B087FFE47848ACCB8EE55 /* Pods-TabBarPicker_Example-TabBarPicker-prefix.pch */,
+				E4BAA120AA13A1D02FAA23A4 /* Pods-TabBarPicker_Example-TabBarPicker-umbrella.h */,
+				2BFE000294D8DE222A710C85 /* Pods-TabBarPicker_Tests-TabBarPicker.modulemap */,
+				95ADC5EB5A022DC3684CE488 /* Pods-TabBarPicker_Tests-TabBarPicker.xcconfig */,
+				E7E28C15EC58288F48C746F1 /* Pods-TabBarPicker_Tests-TabBarPicker-Private.xcconfig */,
+				9332766E99EE0F5D2A1FBA61 /* Pods-TabBarPicker_Tests-TabBarPicker-dummy.m */,
+				0F8E0704B30253CCB523DFF4 /* Pods-TabBarPicker_Tests-TabBarPicker-prefix.pch */,
+				483BA47373CDB5DCE7469742 /* Pods-TabBarPicker_Tests-TabBarPicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-TabBarPicker_Example-TabBarPicker";
+			sourceTree = "<group>";
+		};
+		D93D22476D14850AAD02077A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				218C143A3163FA8EDC1EE306 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEBBC423387915EF18233718 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				01F3BF7BC7DD474B94707B54 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		F19EC70F0AB3444190CC7A52 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C5BBC4E67C2F854A90B1F635 /* ALView+PureLayout.h */,
+				20DAEFB09BBB3604EF2B6FAC /* ALView+PureLayout.m */,
+				A7B7E6397D072295FE0A5F54 /* NSArray+PureLayout.h */,
+				4C6270ED8D95D5EDF4008F37 /* NSArray+PureLayout.m */,
+				76BB8DE64767732CFE4A8B40 /* NSLayoutConstraint+PureLayout.h */,
+				D70593152E0AAA16D569EAA1 /* NSLayoutConstraint+PureLayout.m */,
+				E952AE82AA42C9BBBE86C72B /* PureLayout.h */,
+				2BA42E3BA28325313FB2B2A3 /* PureLayout+Internal.h */,
+				B7B8C5A5AD41DCC1AA5383DD /* PureLayoutDefines.h */,
+				8CF4A5196671D817A4BDE283 /* Support Files */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		FBB7136015A603F89C430027 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				313943159DCA0E810CAB0726 /* Info.plist */,
+				49EB4C8F7F91F1C7083115B9 /* Pods-TabBarPicker_Tests-FBSnapshotTestCase.modulemap */,
+				824E767F35FFF27587C2FC32 /* Pods-TabBarPicker_Tests-FBSnapshotTestCase.xcconfig */,
+				565784FDAE1E1414A1BB9D6A /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-Private.xcconfig */,
+				4AC1B5068EBE1625BCF263B5 /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-dummy.m */,
+				ACB75DA6D5B099B35278F7F9 /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-prefix.pch */,
+				76CBBC331037069F49A1481B /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TabBarPicker_Tests-FBSnapshotTestCase";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1B323BB02900DB0CCDBE6E42 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6223D7701E616A12B9886220 /* Pods-TabBarPicker_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B54E464D4B6DC5BC368D120 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E93B61EB2DEDE0964E3B1EE /* Pods-TabBarPicker_Tests-TabBarPicker-umbrella.h in Headers */,
+				BEE9747F66B393FEEFE81E35 /* TabBarItem.h in Headers */,
+				124D751F1A50BADA38571F52 /* TabBarPicker.h in Headers */,
+				27A0DF5F969CB972F019D658 /* TabBarSubItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		578793AF03626DCCBA89F4D4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A23C9B612EBF9AD343CE1E2 /* FloatConversion.h in Headers */,
+				90FCFA53B151BE9EFDCB409B /* POP.h in Headers */,
+				7247D3BD1744F25683AD5F8D /* POPAction.h in Headers */,
+				53160D4212932FC7C56D3EF2 /* POPAnimatableProperty.h in Headers */,
+				09A4D4FD25C7CF71000BFD2F /* POPAnimation.h in Headers */,
+				55D74730D1FB242A78A3C0E2 /* POPAnimationEvent.h in Headers */,
+				108142577EB2C6F99ADA8C61 /* POPAnimationEventInternal.h in Headers */,
+				7E2F911B68DDD100F76D2D90 /* POPAnimationExtras.h in Headers */,
+				3BD54709283F3AACAABAEF9B /* POPAnimationInternal.h in Headers */,
+				3EE6AB8DD62DB60E64D05A0C /* POPAnimationPrivate.h in Headers */,
+				33C553DA18FDC7D9B3978AB1 /* POPAnimationRuntime.h in Headers */,
+				5D73A845AC7211A277B2B3B4 /* POPAnimationTracer.h in Headers */,
+				5A94D7E53BF242DED78CFAA0 /* POPAnimationTracerInternal.h in Headers */,
+				7EEFD4EEF35DCB13D8049996 /* POPAnimator.h in Headers */,
+				65B31B3C4504F32874FBFD98 /* POPAnimatorPrivate.h in Headers */,
+				10CD87106DC803FFAE595FF3 /* POPBasicAnimation.h in Headers */,
+				D87F6826919FDDA6D85A58A7 /* POPBasicAnimationInternal.h in Headers */,
+				6C7DD001B76A2341D3B3516A /* POPCGUtils.h in Headers */,
+				4F168F8645C1E934DD6F1BC2 /* POPCustomAnimation.h in Headers */,
+				6636FFF6FFBCCE668F3E9F87 /* POPDecayAnimation.h in Headers */,
+				77ADA9D3C1DB1B0AEDFF1113 /* POPDecayAnimationInternal.h in Headers */,
+				D9249B401EAFBC7E735A59E1 /* POPDefines.h in Headers */,
+				14F43215C15DD385DC37FCC7 /* POPGeometry.h in Headers */,
+				C4A5D52AB2139FA5A09919D9 /* POPLayerExtras.h in Headers */,
+				519595A4F772637BFA8F84B7 /* POPMath.h in Headers */,
+				58202E9C720A5DA7AC69572C /* POPPropertyAnimation.h in Headers */,
+				162BEA745AAA759206480273 /* POPPropertyAnimationInternal.h in Headers */,
+				B858BAD455D0DB8F907F3128 /* POPSpringAnimation.h in Headers */,
+				58F869B2B16B8D3A5BE0A964 /* POPSpringAnimationInternal.h in Headers */,
+				C230EF663C8B2E9AA75BB7C7 /* POPSpringSolver.h in Headers */,
+				2E5474CD0D2321F240A9DFE8 /* POPVector.h in Headers */,
+				2116A6EA200DC1D2328AB03A /* Pods-TabBarPicker_Tests-pop-umbrella.h in Headers */,
+				0E6A3ED7F51A2B603FC8AA84 /* TransformationMatrix.h in Headers */,
+				6629264412C2FE52A1169348 /* UnitBezier.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89D8DC3D35AADFF53874867C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8ABDEDC714A994B6B36A4F1 /* Pods-TabBarPicker_Example-TabBarPicker-umbrella.h in Headers */,
+				C591C499E7FB0CF3D776512B /* TabBarItem.h in Headers */,
+				5C89C0AA72C233E829573398 /* TabBarPicker.h in Headers */,
+				D15A957FA849695B2BC0E2BA /* TabBarSubItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B1BA7A312C625E213812DA9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB8E0125011E2555B599F6F /* FBSnapshotTestCase.h in Headers */,
+				777C0B3EE3BF68B1B878885A /* FBSnapshotTestCasePlatform.h in Headers */,
+				D3052435A90B887C4E7AEAC0 /* FBSnapshotTestController.h in Headers */,
+				58C14E475C19C9C5F963EBAF /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-umbrella.h in Headers */,
+				FD8BF6D2DA1679CE61A6F527 /* UIImage+Compare.h in Headers */,
+				B1514CE9C56F3D9A14947483 /* UIImage+Diff.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B43C65B92CC71DAE463BC8C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E171CC4952BB865125F56FC4 /* ALView+PureLayout.h in Headers */,
+				62E823E5143EB6A31CA83F64 /* NSArray+PureLayout.h in Headers */,
+				24ABCA32BE6380A98CF98E28 /* NSLayoutConstraint+PureLayout.h in Headers */,
+				16D4A319EB5B6BA724F18A14 /* Pods-TabBarPicker_Tests-PureLayout-umbrella.h in Headers */,
+				0F8A059B32D797853970DD24 /* PureLayout+Internal.h in Headers */,
+				1E8C432521038851EDD5B9F3 /* PureLayout.h in Headers */,
+				D4B8AA680BDB18DE67139A6C /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13AB0E855B793946C22A902 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D32535025C6A0066C7FDF4C7 /* Pods-TabBarPicker_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		25EC7DE4FAEEEF84395686BD /* Pods-TabBarPicker_Tests-FBSnapshotTestCase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AE8E44F818B51C74314F350 /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests-FBSnapshotTestCase" */;
+			buildPhases = (
+				224D255F6619A9EE8DCF1F89 /* Sources */,
+				1D464096B0A2D21F8A1DD8BC /* Frameworks */,
+				9B1BA7A312C625E213812DA9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TabBarPicker_Tests-FBSnapshotTestCase";
+			productName = "Pods-TabBarPicker_Tests-FBSnapshotTestCase";
+			productReference = 194CECDFA9C949AF055914C0 /* FBSnapshotTestCase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3998475720C1C47684180202 /* Pods-TabBarPicker_Tests-PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2A01AEE9484A7CAC7FAF8E1 /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests-PureLayout" */;
+			buildPhases = (
+				E7F14378429DFFCE7EFFEC2A /* Sources */,
+				A1B82488D27970757F1D39B1 /* Frameworks */,
+				B43C65B92CC71DAE463BC8C9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TabBarPicker_Tests-PureLayout";
+			productName = "Pods-TabBarPicker_Tests-PureLayout";
+			productReference = 60DC3FB0AE4DE499C831C2EF /* PureLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		561939E4515B71341136E16E /* Pods-TabBarPicker_Tests-TabBarPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1249393950AA2AFADACAB1CB /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests-TabBarPicker" */;
+			buildPhases = (
+				D3436181D8E54050939D3076 /* Sources */,
+				D44EE62EA83C8C9C25C6399B /* Frameworks */,
+				3C6C6E272796555543FDDD24 /* Resources */,
+				3B54E464D4B6DC5BC368D120 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D385874E49584FB68248735 /* PBXTargetDependency */,
+			);
+			name = "Pods-TabBarPicker_Tests-TabBarPicker";
+			productName = "Pods-TabBarPicker_Tests-TabBarPicker";
+			productReference = 12300671483B509921D820E8 /* TabBarPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7FBA3465F9826D032614FF28 /* Pods-TabBarPicker_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CE83C4A2D070D01A02146BC /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Example" */;
+			buildPhases = (
+				BD5F548A0F7E932A81CF6FA0 /* Sources */,
+				A62B044A344674144742B21F /* Frameworks */,
+				C13AB0E855B793946C22A902 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6681ABC2479B156BD4E4281B /* PBXTargetDependency */,
+			);
+			name = "Pods-TabBarPicker_Example";
+			productName = "Pods-TabBarPicker_Example";
+			productReference = 270A861F7A2BE44EAE04DC87 /* Pods_TabBarPicker_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8CA46A24F79F8A2591154DC8 /* Pods-TabBarPicker_Example-TabBarPicker-TabBarPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47ACCA4578EB0CE15C6A5317 /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Example-TabBarPicker-TabBarPicker" */;
+			buildPhases = (
+				8BE095C921BE6BA584278DF1 /* Sources */,
+				4D7AA1B2CA10A369CC3E7B47 /* Frameworks */,
+				901FC6E11A04D8CA4B1F8CE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TabBarPicker_Example-TabBarPicker-TabBarPicker";
+			productName = "Pods-TabBarPicker_Example-TabBarPicker-TabBarPicker";
+			productReference = 8E8E7A5081A9B7120430EB1C /* TabBarPicker.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		AE841CD8269D52D367EBAEBB /* Pods-TabBarPicker_Example-TabBarPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA31270D06F7C2E2E1867DA /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Example-TabBarPicker" */;
+			buildPhases = (
+				CCE054CBAA7C18EC4190E6A8 /* Sources */,
+				85C9FF86C8C7E0EC83C0B974 /* Frameworks */,
+				BC59ECA047DB5F78B01D591A /* Resources */,
+				89D8DC3D35AADFF53874867C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				513C7CB9E2AD5FFFACAF085A /* PBXTargetDependency */,
+			);
+			name = "Pods-TabBarPicker_Example-TabBarPicker";
+			productName = "Pods-TabBarPicker_Example-TabBarPicker";
+			productReference = 17A33E2AEC69B6B15FC91A29 /* TabBarPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C26F15991223F90FD04DB84A /* Pods-TabBarPicker_Tests-TabBarPicker-TabBarPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27426159E1BA8D677C1F5403 /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests-TabBarPicker-TabBarPicker" */;
+			buildPhases = (
+				7981162BCF60CBF79B62F96A /* Sources */,
+				B0370C6D90D456531F5F6F7B /* Frameworks */,
+				57DD5422982ACFD674C97697 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TabBarPicker_Tests-TabBarPicker-TabBarPicker";
+			productName = "Pods-TabBarPicker_Tests-TabBarPicker-TabBarPicker";
+			productReference = D645E5697216C1033B02AFF8 /* TabBarPicker.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		CF3DCEB04961FDED1CAC4B7D /* Pods-TabBarPicker_Tests-pop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E923A51F7294D674E9BAB4F1 /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests-pop" */;
+			buildPhases = (
+				BB436824BBE685CB4A77D692 /* Sources */,
+				FB037F553812273A6399BD13 /* Frameworks */,
+				578793AF03626DCCBA89F4D4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TabBarPicker_Tests-pop";
+			productName = "Pods-TabBarPicker_Tests-pop";
+			productReference = B7B0A65C6AFDDBCE9B44D159 /* pop.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DBB89396FBAFD709790F301A /* Pods-TabBarPicker_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67F910D5E6FB101761D3287A /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests" */;
+			buildPhases = (
+				90800D06757C741CF1EA45A3 /* Sources */,
+				25A9733B9CFD86B0B9C49FBB /* Frameworks */,
+				1B323BB02900DB0CCDBE6E42 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9B7ECEE3092959AD130ECE4 /* PBXTargetDependency */,
+				2D1FCBF0F71D941BDE18AB4C /* PBXTargetDependency */,
+				846F0B626200761F44F71507 /* PBXTargetDependency */,
+				C0DB0110D32ECDDB0A4AD0AB /* PBXTargetDependency */,
+			);
+			name = "Pods-TabBarPicker_Tests";
+			productName = "Pods-TabBarPicker_Tests";
+			productReference = BE648A487E547B56B5FA6092 /* Pods_TabBarPicker_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9442BE4A2137345B01F164F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = A9984B49EB9549F746394505 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4AD6C808057F1BE0276F747D;
+			productRefGroup = B4203E66B10EC56449A50D56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FBA3465F9826D032614FF28 /* Pods-TabBarPicker_Example */,
+				AE841CD8269D52D367EBAEBB /* Pods-TabBarPicker_Example-TabBarPicker */,
+				8CA46A24F79F8A2591154DC8 /* Pods-TabBarPicker_Example-TabBarPicker-TabBarPicker */,
+				DBB89396FBAFD709790F301A /* Pods-TabBarPicker_Tests */,
+				25EC7DE4FAEEEF84395686BD /* Pods-TabBarPicker_Tests-FBSnapshotTestCase */,
+				3998475720C1C47684180202 /* Pods-TabBarPicker_Tests-PureLayout */,
+				561939E4515B71341136E16E /* Pods-TabBarPicker_Tests-TabBarPicker */,
+				C26F15991223F90FD04DB84A /* Pods-TabBarPicker_Tests-TabBarPicker-TabBarPicker */,
+				CF3DCEB04961FDED1CAC4B7D /* Pods-TabBarPicker_Tests-pop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C6C6E272796555543FDDD24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				352A750A926CD6A3FD798789 /* TabBarPicker.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DD5422982ACFD674C97697 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		901FC6E11A04D8CA4B1F8CE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC59ECA047DB5F78B01D591A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFFD167800AA5C7FB04156CE /* TabBarPicker.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		224D255F6619A9EE8DCF1F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F4F6E1692E952C3DF70CC77 /* FBSnapshotTestCase.m in Sources */,
+				DF4005BF055A0E8B8ED44A2E /* FBSnapshotTestCasePlatform.m in Sources */,
+				5CBC2056C4A92853FB8D6FC1 /* FBSnapshotTestController.m in Sources */,
+				6AF6567DABEF6C271FBB18EF /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-dummy.m in Sources */,
+				8F4C1C2AB5F72BD79C715288 /* SwiftSupport.swift in Sources */,
+				B4998C8B2DFBD10D384BEDAB /* UIImage+Compare.m in Sources */,
+				C3D2D049AB16D5AB12B9D2D4 /* UIImage+Diff.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7981162BCF60CBF79B62F96A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BE095C921BE6BA584278DF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90800D06757C741CF1EA45A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3B0386FC06E752FE9DAAC5 /* Pods-TabBarPicker_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB436824BBE685CB4A77D692 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB2B13C89C0504EA2809C41 /* POPAnimatableProperty.mm in Sources */,
+				63284F345CEB86A51188CD4C /* POPAnimation.mm in Sources */,
+				E1646D029B083ACD4AA09A1A /* POPAnimationEvent.mm in Sources */,
+				F2E41845989F5902E0EA80F2 /* POPAnimationExtras.mm in Sources */,
+				056FF56B0E3FFCD1569FE5FA /* POPAnimationRuntime.mm in Sources */,
+				9668EE579FCE6F10E8E7530B /* POPAnimationTracer.mm in Sources */,
+				CD7065E574AC2C89F9C3C91E /* POPAnimator.mm in Sources */,
+				A44C43086F269C7D7447CB70 /* POPBasicAnimation.mm in Sources */,
+				D713143B8698238B22FF78F8 /* POPCGUtils.mm in Sources */,
+				324C7320C2ABF43BA6DEEFFE /* POPCustomAnimation.mm in Sources */,
+				E273ABADFA0DFA5557EDFE90 /* POPDecayAnimation.mm in Sources */,
+				238EC5BEDA39C6E0C2C86E02 /* POPGeometry.mm in Sources */,
+				6C1750B6604BA8C954F15225 /* POPLayerExtras.mm in Sources */,
+				DED28AA986D5385272CCB19A /* POPMath.mm in Sources */,
+				3B3B3B4D7F1F2407A7BB8F06 /* POPPropertyAnimation.mm in Sources */,
+				1B7951918B590B9BE7451E47 /* POPSpringAnimation.mm in Sources */,
+				B116AAD6A555AEA1B6301C0B /* POPVector.mm in Sources */,
+				491B2C383677E49A8B176870 /* Pods-TabBarPicker_Tests-pop-dummy.m in Sources */,
+				0E6AA18FEDB5F876D193D4A0 /* TransformationMatrix.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD5F548A0F7E932A81CF6FA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85DEB4C5BC1A258172B2D9C9 /* Pods-TabBarPicker_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE054CBAA7C18EC4190E6A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24C05FE7938E208BC25AB47 /* Pods-TabBarPicker_Example-TabBarPicker-dummy.m in Sources */,
+				E03EE333F599DDEAC8D54CBA /* TabBarItem.m in Sources */,
+				08E83A3AAFD5A55C25D691EB /* TabBarPicker.m in Sources */,
+				87E34772E3D5DC2A38D13DCC /* TabBarSubItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3436181D8E54050939D3076 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44933988DCE544FCDE73C91C /* Pods-TabBarPicker_Tests-TabBarPicker-dummy.m in Sources */,
+				6C7EC292AC2406906C89C702 /* TabBarItem.m in Sources */,
+				3E6ABA6E976EE9F358D84207 /* TabBarPicker.m in Sources */,
+				09CF26836A1B5FFE7F41C3EB /* TabBarSubItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F14378429DFFCE7EFFEC2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00618A922B4BF903CD3FB0FB /* ALView+PureLayout.m in Sources */,
+				100967E31D4539EDC982A5DB /* NSArray+PureLayout.m in Sources */,
+				19E2E13BF272C622A6212CDF /* NSLayoutConstraint+PureLayout.m in Sources */,
+				61852B1EC5A79D61D09833D8 /* Pods-TabBarPicker_Tests-PureLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D1FCBF0F71D941BDE18AB4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TabBarPicker_Tests-PureLayout";
+			target = 3998475720C1C47684180202 /* Pods-TabBarPicker_Tests-PureLayout */;
+			targetProxy = 0EA9D3ECCF74DE7F75274BD5 /* PBXContainerItemProxy */;
+		};
+		3D385874E49584FB68248735 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TabBarPicker_Tests-TabBarPicker-TabBarPicker";
+			target = C26F15991223F90FD04DB84A /* Pods-TabBarPicker_Tests-TabBarPicker-TabBarPicker */;
+			targetProxy = 851C37FE16A19DB70AA57891 /* PBXContainerItemProxy */;
+		};
+		513C7CB9E2AD5FFFACAF085A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TabBarPicker_Example-TabBarPicker-TabBarPicker";
+			target = 8CA46A24F79F8A2591154DC8 /* Pods-TabBarPicker_Example-TabBarPicker-TabBarPicker */;
+			targetProxy = 1530225FC7A44B1ACA588ECC /* PBXContainerItemProxy */;
+		};
+		6681ABC2479B156BD4E4281B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TabBarPicker_Example-TabBarPicker";
+			target = AE841CD8269D52D367EBAEBB /* Pods-TabBarPicker_Example-TabBarPicker */;
+			targetProxy = B025178FEAD646D2229BDD0B /* PBXContainerItemProxy */;
+		};
+		846F0B626200761F44F71507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TabBarPicker_Tests-TabBarPicker";
+			target = 561939E4515B71341136E16E /* Pods-TabBarPicker_Tests-TabBarPicker */;
+			targetProxy = 6A2372653D3E44E2B0D68BC9 /* PBXContainerItemProxy */;
+		};
+		C0DB0110D32ECDDB0A4AD0AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TabBarPicker_Tests-pop";
+			target = CF3DCEB04961FDED1CAC4B7D /* Pods-TabBarPicker_Tests-pop */;
+			targetProxy = F28FCFE320A7C1F1C2A78D0E /* PBXContainerItemProxy */;
+		};
+		F9B7ECEE3092959AD130ECE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TabBarPicker_Tests-FBSnapshotTestCase";
+			target = 25EC7DE4FAEEEF84395686BD /* Pods-TabBarPicker_Tests-FBSnapshotTestCase */;
+			targetProxy = B244F2E681508765E9F87E57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		005156B8A82199582027862A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C7F9C9E234CA6AAF7F5EABE /* Pods-TabBarPicker_Example-TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-TabBarPicker_Example";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		0C282CF21104F91D2773C518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD8368EA285B47BC5E4FC67A /* Pods-TabBarPicker_Tests-pop-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TabBarPicker_Tests-pop/Pods-TabBarPicker_Tests-pop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Tests-pop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Tests-pop/Pods-TabBarPicker_Tests-pop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = pop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		25A24F888CE568721C105B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6116B0D5A3B5F584BBC044D /* Pods-TabBarPicker_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Tests/Pods-TabBarPicker_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TabBarPicker_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		315B18B284BC25DB07E3BE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7E28C15EC58288F48C746F1 /* Pods-TabBarPicker_Tests-TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-TabBarPicker_Tests";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		33C4C2FD9FCF9F99133B3C8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17F187FE6CA6214158010BBE /* Pods-TabBarPicker_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Example/Pods-TabBarPicker_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TabBarPicker_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4AA99F492820902385A5BAFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		512355ABB693AF879D40B1C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565784FDAE1E1414A1BB9D6A /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TabBarPicker_Tests-FBSnapshotTestCase/Pods-TabBarPicker_Tests-FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Tests-FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Tests-FBSnapshotTestCase/Pods-TabBarPicker_Tests-FBSnapshotTestCase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		60A0CFD22CC3D205395CB3C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD8368EA285B47BC5E4FC67A /* Pods-TabBarPicker_Tests-pop-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TabBarPicker_Tests-pop/Pods-TabBarPicker_Tests-pop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Tests-pop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Tests-pop/Pods-TabBarPicker_Tests-pop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = pop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6AC7ADF82ECCFFB691F3B19B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		731DB4F93C95192D76867495 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7E28C15EC58288F48C746F1 /* Pods-TabBarPicker_Tests-TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TabBarPicker_Tests-TabBarPicker/Pods-TabBarPicker_Tests-TabBarPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Tests-TabBarPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Tests-TabBarPicker/Pods-TabBarPicker_Tests-TabBarPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		80F390BA061CDA09CD783EF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ACD1B64DC358C440E53AF49 /* Pods-TabBarPicker_Tests-PureLayout-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TabBarPicker_Tests-PureLayout/Pods-TabBarPicker_Tests-PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Tests-PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Tests-PureLayout/Pods-TabBarPicker_Tests-PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		844B647CF6FEB1A53FB552BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565784FDAE1E1414A1BB9D6A /* Pods-TabBarPicker_Tests-FBSnapshotTestCase-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TabBarPicker_Tests-FBSnapshotTestCase/Pods-TabBarPicker_Tests-FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Tests-FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Tests-FBSnapshotTestCase/Pods-TabBarPicker_Tests-FBSnapshotTestCase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		981C452610C3F8FCB9714754 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ACD1B64DC358C440E53AF49 /* Pods-TabBarPicker_Tests-PureLayout-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TabBarPicker_Tests-PureLayout/Pods-TabBarPicker_Tests-PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Tests-PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Tests-PureLayout/Pods-TabBarPicker_Tests-PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A25A86707D96F1CFBE733378 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C7F9C9E234CA6AAF7F5EABE /* Pods-TabBarPicker_Example-TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TabBarPicker_Example-TabBarPicker/Pods-TabBarPicker_Example-TabBarPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Example-TabBarPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Example-TabBarPicker/Pods-TabBarPicker_Example-TabBarPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEEA9C97B37DD3AEFA968A82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2097A7EF439D99B2BE1C3D1C /* Pods-TabBarPicker_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Tests/Pods-TabBarPicker_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TabBarPicker_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C33C4F014501BCF839F614D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C7F9C9E234CA6AAF7F5EABE /* Pods-TabBarPicker_Example-TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-TabBarPicker_Example";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		DA3523B2598EACCCE9CB261B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7E28C15EC58288F48C746F1 /* Pods-TabBarPicker_Tests-TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TabBarPicker_Tests-TabBarPicker/Pods-TabBarPicker_Tests-TabBarPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Tests-TabBarPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Tests-TabBarPicker/Pods-TabBarPicker_Tests-TabBarPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF8E85A9C5DC81D0532229BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3608461BC17424EEE0E93928 /* Pods-TabBarPicker_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Example/Pods-TabBarPicker_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TabBarPicker_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E26F32E7B66DC04E036412B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C7F9C9E234CA6AAF7F5EABE /* Pods-TabBarPicker_Example-TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TabBarPicker_Example-TabBarPicker/Pods-TabBarPicker_Example-TabBarPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarPicker_Example-TabBarPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarPicker_Example-TabBarPicker/Pods-TabBarPicker_Example-TabBarPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4762A1FD393DCDA04C9585C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7E28C15EC58288F48C746F1 /* Pods-TabBarPicker_Tests-TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-TabBarPicker_Tests";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1249393950AA2AFADACAB1CB /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests-TabBarPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3523B2598EACCCE9CB261B /* Debug */,
+				731DB4F93C95192D76867495 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27426159E1BA8D677C1F5403 /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests-TabBarPicker-TabBarPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4762A1FD393DCDA04C9585C /* Debug */,
+				315B18B284BC25DB07E3BE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47ACCA4578EB0CE15C6A5317 /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Example-TabBarPicker-TabBarPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C33C4F014501BCF839F614D1 /* Debug */,
+				005156B8A82199582027862A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67F910D5E6FB101761D3287A /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEA9C97B37DD3AEFA968A82 /* Debug */,
+				25A24F888CE568721C105B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CE83C4A2D070D01A02146BC /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8E85A9C5DC81D0532229BE /* Debug */,
+				33C4C2FD9FCF9F99133B3C8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AE8E44F818B51C74314F350 /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests-FBSnapshotTestCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				512355ABB693AF879D40B1C2 /* Debug */,
+				844B647CF6FEB1A53FB552BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9984B49EB9549F746394505 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AA99F492820902385A5BAFE /* Debug */,
+				6AC7ADF82ECCFFB691F3B19B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA31270D06F7C2E2E1867DA /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Example-TabBarPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A25A86707D96F1CFBE733378 /* Debug */,
+				E26F32E7B66DC04E036412B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2A01AEE9484A7CAC7FAF8E1 /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests-PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981C452610C3F8FCB9714754 /* Debug */,
+				80F390BA061CDA09CD783EF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E923A51F7294D674E9BAB4F1 /* Build configuration list for PBXNativeTarget "Pods-TabBarPicker_Tests-pop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60A0CFD22CC3D205395CB3C3 /* Debug */,
+				0C282CF21104F91D2773C518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9442BE4A2137345B01F164F /* Project object */;
+}

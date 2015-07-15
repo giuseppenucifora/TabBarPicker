@@ -7,12 +7,15 @@
 //
 
 #import "TabBarPickerAppDelegate.h"
+#import "TabBarPickerViewController.h"
 
 @implementation TabBarPickerAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    TabBarPickerViewController * controller = [[TabBarPickerViewController alloc] init];
+
     return YES;
 }
 

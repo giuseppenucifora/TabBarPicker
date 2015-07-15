@@ -1,0 +1,6 @@
+framework module TabBarPicker {
+  umbrella header "Pods-TabBarPicker_Tests-TabBarPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
