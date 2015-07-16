@@ -15,6 +15,9 @@
 {
     // Override point for customization after application launch.
     TabBarPickerViewController * controller = [[TabBarPickerViewController alloc] init];
+    
+    self.window.rootViewController = controller;
+    [self.window makeKeyAndVisible];
 
     return YES;
 }

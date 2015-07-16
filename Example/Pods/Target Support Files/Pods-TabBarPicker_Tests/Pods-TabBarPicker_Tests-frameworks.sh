@@ -48,14 +48,8 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework 'FBSnapshotTestCase.framework'
-  install_framework 'PureLayout.framework'
   install_framework 'TabBarPicker.framework'
-  install_framework 'pop.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework 'FBSnapshotTestCase.framework'
-  install_framework 'PureLayout.framework'
   install_framework 'TabBarPicker.framework'
-  install_framework 'pop.framework'
 fi

@@ -7,12 +7,12 @@
 //
 
 #import "TabBarItem.h"
+#import <PureLayout/PureLayout.h>
 
 @implementation TabBarItem
 
 - (instancetype) initWithSubItems:(NSArray*) array {
-    self = [super init];
-    
+    self = [self initForAutoLayout];
     if (self) {
         NSAssert(array, @"SubItemsArray cannot be nil");
         

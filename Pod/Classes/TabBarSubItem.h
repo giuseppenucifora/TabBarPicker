@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import "PureLayout.h"
 
-@interface TabBarSubItem : NSObject
+@interface TabBarSubItem : UIView
 
 @property (nonatomic, strong) NSString *name;
 

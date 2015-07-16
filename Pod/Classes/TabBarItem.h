@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TabBarSubItem.h"
 
-@interface TabBarItem : NSObject
+@interface TabBarItem : UIView
 
 /**
  *  Represents the image visible in picker when item is not selected.

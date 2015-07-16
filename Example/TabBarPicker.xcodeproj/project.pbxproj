@@ -22,6 +22,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		68934F521B579CC0000022DE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68934F511B579CC0000022DE /* Media.xcassets */; };
+		82983DEFE8040C5C4FAC9026 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130BC268E5502F6414A80D83 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		130BC268E5502F6414A80D83 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC7F0FFEA16E01D7E2E02FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		20063DD2EE3185CBCBE97557 /* Pods_TabBarPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		237F470FDED70DC43285050F /* Pods_TabBarPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +64,7 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		60E4E52418C8D99443161946 /* Pods-TabBarPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarPicker_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarPicker_Example/Pods-TabBarPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		68934F511B579CC0000022DE /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = SOURCE_ROOT; };
 		746AD37DBDB548EC49AFBED9 /* Pods-TabBarPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarPicker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarPicker_Tests/Pods-TabBarPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C4BDAB668CA96183CE444A37 /* TabBarPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TabBarPicker.podspec; path = ../TabBarPicker.podspec; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				0F257582FF883DCBACD94BE4 /* Pods_TabBarPicker_Example.framework in Frameworks */,
+				82983DEFE8040C5C4FAC9026 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +139,7 @@
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				20063DD2EE3185CBCBE97557 /* Pods_TabBarPicker_Example.framework */,
 				237F470FDED70DC43285050F /* Pods_TabBarPicker_Tests.framework */,
+				130BC268E5502F6414A80D83 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 				6003F5A5195388D20070C39A /* TabBarPickerViewController.h */,
 				6003F5A6195388D20070C39A /* TabBarPickerViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
+				68934F511B579CC0000022DE /* Media.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for TabBarPicker";
@@ -278,6 +285,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				68934F521B579CC0000022DE /* Media.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +313,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabBarPicker_Example/Pods-TabBarPicker_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1CD8731AACB051C7B542519A /* Copy Pods Resources */ = {
@@ -515,6 +523,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TabBarPicker/TabBarPicker-Prefix.pch";
 				INFOPLIST_FILE = "TabBarPicker/TabBarPicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -530,6 +539,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TabBarPicker/TabBarPicker-Prefix.pch";
 				INFOPLIST_FILE = "TabBarPicker/TabBarPicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -588,7 +598,7 @@
 				6003F5BE195388D20070C39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "TabBarPicker_Example" */ = {
 			isa = XCConfigurationList;
@@ -597,7 +607,7 @@
 				6003F5C1195388D20070C39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "TabBarPicker_Tests" */ = {
 			isa = XCConfigurationList;
@@ -606,7 +616,7 @@
 				6003F5C4195388D20070C39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

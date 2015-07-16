@@ -7,9 +7,11 @@
 //
 
 #import "TabBarPickerViewController.h"
-#import <TabBarPicker/TabBarPicker.h>
+#import "TabBarPicker.h"
 
-@interface TabBarPickerViewController ()
+@interface TabBarPickerViewController () {
+    TabBarPicker *tabbar;
+}
 
 @end
 
@@ -20,6 +22,8 @@
     self = [super init];
     
     if (self) {
+        NSLog(@"%ld",(long)[TabBarPicker tabBarVersion]);
+        
         
         TabBarSubItem *subItem1 = [TabBarSubItem tabBarSubItemWithName:@"Peppe"];
         TabBarSubItem *subItem2 = [TabBarSubItem tabBarSubItemWithName:@"Peppe1"];
@@ -30,28 +34,55 @@
         TabBarSubItem *subItem7 = [TabBarSubItem tabBarSubItemWithName:@"Peppe6"];
         
         
-        TabBarItem *item1 = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
-        [item1 setItemName:@"PeppeItem"];
+        TabBarItem *location = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        [location setItemName:@"Location"];
+        [location setImage:[UIImage imageNamed:@"location_off"]];
+        [location setSelectedImage:[UIImage imageNamed:@"location_on"]];
         
-        TabBarItem *item2 = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
-        [item2 setItemName:@"PeppeItem1"];
+        TabBarItem *calendar = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        [calendar setItemName:@"Calendar"];
+        [calendar setImage:[UIImage imageNamed:@"calendar_off"]];
+        [calendar setSelectedImage:[UIImage imageNamed:@"calendar_on"]];
         
-        TabBarPicker *tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[item1,item2] withSize:CGSizeMake(400, 400) forPosition:TabBarPickerPositionBottom];
+        TabBarItem *type = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        [type setItemName:@"Type"];
+        [type setImage:[UIImage imageNamed:@"type_off"]];
+        [type setSelectedImage:[UIImage imageNamed:@"type_on"]];
         
+        TabBarItem *price = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        [price setItemName:@"Price"];
+        [price setImage:[UIImage imageNamed:@"price_off"]];
+        [price setSelectedImage:[UIImage imageNamed:@"price_on"]];
         
+        TabBarItem *allergen = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        [allergen setItemName:@"Allergen"];
+        [allergen setImage:[UIImage imageNamed:@"allergen_off"]];
+        [allergen setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
         
+        tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,calendar,type,price,allergen] forPosition:TabBarPickerPositionBottom];
+        [tabbar setBackgroundColor:[UIColor whiteColor]];
     }
     return self;
 }
 
 - (void) loadView {
     
+    UIView *contentView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [contentView addSubview:tabbar];
+    
+    NSLog(@"%f %f",tabbar.frame.size.width,tabbar.frame.size.height);
+    
+    self.view = contentView;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //[self.view setBackgroundColor:[UIColor lightGrayColor]];
 	// Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning

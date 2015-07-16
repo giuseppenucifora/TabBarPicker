@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8CA46A24F79F8A2591154DC8"
+               BlueprintIdentifier = "661DA0CF22A8CD240CD21AE0"
                BuildableName = "TabBarPicker.bundle"
                BlueprintName = "Pods-TabBarPicker_Example-TabBarPicker-TabBarPicker"
                ReferencedContainer = "container:Pods.xcodeproj">

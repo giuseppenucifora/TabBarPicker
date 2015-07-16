@@ -7,14 +7,14 @@
 //
 
 #import "TabBarSubItem.h"
+#import <PureLayout/PureLayout.h>
 
 @implementation TabBarSubItem
 
 
 - (instancetype) initWithName:(NSString *) name {
     
-    self = [super init];
-    
+    self = [self initForAutoLayout];
     if (self) {
         _name = name;
     }
