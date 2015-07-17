@@ -12,22 +12,16 @@
 #define tabBarSizeVertical CGSizeMake()
 
 
-@interface TabBarPicker(){
-    
-}
+@interface TabBarPicker()
 
+@property (nonatomic) UIDeviceOrientation orientation;
 
 @end
 
 @implementation TabBarPicker
 
-
-+ (NSString*) tabBarVersion {
-    return @"1";
-}
-
 - (instancetype) initWithTabBarItems:(NSArray *)items forPosition:(TabBarPickerPosition)position {
-    NSLog(@"init");
+    
     return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position];
     
 }
@@ -36,11 +30,15 @@
     
     self = [self initForAutoLayout];
     if (self) {
+        
+        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+        
+         [[NSNotificationCenter defaultCenter] addObserver: self selector:   @selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
 
         NSAssert(items, @"TabBar Items array cannot be nil!");
         
         if (CGSizeEqualToSize(size, CGSizeZero)) {
-            _tabBarSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width, 100);
+            _tabBarSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width, 44);
         }
         
         _tabBarItems = [[NSMutableArray alloc] init];
@@ -51,21 +49,34 @@
             }
         }
     }
-    
-    NSLog(@"prova");
-    
-    [self autoSetDimension:ALDimensionWidth toSize:[[UIScreen mainScreen] bounds].size.width relation:NSLayoutRelationLessThanOrEqual];
-    [self autoSetDimension:ALDimensionHeight toSize:_tabBarSize.height relation:NSLayoutRelationLessThanOrEqual];
-    
-    for (TabBarItem *item in _tabBarItems) {
         
-    }
-    
     return self;
 }
 
 - (void) layoutSubviews {
     
+    [self autoSetDimension:ALDimensionHeight toSize:44];
+    [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview];
+    [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
+    
+    
+    for (TabBarItem *item in _tabBarItems) {
+        
+    }
+}
+
+- (void)deviceOrientationDidChange:(NSNotification *)notification {
+    //Obtain current device orientation
+    _orientation = [[UIDevice currentDevice] orientation];
+    
+    [self layoutSubviews];
+}
+
+- (void) layoutSubviewsPortrait {
+    
+}
+
+- (void) layoutSubviewsLandScape {
     
 }
 

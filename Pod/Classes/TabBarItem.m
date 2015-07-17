@@ -9,6 +9,12 @@
 #import "TabBarItem.h"
 #import <PureLayout/PureLayout.h>
 
+@interface TabBarItem()
+
+@property (nonatomic) UIDeviceOrientation orientation;
+
+@end
+
 @implementation TabBarItem
 
 - (instancetype) initWithSubItems:(NSArray*) array {
@@ -16,6 +22,8 @@
     if (self) {
         NSAssert(array, @"SubItemsArray cannot be nil");
         
+        _orientation = [[UIDevice currentDevice] orientation];
+        [[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
         
         _subItems = [[NSMutableArray alloc] init];
         
@@ -26,6 +34,13 @@
         }
     }
     return self;
+}
+
+- (void)deviceOrientationDidChange:(NSNotification *)notification {
+    //Obtain current device orientation
+    _orientation = [[UIDevice currentDevice] orientation];
+    
+    
 }
 
 @end

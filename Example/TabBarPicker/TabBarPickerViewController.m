@@ -8,6 +8,7 @@
 
 #import "TabBarPickerViewController.h"
 #import "TabBarPicker.h"
+#import <PureLayout/PureLayout.h>
 
 @interface TabBarPickerViewController () {
     TabBarPicker *tabbar;
@@ -22,9 +23,7 @@
     self = [super init];
     
     if (self) {
-        NSLog(@"%ld",(long)[TabBarPicker tabBarVersion]);
-        
-        
+       
         TabBarSubItem *subItem1 = [TabBarSubItem tabBarSubItemWithName:@"Peppe"];
         TabBarSubItem *subItem2 = [TabBarSubItem tabBarSubItemWithName:@"Peppe1"];
         TabBarSubItem *subItem3 = [TabBarSubItem tabBarSubItemWithName:@"Peppe2"];
@@ -71,9 +70,17 @@
     
     [contentView addSubview:tabbar];
     
+    /*[tabbar autoPinEdgesToSuperviewMarginsExcludingEdge:ALEdgeTop];
+    tabbar ali
+    [tabbar autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:50 relation:NSLayoutRelationGreaterThanOrEqual];
+    [tabbar autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:50 relation:NSLayoutRelationGreaterThanOrEqual];
+    */
+    
     NSLog(@"%f %f",tabbar.frame.size.width,tabbar.frame.size.height);
     
     self.view = contentView;
+    
+    [self.view setNeedsUpdateConstraints];
 }
 
 - (void)viewDidLoad

@@ -25,8 +25,6 @@ typedef enum
 @property (nonatomic, readonly) CGSize tabBarSize;
 @property (nonatomic) TabBarPickerPosition position;
 
-+ (NSString*) tabBarVersion;
-
 /**
  *  Init TabBarPicker with items. When is selected an item the picher show down subitems.
  *  By default when one of more subItems are selected the selected item become selected.

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F257582FF883DCBACD94BE4 /* Pods_TabBarPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20063DD2EE3185CBCBE97557 /* Pods_TabBarPicker_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		17417A3E5936855A487EB190 /* Pods_TabBarPicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237F470FDED70DC43285050F /* Pods_TabBarPicker_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0C82E12AA6B21B9923F1513B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8391D3904F99D24AFC56B7 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		179C33542C5CE15556FFE8AB /* Pods_TabBarPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB67354A0F6C45C1B502A65 /* Pods_TabBarPicker_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,8 +23,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		68934F521B579CC0000022DE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68934F511B579CC0000022DE /* Media.xcassets */; };
-		82983DEFE8040C5C4FAC9026 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130BC268E5502F6414A80D83 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		C80475EA65AD1B9A0B206ACD /* Pods_TabBarPicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AADF60077A50EEA12BCBBD1 /* Pods_TabBarPicker_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		130BC268E5502F6414A80D83 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC7F0FFEA16E01D7E2E02FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		20063DD2EE3185CBCBE97557 /* Pods_TabBarPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		237F470FDED70DC43285050F /* Pods_TabBarPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		307945FB633D00D016BD64BD /* Pods-TabBarPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarPicker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarPicker_Tests/Pods-TabBarPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3956BCE29C077B3AAC271032 /* Pods-TabBarPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarPicker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarPicker_Example/Pods-TabBarPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5AADF60077A50EEA12BCBBD1 /* Pods_TabBarPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* TabBarPicker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarPicker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +67,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C4BDAB668CA96183CE444A37 /* TabBarPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TabBarPicker.podspec; path = ../TabBarPicker.podspec; sourceTree = "<group>"; };
 		CFD761FB492BA79F46F88611 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DF8391D3904F99D24AFC56B7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEB67354A0F6C45C1B502A65 /* Pods_TabBarPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +79,8 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				0F257582FF883DCBACD94BE4 /* Pods_TabBarPicker_Example.framework in Frameworks */,
-				82983DEFE8040C5C4FAC9026 /* Pods.framework in Frameworks */,
+				0C82E12AA6B21B9923F1513B /* Pods.framework in Frameworks */,
+				179C33542C5CE15556FFE8AB /* Pods_TabBarPicker_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				17417A3E5936855A487EB190 /* Pods_TabBarPicker_Tests.framework in Frameworks */,
+				C80475EA65AD1B9A0B206ACD /* Pods_TabBarPicker_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +137,9 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				20063DD2EE3185CBCBE97557 /* Pods_TabBarPicker_Example.framework */,
-				237F470FDED70DC43285050F /* Pods_TabBarPicker_Tests.framework */,
-				130BC268E5502F6414A80D83 /* Pods.framework */,
+				DF8391D3904F99D24AFC56B7 /* Pods.framework */,
+				FEB67354A0F6C45C1B502A65 /* Pods_TabBarPicker_Example.framework */,
+				5AADF60077A50EEA12BCBBD1 /* Pods_TabBarPicker_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,8 +211,8 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				0E31C9676DFBC56089A9B4CC /* Embed Pods Frameworks */,
 				4F1BB894C32925ADCB8296E6 /* Copy Pods Resources */,
+				0CDA470EAD94FA9E75EE285F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,8 +231,8 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				272CC18661EC68B765A50293 /* Embed Pods Frameworks */,
 				1CD8731AACB051C7B542519A /* Copy Pods Resources */,
+				7ABB977EC6A0CE859EC949C1 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,7 +301,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E31C9676DFBC56089A9B4CC /* Embed Pods Frameworks */ = {
+		0CDA470EAD94FA9E75EE285F /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,7 +313,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabBarPicker_Example/Pods-TabBarPicker_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1CD8731AACB051C7B542519A /* Copy Pods Resources */ = {
@@ -329,21 +329,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabBarPicker_Tests/Pods-TabBarPicker_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		272CC18661EC68B765A50293 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabBarPicker_Tests/Pods-TabBarPicker_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4F1BB894C32925ADCB8296E6 /* Copy Pods Resources */ = {
@@ -374,6 +359,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7ABB977EC6A0CE859EC949C1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabBarPicker_Tests/Pods-TabBarPicker_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D0E97B29CE6B26659B2D4E00 /* Check Pods Manifest.lock */ = {

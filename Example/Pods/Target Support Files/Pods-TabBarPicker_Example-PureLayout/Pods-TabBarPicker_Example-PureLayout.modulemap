@@ -1,0 +1,6 @@
+framework module PureLayout {
+  umbrella header "Pods-TabBarPicker_Example-PureLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}
