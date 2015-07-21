@@ -39,6 +39,7 @@
     //Obtain current device orientation
     _orientation = [[UIDevice currentDevice] orientation];
     
+    [self layoutSubviews];
 }
 
 

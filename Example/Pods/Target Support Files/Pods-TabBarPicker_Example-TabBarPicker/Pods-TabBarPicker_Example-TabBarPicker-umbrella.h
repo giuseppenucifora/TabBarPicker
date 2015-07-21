@@ -2,6 +2,7 @@
 
 #import "TabBarItem.h"
 #import "TabBarPicker.h"
+#import "TabBarPickerSubItemsView.h"
 #import "TabBarSubItem.h"
 
 FOUNDATION_EXPORT double TabBarPickerVersionNumber;

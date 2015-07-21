@@ -11,6 +11,8 @@
 
 @interface TabBarItem()
 
+
+@property (nonatomic, strong) UIButton *itemButton;
 @property (nonatomic) UIDeviceOrientation orientation;
 
 @end
@@ -21,9 +23,13 @@
     self = [self initForAutoLayout];
     if (self) {
         NSAssert(array, @"SubItemsArray cannot be nil");
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
         
         _orientation = [[UIDevice currentDevice] orientation];
-        [[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
+        
+        _itemButton = [[UIButton alloc] initForAutoLayout];
+        
+        [self addSubview:_itemButton];
         
         _subItems = [[NSMutableArray alloc] init];
         
@@ -36,11 +42,26 @@
     return self;
 }
 
+- (void) layoutSubviews {
+    
+    [_itemButton autoPinEdgesToSuperviewMargins];
+    
+}
+
 - (void)deviceOrientationDidChange:(NSNotification *)notification {
     //Obtain current device orientation
     _orientation = [[UIDevice currentDevice] orientation];
     
+    [self layoutSubviews];
+}
+
+- (void) setImage:(UIImage *)image {
+    [_itemButton setImage:image forState:UIControlStateNormal];
+}
+
+- (void) setSelectedImage:(UIImage *)selectedImage {
     
+    [_itemButton setImage:selectedImage forState:UIControlStateSelected];
 }
 
 @end

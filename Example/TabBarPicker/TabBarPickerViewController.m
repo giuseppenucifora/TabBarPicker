@@ -59,7 +59,10 @@
         [allergen setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
         
         tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,calendar,type,price,allergen] forPosition:TabBarPickerPositionBottom];
+        
         [tabbar setBackgroundColor:[UIColor whiteColor]];
+        
+        [tabbar addItem:allergen];
     }
     return self;
 }
@@ -70,17 +73,7 @@
     
     [contentView addSubview:tabbar];
     
-    /*[tabbar autoPinEdgesToSuperviewMarginsExcludingEdge:ALEdgeTop];
-    tabbar ali
-    [tabbar autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:50 relation:NSLayoutRelationGreaterThanOrEqual];
-    [tabbar autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:50 relation:NSLayoutRelationGreaterThanOrEqual];
-    */
-    
-    NSLog(@"%f %f",tabbar.frame.size.width,tabbar.frame.size.height);
-    
     self.view = contentView;
-    
-    [self.view setNeedsUpdateConstraints];
 }
 
 - (void)viewDidLoad
@@ -89,7 +82,25 @@
     
     //[self.view setBackgroundColor:[UIColor lightGrayColor]];
 	// Do any additional setup after loading the view, typically from a nib.
+    [super updateViewConstraints];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
     
+    TabBarSubItem *subItem1 = [TabBarSubItem tabBarSubItemWithName:@"Peppe"];
+    TabBarSubItem *subItem2 = [TabBarSubItem tabBarSubItemWithName:@"Peppe1"];
+    TabBarSubItem *subItem3 = [TabBarSubItem tabBarSubItemWithName:@"Peppe2"];
+    TabBarSubItem *subItem4 = [TabBarSubItem tabBarSubItemWithName:@"Peppe3"];
+    TabBarSubItem *subItem5 = [TabBarSubItem tabBarSubItemWithName:@"Peppe4"];
+    TabBarSubItem *subItem6 = [TabBarSubItem tabBarSubItemWithName:@"Peppe5"];
+    TabBarSubItem *subItem7 = [TabBarSubItem tabBarSubItemWithName:@"Peppe6"];
+    
+    TabBarItem *allergen = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+    [allergen setItemName:@"Allergen"];
+    [allergen setImage:[UIImage imageNamed:@"allergen_off"]];
+    [allergen setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
+    
+    [tabbar addItem:allergen];
 }
 
 - (void)didReceiveMemoryWarning
