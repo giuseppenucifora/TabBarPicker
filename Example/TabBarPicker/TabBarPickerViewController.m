@@ -58,16 +58,16 @@
         [allergen setImage:[UIImage imageNamed:@"allergen_off"]];
         [allergen setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
         
-        TabBarItem *allergen2 = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        /*TabBarItem *allergen2 = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
         [allergen2 setItemName:@"Allergen"];
         [allergen2 setImage:[UIImage imageNamed:@"allergen_off"]];
         [allergen2 setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
-        
-        tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,calendar,type,price,allergen] forPosition:TabBarPickerPositionRight];
+        */
+        tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,calendar,type,price,allergen] forPosition:TabBarPickerPositionBottom];
         [tabbar setItemSpacing:2];
         [tabbar setBackgroundColor:[UIColor whiteColor]];
         
-        [tabbar addItem:allergen2];
+        //[tabbar addItem:allergen2];
     }
     return self;
 }
@@ -93,7 +93,7 @@
 
 - (void) viewDidAppear:(BOOL)animated {
     
-    TabBarSubItem *subItem1 = [TabBarSubItem tabBarSubItemWithName:@"Peppe"];
+    /*TabBarSubItem *subItem1 = [TabBarSubItem tabBarSubItemWithName:@"Peppe"];
     TabBarSubItem *subItem2 = [TabBarSubItem tabBarSubItemWithName:@"Peppe1"];
     TabBarSubItem *subItem3 = [TabBarSubItem tabBarSubItemWithName:@"Peppe2"];
     TabBarSubItem *subItem4 = [TabBarSubItem tabBarSubItemWithName:@"Peppe3"];
@@ -108,7 +108,7 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [tabbar addItem:allergen];
-    });
+    });*/
 }
 
 - (void)didReceiveMemoryWarning

@@ -42,5 +42,14 @@
     [self layoutSubviews];
 }
 
+- (void) layoutSubviews {
+    
+    if ([self.constraints count] > 0) {
+        
+        [NSLayoutConstraint deactivateConstraints:self.constraints];
+        
+    }
+}
+
 
 @end

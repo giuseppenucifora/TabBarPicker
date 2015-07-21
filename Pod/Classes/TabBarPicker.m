@@ -10,30 +10,41 @@
 #import <PureLayout/PureLayout.h>
 #import "TabBarPickerSubItemsView.h"
 
+#define DEFAULT_SUB_ITEMS_PER_ROW 2
+
 @interface TabBarPicker() <TabBarItemDelegate>
 
 @property (nonatomic) UIDeviceOrientation orientation;
+@property (nonatomic) NSUInteger subItemRows;
+@property (nonatomic, strong) TabBarPickerSubItemsView *subItemSelector;
 
 @end
 
 @implementation TabBarPicker
 
-- (instancetype) initWithTabBarItems:(NSArray *)items forPosition:(TabBarPickerPosition)position {
+- (instancetype) initWithTabBarItems:(NSArray *) items forPosition:(TabBarPickerPosition) position {
     
-    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:NSLayoutRelationEqual];
-    
-}
-
-- (instancetype) initWithTabBarItems:(NSArray *)items forPosition:(TabBarPickerPosition)position andNSLayoutRelation:(NSLayoutRelation)relation {
-    
-    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:relation];
+    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:NSLayoutRelationEqual subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW];
     
 }
 
-- (instancetype) initWithTabBarItems:(NSArray*) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation)relation {
+- (instancetype) initWithTabBarItems:(NSArray *) items forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation {
+    
+    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:relation subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW];
+    
+}
+
+- (instancetype) initWithTabBarItems:(NSArray *) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation {
+    
+    return [self initWithTabBarItems:items withTabBarSize:size forPosition:position andNSLayoutRelation:relation subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW];
+    
+}
+
+- (instancetype) initWithTabBarItems:(NSArray*) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation subItemsPerRow:(NSUInteger) subItemsPerRow {
     
     self = [self initForAutoLayout];
     if (self) {
+        _subItemPerRow = subItemsPerRow;
         _itemSpacing = 10;
         _paddingLeft = 0;
         _paddingRight = 0;
@@ -57,6 +68,13 @@
         
         for (NSObject *item in items) {
             [self addItem:item];
+        }
+        
+        if ([_tabBarItems count] > 0) {
+            
+            _subItemSelector = [[TabBarPickerSubItemsView alloc] initWithTabBarItems:_tabBarItems];
+            
+            [self addSubview:_subItemSelector];
         }
     }
     
@@ -136,6 +154,8 @@
     }
     
     [self updateConstraintsIfNeeded];
+    
+    [_subItemSelector layoutSubviews];
 }
 
 - (void) setPosition:(TabBarPickerPosition)position {
@@ -155,7 +175,6 @@
     if (item && [item isKindOfClass:[TabBarItem class]]) {
         
         [_tabBarItems addObject:item];
-        [item setBackgroundColor:[UIColor lightGrayColor]];
         [item setDelegate:self];
         [self addSubview:item];
         
