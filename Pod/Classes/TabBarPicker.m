@@ -60,12 +60,21 @@
         }
     }
     
-    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
     
     return self;
 }
 
 - (void) layoutSubviews {
+    
+    if ([self.constraints count] > 0) {
+        
+        [NSLayoutConstraint deactivateConstraints:self.constraints];
+        
+        for (TabBarItem *item in _tabBarItems) {
+            [item.constraints autoRemoveConstraints];
+        }
+    }
     
     switch (_position) {
         case TabBarPickerPositionLeft:{
@@ -111,6 +120,7 @@
             break;
         case TabBarPickerPositionBottom:
         default:{
+            
             [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
             [self autoSetDimension:ALDimensionHeight toSize:44];
             [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:_layoutRelation];
@@ -118,26 +128,20 @@
             
             [_tabBarItems autoSetViewsDimension:ALDimensionHeight toSize:44.0];
             
-            [_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:0 insetSpacing:YES matchedSizes:YES];
-            
             [[_tabBarItems firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+            
+            [_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
         }
             break;
     }
     
-    [self updateConstraints];
+    [self updateConstraintsIfNeeded];
 }
 
 - (void) setPosition:(TabBarPickerPosition)position {
     _position = position;
     
     if (self.superview) {
-        [self removeConstraints:self.constraints];
-        
-        for (TabBarItem *item in _tabBarItems) {
-            [item removeConstraints:item.constraints];
-        }
-        
         [self layoutSubviews];
     }
 }
@@ -145,14 +149,10 @@
 - (void)deviceOrientationDidChange:(NSNotification *)notification {
     //Obtain current device orientation
     _orientation = [[UIDevice currentDevice] orientation];
-    
-    [self layoutSubviews];
 }
 
 - (void) addItem:(TabBarItem*) item {
     if (item && [item isKindOfClass:[TabBarItem class]]) {
-        
-        NSLog(@"%@",self.constraints);
         
         [_tabBarItems addObject:item];
         [item setBackgroundColor:[UIColor lightGrayColor]];
@@ -161,11 +161,6 @@
         
         
         if (self.superview) {
-            
-            [self removeConstraints:self.constraints];
-            for (TabBarItem *item in _tabBarItems) {
-                [item removeConstraints:item.constraints];
-            }
             
             [self layoutSubviews];
         }

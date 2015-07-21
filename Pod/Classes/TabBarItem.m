@@ -28,6 +28,7 @@
         _orientation = [[UIDevice currentDevice] orientation];
         
         _itemButton = [[UIButton alloc] initForAutoLayout];
+        [_itemButton setBackgroundColor:[UIColor whiteColor]];
         
         [self addSubview:_itemButton];
         
@@ -44,7 +45,8 @@
 
 - (void) layoutSubviews {
     
-    [_itemButton autoPinEdgesToSuperviewMargins];
+    //[_itemButton autoPinEdgesToSuperviewMargins];
+    [_itemButton autoCenterInSuperview];
     
 }
 

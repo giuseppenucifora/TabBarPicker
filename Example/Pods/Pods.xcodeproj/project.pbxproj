@@ -628,10 +628,10 @@
 		4E0DA1B3F943CB5DD84434E2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				948796D629A2FE463CD40F14 /* TabBarItem.h */,
-				6D0486D2A6CC5159ED6C3FA5 /* TabBarItem.m */,
 				6EBFE41004AD256533049528 /* TabBarPicker.h */,
 				66C7B75EB841D53F0EC483E0 /* TabBarPicker.m */,
+				948796D629A2FE463CD40F14 /* TabBarItem.h */,
+				6D0486D2A6CC5159ED6C3FA5 /* TabBarItem.m */,
 				038E63B1DBCA0584644ED157 /* TabBarPickerSubItemsView.h */,
 				13660ECE3ACE682AFF3887AC /* TabBarPickerSubItemsView.m */,
 				489D9E1E1C7A2D5F8BC9F84C /* TabBarSubItem.h */,

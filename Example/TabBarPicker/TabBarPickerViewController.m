@@ -58,11 +58,16 @@
         [allergen setImage:[UIImage imageNamed:@"allergen_off"]];
         [allergen setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
         
-        tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,calendar,type,price,allergen] forPosition:TabBarPickerPositionBottom];
+        TabBarItem *allergen2 = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        [allergen2 setItemName:@"Allergen"];
+        [allergen2 setImage:[UIImage imageNamed:@"allergen_off"]];
+        [allergen2 setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
         
+        tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,calendar,type,price,allergen] forPosition:TabBarPickerPositionRight];
+        [tabbar setItemSpacing:2];
         [tabbar setBackgroundColor:[UIColor whiteColor]];
         
-        [tabbar addItem:allergen];
+        [tabbar addItem:allergen2];
     }
     return self;
 }
@@ -74,6 +79,8 @@
     [contentView addSubview:tabbar];
     
     self.view = contentView;
+    
+    [self.view setNeedsUpdateConstraints];
 }
 
 - (void)viewDidLoad
@@ -82,7 +89,6 @@
     
     //[self.view setBackgroundColor:[UIColor lightGrayColor]];
 	// Do any additional setup after loading the view, typically from a nib.
-    [super updateViewConstraints];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -100,7 +106,9 @@
     [allergen setImage:[UIImage imageNamed:@"allergen_off"]];
     [allergen setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
     
-    [tabbar addItem:allergen];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [tabbar addItem:allergen];
+    });
 }
 
 - (void)didReceiveMemoryWarning
