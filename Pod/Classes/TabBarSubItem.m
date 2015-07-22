@@ -12,6 +12,7 @@
 @interface TabBarSubItem()
 
 @property (nonatomic) UIDeviceOrientation orientation;
+@property (nonatomic, assign) BOOL didSetupConstraints;
 
 @end
 
@@ -52,10 +53,16 @@
 
 - (void) layoutSubviews {
     
-    if ([self.constraints count] > 0) {
+    /*if ([self.constraints count] > 0) {
         
         [NSLayoutConstraint deactivateConstraints:self.constraints];
         
+    }*/
+    
+    if (_didSetupConstraints) {
+        
+        
+        _didSetupConstraints = YES;
     }
 }
 

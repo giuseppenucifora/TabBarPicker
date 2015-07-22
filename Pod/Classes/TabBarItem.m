@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UIButton *itemButton;
 @property (nonatomic) UIDeviceOrientation orientation;
+@property (nonatomic, assign) BOOL didSetupConstraints;
 
 @end
 
@@ -45,10 +46,12 @@
 - (void) layoutSubviews {
     
     //[_itemButton autoPinEdgesToSuperviewMargins];
+    if (!_didSetupConstraints) {
     [_itemButton autoCenterInSuperview];
     [_itemButton autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self];
     [_itemButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self];
-    
+        _didSetupConstraints = YES;
+    }
 }
 
 - (void)deviceOrientationDidChange:(NSNotification *)notification {

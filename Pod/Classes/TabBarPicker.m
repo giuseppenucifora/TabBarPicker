@@ -19,6 +19,7 @@
 @property (nonatomic) NSUInteger subItemRows;
 @property (nonatomic, strong) TabBarPickerSubItemsView *subItemSelector;
 @property (nonatomic) BOOL show;
+@property (nonatomic, assign) BOOL didSetupConstraints;
 
 @end
 
@@ -89,63 +90,61 @@
 
 - (void) layoutSubviews {
     
-    if ([self.constraints count] > 0) {
+    /*if ([self.constraints count] > 0) {
+     
+     [NSLayoutConstraint deactivateConstraints:self.constraints];
+     [NSLayoutConstraint deactivateConstraints:_subItemSelector.constraints];
+     for (TabBarItem *item in _tabBarItems) {
+     [item.constraints autoRemoveConstraints];
+     }
+     }*/
+    if (!_didSetupConstraints) {
         
-        [NSLayoutConstraint deactivateConstraints:self.constraints];
-        [NSLayoutConstraint deactivateConstraints:_subItemSelector.constraints];
-        for (TabBarItem *item in _tabBarItems) {
-            [item.constraints autoRemoveConstraints];
-        }
-    }
-    
-    switch (_position) {
-        case TabBarPickerPositionLeft:{
-            [self autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
-            [self autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
-            [self autoSetDimension:ALDimensionWidth toSize:44];
-            [self autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.superview withOffset:0 relation:_layoutRelation];
-            [self autoAlignAxisToSuperviewMarginAxis:ALAxisHorizontal];
-            
-            [_tabBarItems autoSetViewsDimension:ALDimensionWidth toSize:44.0];
-            
-            [_tabBarItems autoDistributeViewsAlongAxis:ALAxisVertical alignedTo:ALAttributeVertical withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
-            
-            [[_tabBarItems firstObject] autoAlignAxisToSuperviewAxis:ALAxisVertical];
-        }
-            break;
-        case TabBarPickerPositionRight:{
-            [self autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
-            [self autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
-            [self autoSetDimension:ALDimensionWidth toSize:44];
-            [self autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.superview withOffset:0 relation:_layoutRelation];
-            [self autoAlignAxisToSuperviewMarginAxis:ALAxisHorizontal];
-            
-            [_tabBarItems autoSetViewsDimension:ALDimensionWidth toSize:44.0];
-            
-            [_tabBarItems autoDistributeViewsAlongAxis:ALAxisVertical alignedTo:ALAttributeVertical withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
-            
-            [[_tabBarItems firstObject] autoAlignAxisToSuperviewAxis:ALAxisVertical];
-        }
-            break;
-        case TabBarPickerPositionTop:{
-            [self autoPinEdgeToSuperviewMargin:ALEdgeTop];
-            [self autoSetDimension:ALDimensionHeight toSize:44];
-            [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:_layoutRelation];
-            [self autoAlignAxisToSuperviewMarginAxis:ALAxisVertical];
-            
-            [_tabBarItems autoSetViewsDimension:ALDimensionHeight toSize:44.0];
-            
-            [_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
-            
-            [[_tabBarItems firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-        }
-            break;
-        case TabBarPickerPositionBottom:
-        default:{
-            if (!_show) {
+        switch (_position) {
+            case TabBarPickerPositionLeft:{
+                [self autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
+                [self autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
+                [self autoSetDimension:ALDimensionWidth toSize:44];
+                [self autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.superview withOffset:0 relation:_layoutRelation];
+                [self autoAlignAxisToSuperviewMarginAxis:ALAxisHorizontal];
                 
+                [_tabBarItems autoSetViewsDimension:ALDimensionWidth toSize:44.0];
+                
+                [_tabBarItems autoDistributeViewsAlongAxis:ALAxisVertical alignedTo:ALAttributeVertical withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
+                
+                [[_tabBarItems firstObject] autoAlignAxisToSuperviewAxis:ALAxisVertical];
             }
-            else {
+                break;
+            case TabBarPickerPositionRight:{
+                [self autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
+                [self autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
+                [self autoSetDimension:ALDimensionWidth toSize:44];
+                [self autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.superview withOffset:0 relation:_layoutRelation];
+                [self autoAlignAxisToSuperviewMarginAxis:ALAxisHorizontal];
+                
+                [_tabBarItems autoSetViewsDimension:ALDimensionWidth toSize:44.0];
+                
+                [_tabBarItems autoDistributeViewsAlongAxis:ALAxisVertical alignedTo:ALAttributeVertical withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
+                
+                [[_tabBarItems firstObject] autoAlignAxisToSuperviewAxis:ALAxisVertical];
+            }
+                break;
+            case TabBarPickerPositionTop:{
+                [self autoPinEdgeToSuperviewMargin:ALEdgeTop];
+                [self autoSetDimension:ALDimensionHeight toSize:44];
+                [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:_layoutRelation];
+                [self autoAlignAxisToSuperviewMarginAxis:ALAxisVertical];
+                
+                [_tabBarItems autoSetViewsDimension:ALDimensionHeight toSize:44.0];
+                
+                [_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
+                
+                [[_tabBarItems firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+            }
+                break;
+            case TabBarPickerPositionBottom:
+            default:{
+                
                 [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
                 [self autoSetDimension:ALDimensionHeight toSize:44];
                 [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:_layoutRelation];
@@ -157,17 +156,16 @@
                 
                 [_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
             }
+                break;
         }
-            break;
+        
+        
+        
+        [_subItemSelector layoutSubviews];
+        _didSetupConstraints = YES;
+        
+        [self updateConstraintsIfNeeded];
     }
-    
-    [self updateConstraintsIfNeeded];
-    
-    [_subItemSelector layoutSubviews];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self show];
-    });
 }
 
 - (void) setPosition:(TabBarPickerPosition)position {
