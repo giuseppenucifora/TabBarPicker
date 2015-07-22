@@ -11,12 +11,14 @@
 #import "TabBarPickerSubItemsView.h"
 
 #define DEFAULT_SUB_ITEMS_PER_ROW 2
+#define DEFAULT_SUB_ITEM_HEIGHT 44
 
-@interface TabBarPicker() <TabBarItemDelegate>
+@interface TabBarPicker() <TabBarPickerSubItemsViewDelegate>
 
 @property (nonatomic) UIDeviceOrientation orientation;
 @property (nonatomic) NSUInteger subItemRows;
 @property (nonatomic, strong) TabBarPickerSubItemsView *subItemSelector;
+@property (nonatomic) BOOL show;
 
 @end
 
@@ -24,34 +26,36 @@
 
 - (instancetype) initWithTabBarItems:(NSArray *) items forPosition:(TabBarPickerPosition) position {
     
-    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:NSLayoutRelationEqual subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW];
+    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:NSLayoutRelationEqual subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW subItemHeight:DEFAULT_SUB_ITEM_HEIGHT];
     
 }
 
 - (instancetype) initWithTabBarItems:(NSArray *) items forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation {
     
-    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:relation subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW];
+    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:relation subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW subItemHeight:DEFAULT_SUB_ITEM_HEIGHT];
     
 }
 
 - (instancetype) initWithTabBarItems:(NSArray *) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation {
     
-    return [self initWithTabBarItems:items withTabBarSize:size forPosition:position andNSLayoutRelation:relation subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW];
-    
+    return [self initWithTabBarItems:items withTabBarSize:size forPosition:position andNSLayoutRelation:relation subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW subItemHeight:DEFAULT_SUB_ITEM_HEIGHT];
 }
 
 - (instancetype) initWithTabBarItems:(NSArray*) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation subItemsPerRow:(NSUInteger) subItemsPerRow {
+    
+    return [self initWithTabBarItems:items withTabBarSize:size forPosition:position andNSLayoutRelation:relation subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW subItemHeight:DEFAULT_SUB_ITEM_HEIGHT];
+}
+
+
+
+- (instancetype) initWithTabBarItems:(NSArray*) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation subItemsPerRow:(NSUInteger)  subItemsPerRow subItemHeight:(CGFloat) subItemHeight {
     
     self = [self initForAutoLayout];
     if (self) {
         _subItemPerRow = subItemsPerRow;
         _itemSpacing = 10;
-        _paddingLeft = 0;
-        _paddingRight = 0;
-        _paddingTop = 0;
-        _paddingBottom = 0;
         _layoutRelation = relation;
-        
+        _subItemHeight  = subItemHeight;
         _position = position;
         
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -72,8 +76,8 @@
         
         if ([_tabBarItems count] > 0) {
             
-            _subItemSelector = [[TabBarPickerSubItemsView alloc] initWithTabBarItems:_tabBarItems];
-            
+            _subItemSelector = [[TabBarPickerSubItemsView alloc] initWithTabBarItems:_tabBarItems andsubItemsPerRow:_subItemPerRow];
+            [_subItemSelector setDelegate:self];
             [self addSubview:_subItemSelector];
         }
     }
@@ -88,7 +92,7 @@
     if ([self.constraints count] > 0) {
         
         [NSLayoutConstraint deactivateConstraints:self.constraints];
-        
+        [NSLayoutConstraint deactivateConstraints:_subItemSelector.constraints];
         for (TabBarItem *item in _tabBarItems) {
             [item.constraints autoRemoveConstraints];
         }
@@ -138,17 +142,21 @@
             break;
         case TabBarPickerPositionBottom:
         default:{
-            
-            [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
-            [self autoSetDimension:ALDimensionHeight toSize:44];
-            [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:_layoutRelation];
-            [self autoAlignAxisToSuperviewMarginAxis:ALAxisVertical];
-            
-            [_tabBarItems autoSetViewsDimension:ALDimensionHeight toSize:44.0];
-            
-            [[_tabBarItems firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-            
-            [_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
+            if (!_show) {
+                
+            }
+            else {
+                [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
+                [self autoSetDimension:ALDimensionHeight toSize:44];
+                [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:_layoutRelation];
+                [self autoAlignAxisToSuperviewMarginAxis:ALAxisVertical];
+                
+                [_tabBarItems autoSetViewsDimension:ALDimensionHeight toSize:44.0];
+                
+                [[_tabBarItems firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+                
+                [_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
+            }
         }
             break;
     }
@@ -156,6 +164,10 @@
     [self updateConstraintsIfNeeded];
     
     [_subItemSelector layoutSubviews];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self show];
+    });
 }
 
 - (void) setPosition:(TabBarPickerPosition)position {
@@ -175,7 +187,7 @@
     if (item && [item isKindOfClass:[TabBarItem class]]) {
         
         [_tabBarItems addObject:item];
-        [item setDelegate:self];
+        //[item setDelegate:self];
         [self addSubview:item];
         
         
@@ -186,12 +198,37 @@
     }
 }
 
-- (void) layoutSubviewsPortrait {
+- (void) show {
+    
+    if (!_show) {
+        
+        _show = YES;
+        [self setNeedsUpdateConstraints];
+        [self updateConstraintsIfNeeded];
+        
+        [UIView animateWithDuration:1.0
+                              delay:0.0
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             [self layoutIfNeeded]; // this is what actually causes the views to animate to their new layout
+                         }
+                         completion:^(BOOL finished) {
+                             // Run the animation again in the other direction
+                             
+                         }];
+    }
+}
+
+- (void) hide {
     
 }
 
-- (void) layoutSubviewsLandScape {
+#pragma mark TabBarPickerSubItemsViewDelegate
+
+- (void) tabarPickerSubItemsView:(TabBarPickerSubItemsView*) tabarPickerSubItemsView didSelect:(TabBarItem*) item {
     
 }
+
+#pragma mark -
 
 @end

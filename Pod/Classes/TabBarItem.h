@@ -11,14 +11,14 @@
 
 @class TabBarItem;
 
-@protocol TabBarItemDelegate <NSObject>
+/*@protocol TabBarItemDelegate <NSObject>
 
 @required
 
 - (void) tabBarItemSelected:(TabBarItem*) selectedItem;
 
 @end
-
+*/
 @interface TabBarItem : UIView
 
 /**
@@ -37,10 +37,8 @@
  *  Represents the sub items that appeare when you select the item in picker.
  */
 @property (nonatomic, strong) NSMutableArray *subItems;
-/**
- *  <#Description#>
- */
-@property (nonatomic, assign) id<TabBarItemDelegate> delegate;
+
+//@property (nonatomic, assign) id<TabBarItemDelegate> delegate;
 
 /**
  *  <#Description#>

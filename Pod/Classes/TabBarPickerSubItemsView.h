@@ -29,15 +29,16 @@
 /**
  *  <#Description#>
  */
-@property (nonatomic, assign) id<TabBarItemDelegate> delegate;
+@property (nonatomic, assign) id<TabBarPickerSubItemsViewDelegate> delegate;
 
 /**
  *  <#Description#>
  *
- *  @param items <#items description#>
+ *  @param items       <#items description#>
+ *  @param itemsPerRow <#itemsPerRow description#>
  *
  *  @return <#return value description#>
  */
-- (instancetype) initWithTabBarItems:(NSArray *) items;
+- (instancetype) initWithTabBarItems:(NSArray *) items andsubItemsPerRow:(NSUInteger) itemsPerRow;
 
 @end

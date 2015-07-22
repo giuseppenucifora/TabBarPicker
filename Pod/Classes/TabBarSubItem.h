@@ -11,6 +11,7 @@
 @interface TabBarSubItem : UIView
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) UIButton *subItemButton;
 
 + (instancetype) tabBarSubItemWithName:(NSString*)name;
 

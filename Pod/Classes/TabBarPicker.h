@@ -25,12 +25,9 @@ typedef NS_ENUM(NSInteger, TabBarPickerPosition) {
 @property (nonatomic, readonly) CGSize tabBarSize;
 @property (nonatomic, readonly) TabBarPickerPosition position;
 @property (nonatomic, readonly) NSLayoutRelation layoutRelation;
-@property (nonatomic) NSUInteger subItemPerRow;
-@property (nonatomic) CGFloat paddingLeft;
-@property (nonatomic) CGFloat paddingRight;
-@property (nonatomic) CGFloat paddingTop;
-@property (nonatomic) CGFloat paddingBottom;
 @property (nonatomic) CGFloat itemSpacing;
+@property (nonatomic, readonly) NSUInteger subItemPerRow;
+@property (nonatomic, readonly) CGFloat subItemHeight;
 
 /**
  *  Init TabBarPicker with items. When is selected an item the picher show down subitems.
@@ -114,6 +111,31 @@ typedef NS_ENUM(NSInteger, TabBarPickerPosition) {
  *  @return <#return value description#>
  */
 - (instancetype) initWithTabBarItems:(NSArray*) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation subItemsPerRow:(NSUInteger)  subItemsPerRow;
+
+/**
+ *  Init TabBarPicker with items. When is selected an item the picher show down subitems.
+ *  By default when one of more subItems are selected the selected item become selected.
+ *  The picker size is dinamically based the max subitems of items
+ *
+ *  @param items Represents tab bar items. That array cannot be nil.
+ *
+ *  @param size  Represents the tabbar size
+ *
+ *  @param position Represents the posizion in the Screen:
+ *                      - TabBarPickerPositionLeft : Is positioned in vertical on left of the screen and shows the picker at its right
+ *                      - TabBarPickerPositionRight : Is positioned in vertical on right of the screen and shows the picker at its left
+ *                      - TabBarPickerPositionBottom : Is positioned in horizontal on bottom of the screen and shows the picker at its top
+ *                      - TabBarPickerPositionTop : Is positioned in horizontal on top of the screen and shows the picker at its bottom
+ *
+ *  @param relation Represents NSLayoutRelation for TabBar layout.
+ *
+ *  @param subItemsPerRow Represents the number of subItems per single row of subitem picker
+ *
+ *  @param subItemHeight  Represents the height of single subItem.
+ *
+ *  @return <#return value description#>
+ */
+- (instancetype) initWithTabBarItems:(NSArray*) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation subItemsPerRow:(NSUInteger)  subItemsPerRow subItemHeight:(CGFloat) subItemHeight;
 
 /**
  *  <#Description#>

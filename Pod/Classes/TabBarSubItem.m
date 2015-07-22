@@ -26,12 +26,20 @@
          [[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
         
         _name = name;
+        
+        _subItemButton = [[UIButton alloc] initForAutoLayout];
+        [_subItemButton setTitle:_name forState:UIControlStateNormal];
     }
     return self;
 }
 
 + (instancetype) tabBarSubItemWithName:(NSString*)name {
     return [[self alloc] initWithName:name];
+}
+
+- (void) setName:(NSString *)name {
+    _name = name;
+    [_subItemButton setTitle:name forState:UIControlStateNormal];
 }
 
 
