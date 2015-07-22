@@ -20,6 +20,9 @@
 @property (nonatomic, strong) TabBarPickerSubItemsView *subItemSelector;
 @property (nonatomic) BOOL show;
 @property (nonatomic, assign) BOOL didSetupConstraints;
+@property (nonatomic, strong) NSLayoutConstraint *showConstraint;
+
+@property (nonatomic, strong) NSLayoutConstraint *hideConstraint;
 
 @end
 
@@ -145,7 +148,7 @@
             case TabBarPickerPositionBottom:
             default:{
                 
-                [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
+                _hideConstraint = [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
                 [self autoSetDimension:ALDimensionHeight toSize:44];
                 [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:_layoutRelation];
                 [self autoAlignAxisToSuperviewMarginAxis:ALAxisVertical];
@@ -159,13 +162,19 @@
                 break;
         }
         
-        
-        
         [_subItemSelector layoutSubviews];
         _didSetupConstraints = YES;
         
         [self updateConstraintsIfNeeded];
     }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self show];
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self hide];
+    });
 }
 
 - (void) setPosition:(TabBarPickerPosition)position {
@@ -204,21 +213,44 @@
         [self setNeedsUpdateConstraints];
         [self updateConstraintsIfNeeded];
         
-        [UIView animateWithDuration:1.0
+        [UIView animateWithDuration:4
                               delay:0.0
-                            options:UIViewAnimationOptionCurveEaseInOut
+             usingSpringWithDamping:0.6
+              initialSpringVelocity:0
+                            options:0
                          animations:^{
-                             [self layoutIfNeeded]; // this is what actually causes the views to animate to their new layout
+                             [_hideConstraint autoRemove];
+                             
+                             _showConstraint = [self autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:_subItemSelector.frame.size.height];
                          }
                          completion:^(BOOL finished) {
                              // Run the animation again in the other direction
-                             
                          }];
     }
 }
 
 - (void) hide {
-    
+    if (_show) {
+        
+        _show = NO;
+        [self setNeedsUpdateConstraints];
+        [self updateConstraintsIfNeeded];
+        
+        [UIView animateWithDuration:4
+                              delay:0.0
+             usingSpringWithDamping:0.6
+              initialSpringVelocity:0
+                            options:0
+                         animations:^{
+                             
+                             [_showConstraint autoRemove];
+                             
+                             _hideConstraint = [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
+                         }
+                         completion:^(BOOL finished) {
+                             // Run the animation again in the other direction
+                         }];
+    }
 }
 
 #pragma mark TabBarPickerSubItemsViewDelegate
