@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/Vendor/NSString+HexColor/NSString+HexColor.h

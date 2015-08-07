@@ -11,14 +11,14 @@
 
 @class TabBarItem;
 
-/*@protocol TabBarItemDelegate <NSObject>
+@protocol TabBarItemDelegate <NSObject>
 
 @required
 
 - (void) tabBarItemSelected:(TabBarItem*) selectedItem;
 
 @end
-*/
+
 @interface TabBarItem : UIView
 
 /**
@@ -30,6 +30,11 @@
  */
 @property (nonatomic, strong) UIImage *selectedImage;
 /**
+ *  <#Description#>
+ */
+@property (nonatomic, strong) UIColor *highlightColor;
+
+/**
  *  Represents the name of the item that can be shown in picker.
  */
 @property (nonatomic, strong) NSString *itemName;
@@ -38,7 +43,7 @@
  */
 @property (nonatomic, strong) NSMutableArray *subItems;
 
-//@property (nonatomic, assign) id<TabBarItemDelegate> delegate;
+@property (nonatomic, assign) id<TabBarItemDelegate> delegate;
 
 /**
  *  <#Description#>
@@ -48,6 +53,8 @@
  *  @return <#return value description#>
  */
 - (instancetype) initWithSubItems:(NSArray*) array;
+
+- (void) setHighlighted:(BOOL) highlighted;
 
 
 @end

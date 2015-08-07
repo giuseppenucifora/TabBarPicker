@@ -28,6 +28,8 @@ typedef NS_ENUM(NSInteger, TabBarPickerPosition) {
 @property (nonatomic) CGFloat itemSpacing;
 @property (nonatomic, readonly) NSUInteger subItemPerRow;
 @property (nonatomic, readonly) CGFloat subItemHeight;
+@property (nonatomic) BOOL dimWhenShow;
+@property (nonatomic, strong) UIColor * dimColor;
 
 /**
  *  Init TabBarPicker with items. When is selected an item the picher show down subitems.
@@ -143,5 +145,9 @@ typedef NS_ENUM(NSInteger, TabBarPickerPosition) {
  *  @param item <#item description#>
  */
 - (void) addItem:(TabBarItem*) item;
+
+- (void) show;
+
+- (void) hide;
 
 @end

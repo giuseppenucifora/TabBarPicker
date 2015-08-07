@@ -8,6 +8,7 @@
 
 #import "TabBarItem.h"
 #import <PureLayout/PureLayout.h>
+#import "NSString+HexColor.h"
 
 @interface TabBarItem()
 
@@ -29,6 +30,8 @@
         _orientation = [[UIDevice currentDevice] orientation];
         
         _itemButton = [[UIButton alloc] initForAutoLayout];
+        [_itemButton addTarget:self action:@selector(itemButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+        _highlightColor = [@"ff4e50" colorFromHex];
         
         [self addSubview:_itemButton];
         
@@ -68,6 +71,37 @@
 - (void) setSelectedImage:(UIImage *)selectedImage {
     
     [_itemButton setImage:selectedImage forState:UIControlStateSelected];
+}
+
+- (void) setHighlightColor:(UIColor *)highlightColor {
+    
+    _highlightColor = highlightColor;
+}
+
+- (void) setHighlighted:(BOOL) highlighted {
+    [_itemButton setHighlighted:highlighted];
+    if ([_itemButton isHighlighted]) {
+        [_itemButton setBackgroundColor:_highlightColor];
+        
+    }
+    else {
+        [_itemButton setBackgroundColor:[UIColor clearColor]];
+    }
+}
+
+- (void) itemButtonTapped {
+    
+    if ([_itemButton isHighlighted]) {
+        [_itemButton setBackgroundColor:_highlightColor];
+        
+    }
+    else {
+        [_itemButton setBackgroundColor:[UIColor clearColor]];
+    }
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(tabBarItemSelected:)]) {
+        [_delegate tabBarItemSelected:self];
+    }
 }
 
 @end

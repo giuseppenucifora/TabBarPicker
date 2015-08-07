@@ -9,20 +9,26 @@
 #import "TabBarPicker.h"
 #import <PureLayout/PureLayout.h>
 #import "TabBarPickerSubItemsView.h"
+#import "MMCPSScrollView.h"
+#import <UIView-Overlay/UIView+Overlay.h>
 
 #define DEFAULT_SUB_ITEMS_PER_ROW 2
 #define DEFAULT_SUB_ITEM_HEIGHT 44
 
-@interface TabBarPicker() <TabBarPickerSubItemsViewDelegate>
+@interface TabBarPicker() <TabBarPickerSubItemsViewDelegate,TabBarItemDelegate>
 
 @property (nonatomic) UIDeviceOrientation orientation;
 @property (nonatomic) NSUInteger subItemRows;
-@property (nonatomic, strong) TabBarPickerSubItemsView *subItemSelector;
-@property (nonatomic) BOOL show;
+@property (nonatomic, strong) NSMutableArray *subItemSelectors;
+@property (nonatomic, strong) NSMutableArray *subItemSelectorsConstraints;
+@property (nonatomic) BOOL isShow;
 @property (nonatomic, assign) BOOL didSetupConstraints;
 @property (nonatomic, strong) NSLayoutConstraint *showConstraint;
-
 @property (nonatomic, strong) NSLayoutConstraint *hideConstraint;
+@property (nonatomic, strong) NSMutableArray *tabBarItemsConstraints;
+@property (nonatomic, strong) TabBarItem *selectedTabBarItem;
+
+@property (nonatomic, strong) MMCPSScrollView *subItemScrollView;
 
 @end
 
@@ -61,10 +67,15 @@
         _layoutRelation = relation;
         _subItemHeight  = subItemHeight;
         _position = position;
+        _dimWhenShow = YES;
+        _subItemSelectors = [[NSMutableArray alloc] init];
+        _tabBarItemsConstraints = [[NSMutableArray alloc] init];
+        _subItemSelectorsConstraints = [[NSMutableArray alloc] init];
+        _dimColor = [[UIColor blackColor] colorWithAlphaComponent: 0.5];
         
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
         
-        [[NSNotificationCenter defaultCenter] addObserver: self selector:   @selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
+        [[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(deviceOrientationDidChange:) name:UIDeviceOrientationDidChangeNotification object: nil];
         
         NSAssert(items, @"TabBar Items array cannot be nil!");
         
@@ -75,14 +86,49 @@
         _tabBarItems = [[NSMutableArray alloc] init];
         
         for (NSObject *item in items) {
-            [self addItem:item];
+            if (item && [item isKindOfClass:[TabBarItem class]]) {
+                
+                [_tabBarItems addObject:item];
+                [(TabBarItem*)item setDelegate:self];
+                [self addSubview:item];
+            }
         }
         
+        _subItemScrollView = [[MMCPSScrollView alloc] initForAutoLayout];
+        [_subItemScrollView setType:MMCPSScrollHorizontal];
+        [_subItemScrollView setMMCPSDelegate:self];
+        [_subItemScrollView setPagingEnabled:YES];
+        
+        [self addSubview:_subItemScrollView];
+        
         if ([_tabBarItems count] > 0) {
-            
-            _subItemSelector = [[TabBarPickerSubItemsView alloc] initWithTabBarItems:_tabBarItems andsubItemsPerRow:_subItemPerRow];
-            [_subItemSelector setDelegate:self];
-            [self addSubview:_subItemSelector];
+            int i = 0;
+            for (TabBarItem *item in _tabBarItems) {
+                TabBarPickerSubItemsView *subItemSelector = [[TabBarPickerSubItemsView alloc] initWithTabBarItem:item andsubItemsPerRow:_subItemPerRow];
+                [subItemSelector setDelegate:self];
+                switch (i) {
+                    case 0:
+                        
+                        break;
+                    case 1:{
+                        [subItemSelector setBackgroundColor:[UIColor redColor]];
+                    }
+                        break;
+                    case 2:{
+                        [subItemSelector setBackgroundColor:[UIColor greenColor]];
+                    }
+                        break;
+                    case 3: {
+                        
+                    }
+                        break;
+                    default:
+                        break;
+                }
+                [_subItemScrollView addSubview:subItemSelector];
+                
+                [_subItemSelectors addObject:subItemSelector];
+            }
         }
     }
     
@@ -157,24 +203,26 @@
                 
                 [[_tabBarItems firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
                 
-                [_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES];
+                [_tabBarItemsConstraints addObjectsFromArray:[_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES]];
+                
+                [_subItemSelectors autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:0 insetSpacing:YES matchedSizes:YES];
+                
+                [_subItemScrollView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self];
+                [_subItemScrollView autoSetDimension:ALDimensionHeight toSize:343];
+                [_subItemScrollView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:[_tabBarItems firstObject]];
+                [_subItemScrollView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+                [_subItemScrollView setBackgroundColor:[UIColor blueColor]];
+                
+                
             }
                 break;
         }
         
-        [_subItemSelector layoutSubviews];
+        
         _didSetupConstraints = YES;
         
         [self updateConstraintsIfNeeded];
     }
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self show];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self hide];
-    });
 }
 
 - (void) setPosition:(TabBarPickerPosition)position {
@@ -194,58 +242,108 @@
     if (item && [item isKindOfClass:[TabBarItem class]]) {
         
         [_tabBarItems addObject:item];
-        //[item setDelegate:self];
+        [item setDelegate:self];
         [self addSubview:item];
         
+        [_tabBarItemsConstraints autoRemoveConstraints];
         
-        if (self.superview) {
-            
-            [self layoutSubviews];
-        }
+        [_tabBarItemsConstraints addObjectsFromArray:[_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES]];
     }
 }
 
 - (void) show {
     
-    if (!_show) {
+    if (!_isShow) {
         
-        _show = YES;
+        
+        _isShow = YES;
         [self setNeedsUpdateConstraints];
         [self updateConstraintsIfNeeded];
         
-        [UIView animateWithDuration:4
+        [UIView animateWithDuration:1.5
                               delay:0.0
-             usingSpringWithDamping:0.6
+             usingSpringWithDamping:1
               initialSpringVelocity:0
                             options:0
                          animations:^{
-                             [_hideConstraint autoRemove];
+                             if (_dimWhenShow) {
+                                 
+                                 [self.superview ag_addOverlayWithColor:_dimColor];
+                                 self.layer.zPosition = 999;
+                             }
+                             switch (_position) {
+                                 case TabBarPickerPositionLeft: {
+                                     
+                                     break;
+                                 }
+                                 case TabBarPickerPositionRight: {
+                                     
+                                     break;
+                                 }
+                                     
+                                 case TabBarPickerPositionTop: {
+                                     
+                                     break;
+                                 }
+                                 case TabBarPickerPositionBottom:
+                                 default: {
+                                     [_hideConstraint autoRemove];
+                                     
+                                     _showConstraint = [self autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:_subItemScrollView.frame.size.height];
+                                     break;
+                                 }
+                             }
                              
-                             _showConstraint = [self autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:_subItemSelector.frame.size.height];
+                             [self layoutIfNeeded];
                          }
                          completion:^(BOOL finished) {
                              // Run the animation again in the other direction
                          }];
     }
+    
 }
 
 - (void) hide {
-    if (_show) {
+    if (_isShow) {
         
-        _show = NO;
+        _isShow = NO;
         [self setNeedsUpdateConstraints];
         [self updateConstraintsIfNeeded];
         
-        [UIView animateWithDuration:4
+        [UIView animateWithDuration:1.5
                               delay:0.0
-             usingSpringWithDamping:0.6
+             usingSpringWithDamping:1
               initialSpringVelocity:0
                             options:0
                          animations:^{
+                             if (_dimWhenShow) {
+                                 [self.superview ag_removeOverlay];
+                                 self.layer.zPosition = 0;
+                             }
+                             switch (_position) {
+                                 case TabBarPickerPositionLeft: {
+                                     
+                                     break;
+                                 }
+                                 case TabBarPickerPositionRight: {
+                                     
+                                     break;
+                                 }
+                                     
+                                 case TabBarPickerPositionTop: {
+                                     
+                                     break;
+                                 }
+                                 case TabBarPickerPositionBottom:
+                                 default: {
+                                     [_showConstraint autoRemove];
+                                     
+                                     _hideConstraint = [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
+                                     break;
+                                 }
+                             }
                              
-                             [_showConstraint autoRemove];
-                             
-                             _hideConstraint = [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
+                             [self layoutIfNeeded];
                          }
                          completion:^(BOOL finished) {
                              // Run the animation again in the other direction
@@ -257,6 +355,40 @@
 
 - (void) tabarPickerSubItemsView:(TabBarPickerSubItemsView*) tabarPickerSubItemsView didSelect:(TabBarItem*) item {
     
+}
+
+#pragma mark -
+
+#pragma mark TabBarItemDelegate
+
+- (void) tabBarItemSelected:(TabBarItem *)selectedItem {
+    for (TabBarItem *item in _tabBarItems) {
+        if (![item isEqual:selectedItem]) {
+            [item setHighlighted:NO];
+        }
+    }
+    
+    if (!_isShow) {
+        [self show];
+    }
+    else {
+        if(![_selectedTabBarItem isEqual:selectedItem]) {
+            
+        }
+    }
+    _selectedTabBarItem = selectedItem;
+}
+
+#pragma mark -
+
+#pragma mark MMCPSScrollViewDelegate
+
+- (void)scrollView:(MMCPSScrollView *)scrollView didScrollToPage:(NSUInteger)pageIndex {
+    NSLog(@"The MMCPSScrollView is now on page %i.", pageIndex);
+}
+
+- (void)scrollView:(MMCPSScrollView *)scrollView willScrollToPage:(NSUInteger)pageIndex {
+    NSLog(@"The MMCPSScrollView is now going to page %i.", pageIndex);
 }
 
 #pragma mark -

@@ -16,35 +16,23 @@
 @property (nonatomic) NSUInteger itemsPerRow;
 @property (nonatomic) CGFloat itemHeight;
 @property (nonatomic) NSUInteger rows;
-@property (nonatomic, strong) UICollectionView *subItemCollectionView;
 @property (nonatomic, assign) BOOL didSetupConstraints;
 
 @end
 
 @implementation TabBarPickerSubItemsView
 
-- (instancetype) initWithTabBarItems:(NSArray *) items andsubItemsPerRow:(NSUInteger) itemsPerRow {
+- (instancetype) initWithTabBarItem:(TabBarItem *) item andsubItemsPerRow:(NSUInteger) itemsPerRow {
     self = [self initForAutoLayout];
     
     if (self) {
         _itemsPerRow = itemsPerRow;
-        _itemsArray = [[NSMutableArray alloc] initWithArray:items];
+        _subItemsArray = [[NSMutableArray alloc] initWithArray:[item subItems]];
         _itemHeight = DEFAULT_ITEM_HEIGHT;
         _rows = 0;
         
-        for (TabBarItem *item in _itemsArray) {
-            if (_rows < ([[item subItems] count]/_itemsPerRow)) {
-                _rows = ceil(([[item subItems] count]/_itemsPerRow));
-            }
-        }
+        _rows = ceil(([_subItemsArray count]/_itemsPerRow));
         
-        [self setBackgroundColor:[UIColor redColor]];
-        /*_subItemCollectionView = [[UICollectionView alloc] initForAutoLayout];
-         [_subItemCollectionView setPagingEnabled:YES];
-         [_subItemCollectionView setDelegate:self];
-         [_subItemCollectionView setDataSource:self];
-         
-         [self addSubview:_subItemCollectionView];*/
     }
     
     [self updateConstraintsIfNeeded];
@@ -71,9 +59,6 @@
         [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:NSLayoutRelationEqual];
         [self autoSetDimension:ALDimensionHeight toSize:_rows*_itemHeight];
         
-        [_subItemCollectionView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self];
-        [_subItemCollectionView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self];
-        [_subItemCollectionView setBackgroundColor:[UIColor redColor]];
         _didSetupConstraints = YES;
     }
 }

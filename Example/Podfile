@@ -9,6 +9,8 @@ target 'TabBarPicker_Example', :exclusive => true do
   pod "TabBarPicker", :path => "../"
   pod 'PureLayout'
   pod 'pop', '~> 1.0'
+  pod 'UIView-Overlay'
+  
 end
 
 target 'TabBarPicker_Tests', :exclusive => true do

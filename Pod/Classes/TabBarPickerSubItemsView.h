@@ -24,7 +24,7 @@
 /**
  *  <#Description#>
  */
-@property (nonatomic, strong) NSMutableArray *itemsArray;
+@property (nonatomic, strong) NSMutableArray *subItemsArray;
 
 /**
  *  <#Description#>
@@ -39,6 +39,6 @@
  *
  *  @return <#return value description#>
  */
-- (instancetype) initWithTabBarItems:(NSArray *) items andsubItemsPerRow:(NSUInteger) itemsPerRow;
+- (instancetype) initWithTabBarItem:(TabBarItem *) item andsubItemsPerRow:(NSUInteger) itemsPerRow;
 
 @end
