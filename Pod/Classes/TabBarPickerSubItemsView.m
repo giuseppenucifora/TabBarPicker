@@ -9,30 +9,22 @@
 #import "TabBarPickerSubItemsView.h"
 #import <PureLayout/PureLayout.h>
 
-#define DEFAULT_ITEM_HEIGHT 44
-
 @interface TabBarPickerSubItemsView()
 
-@property (nonatomic) NSUInteger itemsPerRow;
-@property (nonatomic) CGFloat itemHeight;
-@property (nonatomic) NSUInteger rows;
 @property (nonatomic, assign) BOOL didSetupConstraints;
+@property (nonatomic) TabBarPickerSubItemsViewType type;
+@property (nonatomic, strong) NSMutableArray *elementsArray;
 
 @end
 
 @implementation TabBarPickerSubItemsView
 
-- (instancetype) initWithTabBarItem:(TabBarItem *) item andsubItemsPerRow:(NSUInteger) itemsPerRow {
+- (instancetype) initWithType:(TabBarPickerSubItemsViewType) type andElements:(NSArray*) elements {
     self = [self initForAutoLayout];
     
     if (self) {
-        _itemsPerRow = itemsPerRow;
-        _subItemsArray = [[NSMutableArray alloc] initWithArray:[item subItems]];
-        _itemHeight = DEFAULT_ITEM_HEIGHT;
-        _rows = 0;
-        
-        _rows = ceil(([_subItemsArray count]/_itemsPerRow));
-        
+        _type = type;
+        _elementsArray = [[NSMutableArray alloc] initWithArray:elements];
     }
     
     [self updateConstraintsIfNeeded];
@@ -43,21 +35,11 @@
 
 - (void) layoutSubviews {
     
-    /*if ([self.constraints count] > 0) {
-     
-     [NSLayoutConstraint deactivateConstraints:self.constraints];
-     
-     for (TabBarItem *item in _itemsArray) {
-     for (TabBarSubItem *subItem in item.subItems) {
-     [subItem.constraints autoRemoveConstraints];
-     }
-     }
-     }*/
     if (!_didSetupConstraints) {
         
-        //[self autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:-(_rows*_itemHeight)];
         [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:NSLayoutRelationEqual];
         [self autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.superview withOffset:0 relation:NSLayoutRelationEqual];
+        
         _didSetupConstraints = YES;
     }
 }

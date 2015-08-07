@@ -35,33 +35,38 @@
         
         TabBarItem *location = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
         [location setItemName:@"Location"];
-        [location setImage:[UIImage imageNamed:@"location_off"]];
-        [location setSelectedImage:[UIImage imageNamed:@"location_on"]];
+        [location setImage:[UIImage imageNamed:@"location"]];
+        [location setSelectedImage:[UIImage imageNamed:@"location_selected"]];
+        [location setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
         TabBarItem *calendar = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
         [calendar setItemName:@"Calendar"];
-        [calendar setImage:[UIImage imageNamed:@"calendar_off"]];
-        [calendar setSelectedImage:[UIImage imageNamed:@"calendar_on"]];
+        [calendar setImage:[UIImage imageNamed:@"calendar"]];
+        [calendar setSelectedImage:[UIImage imageNamed:@"calendar_selected"]];
+        [calendar setHighlightedImage:[UIImage imageNamed:@"calendar_highlighted"]];
         
         TabBarItem *type = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
         [type setItemName:@"Type"];
-        [type setImage:[UIImage imageNamed:@"type_off"]];
-        [type setSelectedImage:[UIImage imageNamed:@"type_on"]];
+        [type setImage:[UIImage imageNamed:@"type"]];
+        [type setSelectedImage:[UIImage imageNamed:@"type_selected"]];
+        [type setHighlightedImage:[UIImage imageNamed:@"type_highlighted"]];
         
         TabBarItem *price = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
         [price setItemName:@"Price"];
-        [price setImage:[UIImage imageNamed:@"price_off"]];
-        [price setSelectedImage:[UIImage imageNamed:@"price_on"]];
+        [price setImage:[UIImage imageNamed:@"price"]];
+        [price setSelectedImage:[UIImage imageNamed:@"price_selected"]];
+        [price setHighlightedImage:[UIImage imageNamed:@"price_highlighted"]];
         
         TabBarItem *allergen = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
         [allergen setItemName:@"Allergen"];
-        [allergen setImage:[UIImage imageNamed:@"allergen_off"]];
-        [allergen setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
+        [allergen setImage:[UIImage imageNamed:@"allergen"]];
+        [allergen setSelectedImage:[UIImage imageNamed:@"allergen_selected"]];
+        [allergen setHighlightedImage:[UIImage imageNamed:@"allergen_highlighted"]];
         
         /*TabBarItem *allergen2 = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
         [allergen2 setItemName:@"Allergen"];
-        [allergen2 setImage:[UIImage imageNamed:@"allergen_off"]];
-        [allergen2 setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
+        [allergen2 setImage:[UIImage imageNamed:@"allergen"]];
+        [allergen2 setSelectedImage:[UIImage imageNamed:@"allergen_selected"]];
         */
         tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,calendar,type,price,allergen] forPosition:TabBarPickerPositionBottom];
         [tabbar setItemSpacing:0];
@@ -95,9 +100,7 @@
 
 - (void) viewDidAppear:(BOOL)animated {
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tabbar show];
-    });
+    [tabbar selectItem:0];
     
     /*TabBarSubItem *subItem1 = [TabBarSubItem tabBarSubItemWithName:@"Peppe"];
     TabBarSubItem *subItem2 = [TabBarSubItem tabBarSubItemWithName:@"Peppe1"];
@@ -109,8 +112,8 @@
     
     TabBarItem *allergen = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
     [allergen setItemName:@"Allergen"];
-    [allergen setImage:[UIImage imageNamed:@"allergen_off"]];
-    [allergen setSelectedImage:[UIImage imageNamed:@"allergen_on"]];
+    [allergen setImage:[UIImage imageNamed:@"allergen"]];
+    [allergen setSelectedImage:[UIImage imageNamed:@"allergen_selected"]];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [tabbar addItem:allergen];

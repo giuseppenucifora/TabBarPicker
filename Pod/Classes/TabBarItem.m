@@ -9,6 +9,7 @@
 #import "TabBarItem.h"
 #import <PureLayout/PureLayout.h>
 #import "NSString+HexColor.h"
+#import <UIButton+BackgroundColor/UIButton+BackgroundColor.h>
 
 @interface TabBarItem()
 
@@ -31,7 +32,7 @@
         
         _itemButton = [[UIButton alloc] initForAutoLayout];
         [_itemButton addTarget:self action:@selector(itemButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-        _highlightColor = [@"ff4e50" colorFromHex];
+        [_itemButton setBackgroundColor:[@"ff4e50" colorFromHex] forState:UIControlStateHighlighted];
         
         [self addSubview:_itemButton];
         
@@ -71,29 +72,40 @@
 - (void) setSelectedImage:(UIImage *)selectedImage {
     
     [_itemButton setImage:selectedImage forState:UIControlStateSelected];
+    [_itemButton setImage:selectedImage forState:UIControlStateSelected|UIControlStateHighlighted];
 }
 
-- (void) setHighlightColor:(UIColor *)highlightColor {
+- (void) setHighlightedImage:(UIImage *)highlightedImage {
+    [_itemButton setImage:highlightedImage forState:UIControlStateHighlighted];
+    [_itemButton setImage:highlightedImage forState:UIControlStateHighlighted|UIControlStateNormal];
+}
+
+- (void) setHighlightedColor:(UIColor *)highlightedColor {
     
-    _highlightColor = highlightColor;
+    _highlightedColor = highlightedColor;
+    
 }
 
 - (void) setHighlighted:(BOOL) highlighted {
     [_itemButton setHighlighted:highlighted];
     if ([_itemButton isHighlighted]) {
-        [_itemButton setBackgroundColor:_highlightColor];
+        
+        [_itemButton setBackgroundColor:_highlightedColor];
         
     }
     else {
         [_itemButton setBackgroundColor:[UIColor clearColor]];
     }
+    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isSelected]]);
+    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isHighlighted]]);
+    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isEnabled]]);
+    NSLog(@"%ld",_itemButton.state);
 }
 
 - (void) itemButtonTapped {
-    
     if ([_itemButton isHighlighted]) {
-        [_itemButton setBackgroundColor:_highlightColor];
         
+        [_itemButton setBackgroundColor:_highlightedColor];
     }
     else {
         [_itemButton setBackgroundColor:[UIColor clearColor]];
@@ -102,6 +114,13 @@
     if (_delegate && [_delegate respondsToSelector:@selector(tabBarItemSelected:)]) {
         [_delegate tabBarItemSelected:self];
     }
+    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isSelected]]);
+    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isHighlighted]]);
+    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isEnabled]]);
+    NSLog(@"%ld",_itemButton.state);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_itemButton setHighlighted:YES];
+    });
 }
 
 @end

@@ -11,6 +11,14 @@
 
 @class TabBarPickerSubItemsView;
 
+typedef NS_ENUM(NSInteger, TabBarPickerSubItemsViewType) {
+    // Informational
+    TabBarPickerSubItemsViewTypeData,
+    TabBarPickerSubItemsViewTypeString,
+    TabBarPickerSubItemsViewTypeButtons,
+    TabBarPickerSubItemsViewTypeCheckBox
+};
+
 @protocol TabBarPickerSubItemsViewDelegate <NSObject>
 
 @required
@@ -24,21 +32,7 @@
 /**
  *  <#Description#>
  */
-@property (nonatomic, strong) NSMutableArray *subItemsArray;
-
-/**
- *  <#Description#>
- */
 @property (nonatomic, assign) id<TabBarPickerSubItemsViewDelegate> delegate;
 
-/**
- *  <#Description#>
- *
- *  @param items       <#items description#>
- *  @param itemsPerRow <#itemsPerRow description#>
- *
- *  @return <#return value description#>
- */
-- (instancetype) initWithTabBarItem:(TabBarItem *) item andsubItemsPerRow:(NSUInteger) itemsPerRow;
 
 @end

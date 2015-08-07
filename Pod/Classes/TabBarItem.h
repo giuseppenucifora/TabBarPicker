@@ -30,9 +30,13 @@
  */
 @property (nonatomic, strong) UIImage *selectedImage;
 /**
- *  <#Description#>
+ *  Represents the image visible in picker when item is highlited.
  */
-@property (nonatomic, strong) UIColor *highlightColor;
+@property (nonatomic, strong) UIImage *highlightedImage;
+/**
+ *  Represents the color of picker item when is highlited.
+ */
+@property (nonatomic, strong) UIColor *highlightedColor;
 
 /**
  *  Represents the name of the item that can be shown in picker.

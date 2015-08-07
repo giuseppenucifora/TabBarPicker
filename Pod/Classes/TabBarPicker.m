@@ -11,14 +11,11 @@
 #import "TabBarPickerSubItemsView.h"
 #import "MMCPSScrollView.h"
 #import <UIView-Overlay/UIView+Overlay.h>
-
-#define DEFAULT_SUB_ITEMS_PER_ROW 2
-#define DEFAULT_SUB_ITEM_HEIGHT 44
+#import "NSString+HexColor.h"
 
 @interface TabBarPicker() <TabBarPickerSubItemsViewDelegate,TabBarItemDelegate>
 
 @property (nonatomic) UIDeviceOrientation orientation;
-@property (nonatomic) NSUInteger subItemRows;
 @property (nonatomic, strong) NSMutableArray *subItemSelectors;
 @property (nonatomic, strong) NSMutableArray *subItemSelectorsConstraints;
 @property (nonatomic) BOOL isShow;
@@ -35,42 +32,29 @@
 
 - (instancetype) initWithTabBarItems:(NSArray *) items forPosition:(TabBarPickerPosition) position {
     
-    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:NSLayoutRelationEqual subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW subItemHeight:DEFAULT_SUB_ITEM_HEIGHT];
+    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:NSLayoutRelationEqual];
     
 }
 
 - (instancetype) initWithTabBarItems:(NSArray *) items forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation {
     
-    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:relation subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW subItemHeight:DEFAULT_SUB_ITEM_HEIGHT];
+    return [self initWithTabBarItems:items withTabBarSize:CGSizeZero forPosition:position andNSLayoutRelation:relation];
     
 }
 
-- (instancetype) initWithTabBarItems:(NSArray *) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation {
-    
-    return [self initWithTabBarItems:items withTabBarSize:size forPosition:position andNSLayoutRelation:relation subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW subItemHeight:DEFAULT_SUB_ITEM_HEIGHT];
-}
-
-- (instancetype) initWithTabBarItems:(NSArray*) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation subItemsPerRow:(NSUInteger) subItemsPerRow {
-    
-    return [self initWithTabBarItems:items withTabBarSize:size forPosition:position andNSLayoutRelation:relation subItemsPerRow:DEFAULT_SUB_ITEMS_PER_ROW subItemHeight:DEFAULT_SUB_ITEM_HEIGHT];
-}
-
-
-
-- (instancetype) initWithTabBarItems:(NSArray*) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation subItemsPerRow:(NSUInteger)  subItemsPerRow subItemHeight:(CGFloat) subItemHeight {
+- (instancetype) initWithTabBarItems:(NSArray*) items withTabBarSize:(CGSize) size forPosition:(TabBarPickerPosition) position andNSLayoutRelation:(NSLayoutRelation) relation {
     
     self = [self initForAutoLayout];
     if (self) {
-        _subItemPerRow = subItemsPerRow;
+
         _itemSpacing = 10;
         _layoutRelation = relation;
-        _subItemHeight  = subItemHeight;
         _position = position;
         _dimWhenShow = YES;
         _subItemSelectors = [[NSMutableArray alloc] init];
         _tabBarItemsConstraints = [[NSMutableArray alloc] init];
         _subItemSelectorsConstraints = [[NSMutableArray alloc] init];
-        _dimColor = [[UIColor blackColor] colorWithAlphaComponent: 0.5];
+        _dimColor = [[@"333333" colorFromHex] colorWithAlphaComponent: 0.5];
         
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
         
@@ -104,7 +88,7 @@
         if ([_tabBarItems count] > 0) {
             int i = 0;
             for (TabBarItem *item in _tabBarItems) {
-                TabBarPickerSubItemsView *subItemSelector = [[TabBarPickerSubItemsView alloc] initWithTabBarItem:item andsubItemsPerRow:_subItemPerRow];
+                TabBarPickerSubItemsView *subItemSelector = [[TabBarPickerSubItemsView alloc] init];
                 [subItemSelector setDelegate:self];
                 switch (i) {
                     case 0:
@@ -122,7 +106,9 @@
                         [subItemSelector setBackgroundColor:[UIColor yellowColor]];
                     }
                         break;
-                    default:
+                    default:{
+                        [subItemSelector setBackgroundColor:[UIColor blueColor]];
+                    }
                         break;
                 }
                 i++;
@@ -252,6 +238,14 @@
         
         [_tabBarItemsConstraints addObjectsFromArray:[_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES]];
     }
+}
+
+- (void) selectItem:(NSInteger) itemIndex {
+    
+    if ([_tabBarItems count] > itemIndex) {
+        [(TabBarItem*)[_tabBarItems objectAtIndex:itemIndex] setHighlighted:YES];
+    }
+    [self show];
 }
 
 - (void) show {
