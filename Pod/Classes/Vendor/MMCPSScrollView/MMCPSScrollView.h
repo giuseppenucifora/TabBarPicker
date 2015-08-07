@@ -51,4 +51,6 @@ typedef enum {
 
 - (id)initWithFrame:(CGRect)frame andType:(MMCPSScrollType) type;
 
+- (void) scrollToPage:(NSInteger) index;
+
 @end

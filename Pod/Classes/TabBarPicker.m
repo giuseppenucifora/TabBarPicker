@@ -27,7 +27,6 @@
 @property (nonatomic, strong) NSLayoutConstraint *hideConstraint;
 @property (nonatomic, strong) NSMutableArray *tabBarItemsConstraints;
 @property (nonatomic, strong) TabBarItem *selectedTabBarItem;
-
 @property (nonatomic, strong) MMCPSScrollView *subItemScrollView;
 
 @end
@@ -98,6 +97,7 @@
         [_subItemScrollView setType:MMCPSScrollHorizontal];
         [_subItemScrollView setMMCPSDelegate:self];
         [_subItemScrollView setPagingEnabled:YES];
+        [_subItemScrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
         
         [self addSubview:_subItemScrollView];
         
@@ -108,7 +108,7 @@
                 [subItemSelector setDelegate:self];
                 switch (i) {
                     case 0:
-                        
+                        [subItemSelector setBackgroundColor:[UIColor lightGrayColor]];
                         break;
                     case 1:{
                         [subItemSelector setBackgroundColor:[UIColor redColor]];
@@ -119,16 +119,18 @@
                     }
                         break;
                     case 3: {
-                        
+                        [subItemSelector setBackgroundColor:[UIColor yellowColor]];
                     }
                         break;
                     default:
                         break;
                 }
+                i++;
                 [_subItemScrollView addSubview:subItemSelector];
                 
                 [_subItemSelectors addObject:subItemSelector];
             }
+            [_subItemScrollView setPageSize:1];
         }
     }
     
@@ -138,15 +140,7 @@
 }
 
 - (void) layoutSubviews {
-    
-    /*if ([self.constraints count] > 0) {
-     
-     [NSLayoutConstraint deactivateConstraints:self.constraints];
-     [NSLayoutConstraint deactivateConstraints:_subItemSelector.constraints];
-     for (TabBarItem *item in _tabBarItems) {
-     [item.constraints autoRemoveConstraints];
-     }
-     }*/
+   
     if (!_didSetupConstraints) {
         
         switch (_position) {
@@ -205,14 +199,23 @@
                 
                 [_tabBarItemsConstraints addObjectsFromArray:[_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES]];
                 
-                [_subItemSelectors autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:0 insetSpacing:YES matchedSizes:YES];
+                
                 
                 [_subItemScrollView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self];
                 [_subItemScrollView autoSetDimension:ALDimensionHeight toSize:343];
                 [_subItemScrollView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:[_tabBarItems firstObject]];
                 [_subItemScrollView autoAlignAxisToSuperviewAxis:ALAxisVertical];
-                [_subItemScrollView setBackgroundColor:[UIColor blueColor]];
                 
+                //[_subItemScrollView setPageSize:343];
+                [_subItemScrollView setSegmentSize:[[UIScreen mainScreen] bounds].size.width];
+                
+                [_subItemSelectors autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:0 insetSpacing:YES matchedSizes:YES];
+                [_subItemSelectors autoSetViewsDimension:ALDimensionHeight toSize:343];
+                [_subItemSelectors autoSetViewsDimension:ALDimensionWidth toSize:[[UIScreen mainScreen] bounds].size.width];
+                
+                [[_subItemSelectors firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+                
+                [_subItemScrollView setContentSize:CGSizeMake([_subItemSelectors count]*[[UIScreen mainScreen] bounds].size.width , 343)];
                 
             }
                 break;
@@ -254,7 +257,6 @@
 - (void) show {
     
     if (!_isShow) {
-        
         
         _isShow = YES;
         [self setNeedsUpdateConstraints];
@@ -377,6 +379,8 @@
         }
     }
     _selectedTabBarItem = selectedItem;
+    
+    [_subItemScrollView scrollToPage:[_tabBarItems indexOfObject:_selectedTabBarItem]];
 }
 
 #pragma mark -

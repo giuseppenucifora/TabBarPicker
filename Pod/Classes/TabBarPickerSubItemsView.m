@@ -55,10 +55,9 @@
      }*/
     if (!_didSetupConstraints) {
         
-        [self autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:-(_rows*_itemHeight)];
+        //[self autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:-(_rows*_itemHeight)];
         [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:NSLayoutRelationEqual];
-        [self autoSetDimension:ALDimensionHeight toSize:_rows*_itemHeight];
-        
+        [self autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.superview withOffset:0 relation:NSLayoutRelationEqual];
         _didSetupConstraints = YES;
     }
 }
