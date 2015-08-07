@@ -9,7 +9,7 @@
 #import "TabBarItem.h"
 #import <PureLayout/PureLayout.h>
 #import "NSString+HexColor.h"
-#import <UIButton+BackgroundColor/UIButton+BackgroundColor.h>
+#import "UIButton+BackgroundColor.h"
 
 @interface TabBarItem()
 
@@ -83,19 +83,12 @@
 - (void) setHighlightedColor:(UIColor *)highlightedColor {
     
     _highlightedColor = highlightedColor;
-    
+    [_itemButton setBackgroundColor:_highlightedColor forState:UIControlStateHighlighted];
 }
 
 - (void) setHighlighted:(BOOL) highlighted {
     [_itemButton setHighlighted:highlighted];
-    if ([_itemButton isHighlighted]) {
-        
-        [_itemButton setBackgroundColor:_highlightedColor];
-        
-    }
-    else {
-        [_itemButton setBackgroundColor:[UIColor clearColor]];
-    }
+    
     NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isSelected]]);
     NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isHighlighted]]);
     NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isEnabled]]);
@@ -103,14 +96,6 @@
 }
 
 - (void) itemButtonTapped {
-    if ([_itemButton isHighlighted]) {
-        
-        [_itemButton setBackgroundColor:_highlightedColor];
-    }
-    else {
-        [_itemButton setBackgroundColor:[UIColor clearColor]];
-    }
-    
     if (_delegate && [_delegate respondsToSelector:@selector(tabBarItemSelected:)]) {
         [_delegate tabBarItemSelected:self];
     }
@@ -118,7 +103,7 @@
     NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isHighlighted]]);
     NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isEnabled]]);
     NSLog(@"%ld",_itemButton.state);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.002 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [_itemButton setHighlighted:YES];
     });
 }

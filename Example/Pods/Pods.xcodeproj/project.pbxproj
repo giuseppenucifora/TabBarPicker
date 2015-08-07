@@ -44,6 +44,10 @@
 		610E3F00DD9A11CF2B3AB4ACDF9F2C88 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1993462D9F57783E626EE12A22DA6E /* ALView+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		62AF98DE098B6AE453132CE1AA19765E /* POPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6215B243DFD151285F9B12CE2368A2 /* POPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6354BF1C514445C33F9B65DD18205535 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 913E7306AD4E255661D418473382CF54 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		688F8F6C1B7515A7008E28C8 /* UIButton+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 688F8F681B7515A7008E28C8 /* UIButton+BackgroundColor.h */; };
+		688F8F6D1B7515A7008E28C8 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 688F8F691B7515A7008E28C8 /* UIButton+BackgroundColor.m */; };
+		688F8F6E1B7515A7008E28C8 /* UIImage+Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 688F8F6A1B7515A7008E28C8 /* UIImage+Color.h */; };
+		688F8F6F1B7515A7008E28C8 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 688F8F6B1B7515A7008E28C8 /* UIImage+Color.m */; };
 		6BFFC7205011A11472F6457F6D6B489C /* POPAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24FD90CF8C651053BFFF6A3EAF117125 /* POPAnimation.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6C4B81E2699A8266AAB7C85824999897 /* POPSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = A103939D06A87FED0BE43F0CF5F5056A /* POPSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DBFBBAB5805C21D1665893E655EA4FD /* POPDecayAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0092F18589478DBE2AE13D966D9CCD17 /* POPDecayAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -216,6 +220,10 @@
 		63FCE3E65371359592CB606E1790BC86 /* POPLayerExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = pop/POPLayerExtras.h; sourceTree = "<group>"; };
 		6474C99DA6F95FB4A031EA234BA3CF12 /* POPPropertyAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimation.h; path = pop/POPPropertyAnimation.h; sourceTree = "<group>"; };
 		6805F6C4A24C2AAAB6A33C0A97652E03 /* POPAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimation.h; path = pop/POPAnimation.h; sourceTree = "<group>"; };
+		688F8F681B7515A7008E28C8 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
+		688F8F691B7515A7008E28C8 /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
+		688F8F6A1B7515A7008E28C8 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		688F8F6B1B7515A7008E28C8 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		6A74066159202FC8BA84394854A1116D /* MMCPSScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MMCPSScrollView.h; sourceTree = "<group>"; };
 		6E05779740DB7A4882324BB0CC77FE83 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
 		73CE6B07292175B9D39CBFFC0DB41A60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -396,6 +404,7 @@
 			children = (
 				977370A91AC8B677022217B6F7096E4E /* MMCPSScrollView */,
 				FFBEFBD8E8214E18E4714B2658CAC8CB /* NSString+HexColor */,
+				688F8F671B7515A7008E28C8 /* UIButton+BackgroundColor */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -484,6 +493,17 @@
 			);
 			name = "Pods-TabBarPicker_Example";
 			path = "Target Support Files/Pods-TabBarPicker_Example";
+			sourceTree = "<group>";
+		};
+		688F8F671B7515A7008E28C8 /* UIButton+BackgroundColor */ = {
+			isa = PBXGroup;
+			children = (
+				688F8F681B7515A7008E28C8 /* UIButton+BackgroundColor.h */,
+				688F8F691B7515A7008E28C8 /* UIButton+BackgroundColor.m */,
+				688F8F6A1B7515A7008E28C8 /* UIImage+Color.h */,
+				688F8F6B1B7515A7008E28C8 /* UIImage+Color.m */,
+			);
+			path = "UIButton+BackgroundColor";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -719,7 +739,9 @@
 				A1F2D95F436714051CFE1601C09ACAE9 /* NSString+HexColor.h in Headers */,
 				3FC1CA95A408FA5E1A57AC93B0C8A988 /* TabBarItem.h in Headers */,
 				DF28F428A637429E12D16D55801D4916 /* TabBarPicker-umbrella.h in Headers */,
+				688F8F6C1B7515A7008E28C8 /* UIButton+BackgroundColor.h in Headers */,
 				C83D6A4F894219C63C6ED47E108D3EB3 /* TabBarPicker.h in Headers */,
+				688F8F6E1B7515A7008E28C8 /* UIImage+Color.h in Headers */,
 				7391D8870EF96C08872561E1821F1085 /* TabBarPickerSubItemsView.h in Headers */,
 				860781420B1293C292A4A3D52E9F50F0 /* TabBarSubItem.h in Headers */,
 			);
@@ -1076,10 +1098,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDBA8DBAAFFC333C9196889504A8897 /* MMCPSScrollView.m in Sources */,
+				688F8F6D1B7515A7008E28C8 /* UIButton+BackgroundColor.m in Sources */,
 				D6B77498010DFE75E70431CBF7896FCC /* NSString+HexColor.m in Sources */,
 				4878C076CDFE4C3EA1F69EA060123C59 /* TabBarItem.m in Sources */,
 				6F1FE5900883A92AFA28F808B14E8726 /* TabBarPicker-dummy.m in Sources */,
 				B020FF612A093F9D08267D37E81E8A10 /* TabBarPicker.m in Sources */,
+				688F8F6F1B7515A7008E28C8 /* UIImage+Color.m in Sources */,
 				787808E143D0036BA6D65469240A1653 /* TabBarPickerSubItemsView.m in Sources */,
 				2E7293FA79CA8E73693C7D7C838206AD /* TabBarSubItem.m in Sources */,
 			);
