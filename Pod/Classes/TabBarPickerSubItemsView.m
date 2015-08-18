@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UISwitch *itemSwich;
 @property (nonatomic, strong) UILabel *switchBarLabel;
 @property (nonatomic, strong) UIButton *localizationButton;
+@property (nonatomic, strong) UIView *contentView;
 
 @end
 
@@ -32,36 +33,39 @@
 
 - (instancetype) initWithType:(TabBarPickerSubItemsViewType) type subItems:(NSArray*) subItems needsLocalization:(BOOL) needsLocalization{
     
-    self = [self initForAutoLayout];
+    self                = [self initForAutoLayout];
     
     if (self) {
         [self setUserInteractionEnabled:YES];
-        _type = type;
-        _needsLocalization = needsLocalization;
-        _switchBarView = [[UIView alloc] initForAutoLayout];
+        _type               = type;
+        _needsLocalization  = needsLocalization;
+        _switchBarView      = [[UIView alloc] initForAutoLayout];
         [_switchBarView setBackgroundColor:[@"f7f7f7" colorFromHex]];
         
-        _switchBarLabel = [[UILabel alloc] initForAutoLayout];
+        _switchBarLabel     = [[UILabel alloc] initForAutoLayout];
         [_switchBarLabel setTextColor:[@"999999" colorFromHex]];
         [_switchBarLabel setText:NSLocalizedString(@"Distance", @"")];
         [_switchBarView addSubview:_switchBarLabel];
         
-        _itemSwich = [[UISwitch alloc] initForAutoLayout];
+        _itemSwich          = [[UISwitch alloc] initForAutoLayout];
         [_itemSwich setOnTintColor:[@"ff4e50" colorFromHex]];
-
+        
         [_itemSwich.layer setBorderWidth:2];
         [_itemSwich.layer setBorderColor:[[@"cccccc" colorFromHex] CGColor]];
         [_itemSwich.layer setCornerRadius:_itemSwich.frame.size.height/2];
         [_itemSwich setUserInteractionEnabled:YES];
         [_itemSwich addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
-        [_switchBarView addSubview:_itemSwich];
+        
+        _contentView        = [[UIView alloc] initForAutoLayout];
+        
+        
+        [self addSubview:_contentView];
         
         if (_needsLocalization) {
             
-            _localizationView = [[UIView alloc] initForAutoLayout];
+            _localizationView   = [[UIView alloc] initForAutoLayout];
             [_localizationView setBackgroundColor:[UIColor purpleColor]];
             [_localizationView setAlpha:0];
-            
             
             _localizationButton = [[UIButton alloc] initForAutoLayout];
             [_localizationButton setTitle:NSLocalizedString(@"ATTIVA LOCALIZZAZIONE DISPOSITIVO", @"") forState:UIControlStateNormal];
@@ -75,16 +79,12 @@
             
             [_localizationView addSubview:_localizationButton];
             
-            [self addSubview:_localizationView];
+            [_contentView addSubview:_localizationView];
         }
         
-        /*_subItems = [[NSMutableArray alloc] init];
-         for (NSObject *subItem in subItems) {
-         if ([subItem isKindOfClass:[TabBarSubItem class]]) {
-         [_subItems addObject:subItem];
-         }
-         }*/
         [self addSubview:_switchBarView];
+        
+        [_switchBarView addSubview:_itemSwich];
     }
     
     [self updateConstraintsIfNeeded];
@@ -115,20 +115,32 @@
         [_itemSwich autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:_switchBarView withOffset:-20];
         [_itemSwich autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
         
-        [_localizationView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_itemSwich withOffset:4];
-        [_localizationView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self];
-        [_localizationView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self];
+        [_contentView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_switchBarView];
+        [_contentView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self];
+        [_contentView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self];
+        [_contentView autoAlignAxisToSuperviewAxis:ALAxisVertical];
         
-        [_localizationButton autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-        [_localizationButton autoAlignAxisToSuperviewAxis:ALAxisVertical];
-        [_localizationButton autoSetDimension:ALDimensionHeight toSize:44 relation:NSLayoutRelationLessThanOrEqual];
-        [_localizationButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self withMultiplier:0.8];
-        
+        if (_needsLocalization) {
+            
+            [_localizationView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_contentView];
+            
+            [_localizationView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:_contentView];
+            [_localizationView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+            [_localizationView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+            
+            [_localizationButton autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+            [_localizationButton autoAlignAxisToSuperviewAxis:ALAxisVertical];
+            [_localizationButton autoSetDimension:ALDimensionHeight toSize:44 relation:NSLayoutRelationLessThanOrEqual];
+            [_localizationButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self withMultiplier:0.8];
+        }
         _didSetupConstraints = YES;
     }
-    NSLog(@"%f %f",self.frame.size.width,self.frame.size.height);
-    NSLog(@"%f %f",_switchBarView.frame.size.width,_switchBarView.frame.size.height);
+    
     [_localizationButton.layer setCornerRadius:_localizationButton.frame.size.height/2];
+}
+
+- (void) setBackgroundColor:(UIColor *)backgroundColor {
+    [_contentView setBackgroundColor:backgroundColor];
 }
 
 - (void) enableLocalizationWithView:(UIView *) localizationView {

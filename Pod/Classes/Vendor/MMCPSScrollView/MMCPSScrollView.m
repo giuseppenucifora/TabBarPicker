@@ -324,20 +324,19 @@
 {
     // If not dragging, send event to next responder
     if (!self.dragging) {
-        [self.nextResponder.nextResponder touchesEnded: touches withEvent:event];
+        if ([self.nextResponder respondsToSelector:@selector(touchesEnded:withEvent:)]) {
+            [self.nextResponder touchesEnded: touches withEvent:event];
+        }
+        if ([self.nextResponder.nextResponder respondsToSelector:@selector(touchesEnded:withEvent:)]) {
+            [self.nextResponder.nextResponder touchesEnded: touches withEvent:event];
+        }
+        if ([self.nextResponder.nextResponder.nextResponder respondsToSelector:@selector(touchesEnded:withEvent:)]) {
+            [self.nextResponder.nextResponder.nextResponder touchesEnded: touches withEvent:event];
+        }
     }
-    else
+    else {
         [super touchesEnded: touches withEvent: event];
-    
-}
-
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if (!self.dragging) {
-        [self.nextResponder.nextResponder touchesBegan: touches withEvent:event];
     }
-    else
-        [super touchesBegan: touches withEvent:event];
     
 }
 

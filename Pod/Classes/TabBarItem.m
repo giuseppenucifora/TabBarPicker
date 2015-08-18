@@ -55,7 +55,7 @@
     //[_itemButton autoPinEdgesToSuperviewMargins];
     if (!_didSetupConstraints) {
         [_itemButton autoCenterInSuperview];
-        [_itemButton autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self];
+        [_itemButton autoSetDimension:ALDimensionHeight toSize:44];
         [_itemButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self];
 
         _didSetupConstraints = YES;

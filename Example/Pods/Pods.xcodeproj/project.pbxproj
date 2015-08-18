@@ -49,8 +49,6 @@
 		6115D515692E38D8D809451232B83C52 /* TabBarPickerSubItemsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BDFBF8EAD1D91F7F7C98AE097F6AD54 /* TabBarPickerSubItemsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62AF98DE098B6AE453132CE1AA19765E /* POPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6215B243DFD151285F9B12CE2368A2 /* POPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6354BF1C514445C33F9B65DD18205535 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 913E7306AD4E255661D418473382CF54 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		688DF0C01B833D0D00FE093C /* ToucheableScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 688DF0BE1B833D0D00FE093C /* ToucheableScrollView.h */; };
-		688DF0C11B833D0D00FE093C /* ToucheableScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 688DF0BF1B833D0D00FE093C /* ToucheableScrollView.m */; };
 		6BFFC7205011A11472F6457F6D6B489C /* POPAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24FD90CF8C651053BFFF6A3EAF117125 /* POPAnimation.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6C4B81E2699A8266AAB7C85824999897 /* POPSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = A103939D06A87FED0BE43F0CF5F5056A /* POPSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DBFBBAB5805C21D1665893E655EA4FD /* POPDecayAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0092F18589478DBE2AE13D966D9CCD17 /* POPDecayAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -228,8 +226,6 @@
 		6474C99DA6F95FB4A031EA234BA3CF12 /* POPPropertyAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimation.h; path = pop/POPPropertyAnimation.h; sourceTree = "<group>"; };
 		6682B426E85C9170F1FA5919B0BD809D /* TabBarPickerSubItemsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarPickerSubItemsView.m; sourceTree = "<group>"; };
 		6805F6C4A24C2AAAB6A33C0A97652E03 /* POPAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimation.h; path = pop/POPAnimation.h; sourceTree = "<group>"; };
-		688DF0BE1B833D0D00FE093C /* ToucheableScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToucheableScrollView.h; sourceTree = "<group>"; };
-		688DF0BF1B833D0D00FE093C /* ToucheableScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToucheableScrollView.m; sourceTree = "<group>"; };
 		69A66B68532816A729F8D7B45A344A3D /* SharedLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SharedLocationManager.h; sourceTree = "<group>"; };
 		6C4407C962E1D98312FB510D7F5BA8D7 /* SharedLocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SharedLocationManager.m; sourceTree = "<group>"; };
 		6E05779740DB7A4882324BB0CC77FE83 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
@@ -502,19 +498,9 @@
 			path = "Target Support Files/Pods-TabBarPicker_Example";
 			sourceTree = "<group>";
 		};
-		688DF0BD1B833D0D00FE093C /* TouchableScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				688DF0BE1B833D0D00FE093C /* ToucheableScrollView.h */,
-				688DF0BF1B833D0D00FE093C /* ToucheableScrollView.m */,
-			);
-			path = TouchableScrollView;
-			sourceTree = "<group>";
-		};
 		6F07576C2E19EA1A65B4E924DB9FD5C7 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				688DF0BD1B833D0D00FE093C /* TouchableScrollView */,
 				2B50D3C0ACD825270CCC306CD51D20E7 /* MMCPSScrollView */,
 				D32A21F857D4479FF01EE37CF833E9CD /* NSString+HexColor */,
 				8AE381098F77067F0AD825096898C950 /* SharedLocationManager */,
@@ -821,7 +807,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3B4357DC8723B40B75036643935EBD7 /* MMCPSScrollView.h in Headers */,
-				688DF0C01B833D0D00FE093C /* ToucheableScrollView.h in Headers */,
 				2A65286B5726E4AF0A5395E6B035F614 /* NSString+HexColor.h in Headers */,
 				399306C358953571B5B236714BAC0F0B /* SharedLocationManager.h in Headers */,
 				BA97F812224F556023C97037E1B9B768 /* TabBarItem.h in Headers */,
@@ -1139,7 +1124,6 @@
 				07501B134439D43A603B50365BAB8C36 /* NSString+HexColor.m in Sources */,
 				2D696A7493C3B7A7DC34C3857719B884 /* SharedLocationManager.m in Sources */,
 				CCBEA17C33C968D4115035DFD75D03C7 /* TabBarItem.m in Sources */,
-				688DF0C11B833D0D00FE093C /* ToucheableScrollView.m in Sources */,
 				8684DD0504E7EC38B91A22B510C6A01D /* TabBarPicker-dummy.m in Sources */,
 				27612C6A0F69DAD74E0FEB17816B9E15 /* TabBarPicker.m in Sources */,
 				F959AAD4573A311BB8F79F1AF6BF166E /* TabBarPickerSubItemsView.m in Sources */,

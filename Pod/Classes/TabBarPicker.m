@@ -9,7 +9,7 @@
 #import "TabBarPicker.h"
 #import <PureLayout/PureLayout.h>
 #import "TabBarPickerSubItemsView.h"
-#import "ToucheableScrollView.h"
+#import "MMCPSScrollView.h"
 #import <UIView-Overlay/UIView+Overlay.h>
 #import "NSString+HexColor.h"
 
@@ -25,8 +25,8 @@
 @property (nonatomic, strong) NSMutableArray *tabBarItemsConstraints;
 @property (nonatomic, strong) TabBarItem *selectedTabBarItem;
 
-@property (nonatomic, strong) ToucheableScrollView *subItemScrollView;
-@property (assign, nonatomic) int totalPages;
+@property (nonatomic, strong) UIView *tabBarView;
+@property (nonatomic, strong) MMCPSScrollView *subItemScrollView;
 
 @end
 
@@ -70,19 +70,25 @@
         
         _tabBarItems = [[NSMutableArray alloc] init];
         
+        _tabBarView = [[UIView alloc] initForAutoLayout];
+        
+        [self addSubview:_tabBarView];
+        
         for (NSObject *item in items) {
             if (item && [item isKindOfClass:[TabBarItem class]]) {
                 
                 [_tabBarItems addObject:item];
                 [(TabBarItem*)item setDelegate:self];
-                [self addSubview:item];
+                [_tabBarView addSubview:item];
             }
         }
         
-        _subItemScrollView = [[ToucheableScrollView alloc] initForAutoLayout];
+        _subItemScrollView = [[MMCPSScrollView alloc] initForAutoLayout];
         [_subItemScrollView setPagingEnabled:YES];
         [_subItemScrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
         [_subItemScrollView setUserInteractionEnabled:YES];
+        [_subItemScrollView setMMCPSDelegate:self];
+        [_subItemScrollView setPageSize:1];
         
         [self addSubview:_subItemScrollView];
     }
@@ -141,10 +147,16 @@
             case TabBarPickerPositionBottom:
             default:{
                 
-                _hideConstraint = [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
-                [self autoSetDimension:ALDimensionHeight toSize:44];
+                _hideConstraint = [self autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.superview withOffset:299 relation:NSLayoutRelationEqual];
+                
+                [self autoSetDimension:ALDimensionHeight toSize:343];
                 [self autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview withOffset:0 relation:_layoutRelation];
                 [self autoAlignAxisToSuperviewMarginAxis:ALAxisVertical];
+                
+                [_tabBarView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview];
+                [_tabBarView autoSetDimension:ALDimensionHeight toSize:44];
+                [_tabBarView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+                [_tabBarView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self];
                 
                 [_tabBarItems autoSetViewsDimension:ALDimensionHeight toSize:44.0];
                 
@@ -156,11 +168,12 @@
                 [_subItemScrollView autoSetDimension:ALDimensionHeight toSize:343];
                 [_subItemScrollView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:[_tabBarItems firstObject]];
                 [_subItemScrollView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+                [_subItemScrollView setSegmentSize:[[UIScreen mainScreen] bounds].size.width    ];
+                [_subItemScrollView setType:MMCPSScrollHorizontal];
                 
                 if ([_tabBarItems count] > 0) {
                     int i = 0;
                     
-                    TabBarItem *prevItem;
                     for (TabBarItem *item in _tabBarItems) {
                         
                         if ([item itemSubView]) {
@@ -193,35 +206,17 @@
                             
                             [_subItemSelectors addObject:[item itemSubView]];
                             
-                            if (!prevItem) {
-                                // Align to contentView
-                                [pageLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft];
-                            } else {
-                                // Align to prev label
-                                [pageLabel autoConstrainAttribute:ALAttributeLeading toAttribute:ALAttributeTrailing ofView:prevLabel];
-                            }
-                            
-                            if (i == pages - 1) {
-                                // Last page
-                                [pageLabel autoPinEdgeToSuperviewEdge:ALEdgeRight];
-                            }
-                            
-                            prevItem = item;
                         }
                     }
                     [_subItemScrollView setPageSize:1];
                 }
                 
-                //[_subItemSelectors autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:0 insetSpacing:YES matchedSizes:YES];
+                [_subItemSelectors autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:0 insetSpacing:YES matchedSizes:YES];
                 
-                //[[_subItemSelectors firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-                
-                //[_subItemScrollView layoutIfNeeded];
-                
+                [[_subItemSelectors firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
             }
                 break;
         }
-        
         
         _didSetupConstraints = YES;
 
@@ -300,7 +295,7 @@
                                  default: {
                                      [_hideConstraint autoRemove];
                                      
-                                     _showConstraint = [self autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:_subItemScrollView.frame.size.height];
+                                     _showConstraint = [self autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.superview withOffset:0 relation:NSLayoutRelationEqual];
                                      break;
                                  }
                              }
@@ -349,7 +344,7 @@
                                  default: {
                                      [_showConstraint autoRemove];
                                      
-                                     _hideConstraint = [self autoPinEdgeToSuperviewMargin:ALEdgeBottom];
+                                     _hideConstraint = [self autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.superview withOffset:299 relation:NSLayoutRelationEqual];
                                      break;
                                  }
                              }
@@ -389,7 +384,7 @@
     }
     _selectedTabBarItem = selectedItem;
     
-    [_subItemScrollView scrollToPage:[_tabBarItems indexOfObject:_selectedTabBarItem]+1];
+    [_subItemScrollView scrollToPage:[_tabBarItems indexOfObject:_selectedTabBarItem]];
 }
 
 #pragma mark -
