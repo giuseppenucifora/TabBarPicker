@@ -1,6 +1,6 @@
 PODS:
   - pop (1.0.7)
-  - PureLayout (2.0.6)
+  - PureLayout (3.0.0)
   - TabBarPicker (0.1.0)
   - UIView-Overlay (0.1)
 
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
-  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
+  PureLayout: 270dfee2236f697ab1d5e2771c2e5c248495fa0d
   TabBarPicker: 0b8b0c04ad47ed9c740cef5d31cac7fefe6cb273
   UIView-Overlay: 95e42e733f6fdcfca523a399ba7907d0ca4570a0
 

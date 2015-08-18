@@ -10,6 +10,7 @@
 #import <PureLayout/PureLayout.h>
 #import "NSString+HexColor.h"
 #import "UIButton+BackgroundColor.h"
+#import <UIKit/UIKit.h>
 
 @interface TabBarItem()
 
@@ -17,32 +18,34 @@
 @property (nonatomic, strong) UIButton *itemButton;
 @property (nonatomic) UIDeviceOrientation orientation;
 @property (nonatomic, assign) BOOL didSetupConstraints;
+@property (nonatomic, strong) UIView *switchBarView;
+@property (nonatomic, strong) UISwitch *itemSwich;
+@property (nonatomic, strong) UILabel *switchBarLabel;
 
 @end
 
 @implementation TabBarItem
 
-- (instancetype) initWithSubItems:(NSArray*) array {
+- (instancetype) initWithSubItemView:(TabBarPickerSubItemsView*) itemSubView {
+    
+    return [self initWithSubItemView:itemSubView needLocalization:NO];
+}
+
+- (instancetype) initWithSubItemView:(TabBarPickerSubItemsView*) itemSubView needLocalization:(BOOL) needLocalitazion {
     self = [self initForAutoLayout];
     if (self) {
-        NSAssert(array, @"SubItemsArray cannot be nil");
+        NSAssert(itemSubView, @"itemSubView cannot be nil");
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
         
         _orientation = [[UIDevice currentDevice] orientation];
+        _itemSubView = itemSubView;
         
         _itemButton = [[UIButton alloc] initForAutoLayout];
         [_itemButton addTarget:self action:@selector(itemButtonTapped) forControlEvents:UIControlEventTouchUpInside];
         [_itemButton setBackgroundColor:[@"ff4e50" colorFromHex] forState:UIControlStateHighlighted];
         
         [self addSubview:_itemButton];
-        
-        _subItems = [[NSMutableArray alloc] init];
-        
-        for (NSObject *subItem in array) {
-            if ([subItem isKindOfClass:[TabBarSubItem class]]) {
-                [_subItems addObject:subItem];
-            }
-        }
+
     }
     return self;
 }
@@ -51,9 +54,10 @@
     
     //[_itemButton autoPinEdgesToSuperviewMargins];
     if (!_didSetupConstraints) {
-    [_itemButton autoCenterInSuperview];
-    [_itemButton autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self];
-    [_itemButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self];
+        [_itemButton autoCenterInSuperview];
+        [_itemButton autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self];
+        [_itemButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self];
+
         _didSetupConstraints = YES;
     }
 }
@@ -88,24 +92,26 @@
 
 - (void) setHighlighted:(BOOL) highlighted {
     [_itemButton setHighlighted:highlighted];
-    
-    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isSelected]]);
-    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isHighlighted]]);
-    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isEnabled]]);
-    NSLog(@"%ld",_itemButton.state);
 }
 
 - (void) itemButtonTapped {
     if (_delegate && [_delegate respondsToSelector:@selector(tabBarItemSelected:)]) {
         [_delegate tabBarItemSelected:self];
     }
-    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isSelected]]);
-    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isHighlighted]]);
-    NSLog(@"%@",[NSNumber numberWithBool:[_itemButton isEnabled]]);
-    NSLog(@"%ld",_itemButton.state);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.002 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_itemButton setHighlighted:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.00001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self setHighlighted:YES];
     });
+}
+
+
+
+- (void)openSettings
+{
+    BOOL canOpenSettings = (&UIApplicationOpenSettingsURLString != NULL);
+    if (canOpenSettings) {
+        NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        [[UIApplication sharedApplication] openURL:url];
+    }
 }
 
 @end

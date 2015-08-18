@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TabBarItem.h"
 
+@class TabBarItem;
+@class TabBarSubItem;
 @class TabBarPickerSubItemsView;
 
 typedef NS_ENUM(NSInteger, TabBarPickerSubItemsViewType) {
@@ -23,7 +24,7 @@ typedef NS_ENUM(NSInteger, TabBarPickerSubItemsViewType) {
 
 @required
 
-- (void) tabarPickerSubItemsView:(TabBarPickerSubItemsView*) tabarPickerSubItemsView didSelect:(TabBarItem*) item;
+- (void) tabarPickerSubItemsView:(TabBarPickerSubItemsView*) tabarPickerSubItemsView didSelectTabBarSubItem:(TabBarSubItem*) subItem forTabBarItem:(TabBarItem*) item;
 
 @end
 
@@ -33,6 +34,21 @@ typedef NS_ENUM(NSInteger, TabBarPickerSubItemsViewType) {
  *  <#Description#>
  */
 @property (nonatomic, assign) id<TabBarPickerSubItemsViewDelegate> delegate;
+/**
+ *  <#Description#>
+ */
+@property (nonatomic) BOOL needsLocalization;
+/**
+ *  <#Description#>
+ */
+@property (nonatomic, strong) UIView *localizationView;
+/**
+ *  <#Description#>
+ */
+@property (nonatomic, strong) TabBarItem *tabBarItemReference;
 
+- (instancetype) initWithType:(TabBarPickerSubItemsViewType) type subItems:(NSArray*) subItems;
+
+- (instancetype) initWithType:(TabBarPickerSubItemsViewType) type subItems:(NSArray*) subItems needsLocalization:(BOOL) needsLocalization;
 
 @end

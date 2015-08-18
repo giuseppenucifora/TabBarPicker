@@ -12,7 +12,8 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) UIButton *subItemButton;
+@property (nonatomic, strong) id value;
 
-+ (instancetype) tabBarSubItemWithName:(NSString*)name;
++ (instancetype) tabBarSubItemWithName:(NSString*)name andValue:(id) value;;
 
 @end

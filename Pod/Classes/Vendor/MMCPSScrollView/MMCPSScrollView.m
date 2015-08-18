@@ -18,6 +18,7 @@
     
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
+        [self setUserInteractionEnabled:YES];
     }
     
     return self;
@@ -291,6 +292,7 @@
 
 - (void)addSubview:(UIView *)view {
     [super addSubview:view];
+    [view setUserInteractionEnabled:YES];
     
     int currentLowestPoint = [self CGRectOrigin:_bottomComponent] + [self CGRectSize:_bottomComponent];
     int viewLowestPoint = [self frameOrigin:view] + [self frameSize:view];
@@ -316,6 +318,27 @@
         
         [self setContentSize:contentSize];
     }
+}
+
+- (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event
+{
+    // If not dragging, send event to next responder
+    if (!self.dragging) {
+        [self.nextResponder.nextResponder touchesEnded: touches withEvent:event];
+    }
+    else
+        [super touchesEnded: touches withEvent: event];
+    
+}
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    if (!self.dragging) {
+        [self.nextResponder.nextResponder touchesBegan: touches withEvent:event];
+    }
+    else
+        [super touchesBegan: touches withEvent:event];
+    
 }
 
 @end

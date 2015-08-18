@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		03208AEB6A03CCA0C77A5DA3A79BD522 /* POPVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 93687FABCF55D0A5D679C928BA78DAB4 /* POPVector.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		060E7DD819F53729654E36495DF47426 /* FloatConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = E44E0425616E7E04E1AB9E751AA6AE53 /* FloatConversion.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		07501B134439D43A603B50365BAB8C36 /* NSString+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED289C824091E9CC3700069DEB5B7133 /* NSString+HexColor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0BFE7C394E8150EF5FD76D3675116D48 /* POPBasicAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ADFB66E931B6A5F3701C265EBC50E57 /* POPBasicAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EAB569A3E1579E852A97E70B2A52B19 /* UIView+Overlay.h in Headers */ = {isa = PBXBuildFile; fileRef = B861FEB396B49AFBE01AC2B10E0ACAB5 /* UIView+Overlay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F7B5941BC1A4A320845B9B863551176 /* pop-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 407457717814B9F748F29AC5BADC4CE8 /* pop-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		108E0EDA81BB5E6B0343D317882BE687 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D512E3B6436A1426D782F6DC1DFD3E7D /* Foundation.framework */; };
 		11C5B9474617E9D2DB312798E38A2DC9 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12B38B170D3912EDE7922B720C20619D /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		141AA641914936AB790CE6FCB178B1D7 /* MMCPSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E74ECC4D12B3ABD32F0D9603ABE541B8 /* MMCPSScrollView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		15EBB865A82DF72209B0E02819463060 /* POPAnimatableProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0265183A5C6854D378BE13ADD62DF5D0 /* POPAnimatableProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15EEB9A75A38BB0F7C3B2448A705AD83 /* UnitBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5E9FAC402EFB3AA4E84A2D8D436956 /* UnitBezier.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		19022D54C183B386CBCC3929AB78ED45 /* POPAnimationRuntime.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79BC08E450E450A6BB7385AAE26BD967 /* POPAnimationRuntime.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -21,79 +23,80 @@
 		203E916178B206E4760E275D94B537FA /* POPAnimationRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = FBE55426C8613986F9DE17C08EC4E7CF /* POPAnimationRuntime.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		242683D9189D01DB10D327BD4807ADF2 /* POPAnimatorPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EF1BD1588AB81241629165EFEB77F71 /* POPAnimatorPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		242F2CEE058E9AFB0886BC75D30F5897 /* POPAnimationPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2A7544C3995B3943AA4BC07DAB51D1 /* POPAnimationPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		27612C6A0F69DAD74E0FEB17816B9E15 /* TabBarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 892712A2B0521F4472AE53DB17FFA5ED /* TabBarPicker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		29B97DBB30EE19D048BEC6E25E9F9F14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D512E3B6436A1426D782F6DC1DFD3E7D /* Foundation.framework */; };
+		2A65286B5726E4AF0A5395E6B035F614 /* NSString+HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5198D727327607E4FCEA3F8B223AE56C /* NSString+HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B787FFB562C10AD02FE1C9005365F43 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 090ED9CFCA52EB517831504E40655C5E /* NSLayoutConstraint+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2E7293FA79CA8E73693C7D7C838206AD /* TabBarSubItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0DF9726324591447BF3C7A6CC8F6FD /* TabBarSubItem.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2D696A7493C3B7A7DC34C3857719B884 /* SharedLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4407C962E1D98312FB510D7F5BA8D7 /* SharedLocationManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		30BE2AA9FA254A8A54B20C5D1C439CED /* UIView-Overlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 967EC1A8094613A64436935A32CE393E /* UIView-Overlay-dummy.m */; };
 		3329AF43344F94C2DD9A49EB23068CE8 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9326A1634F9D8759718BF9F5AE1342E8 /* Pods-dummy.m */; };
 		34EC1894BF64A676F556AE2782F2E2A6 /* POPGeometry.mm in Sources */ = {isa = PBXBuildFile; fileRef = C860C342641452046FDF204ED4FB25D3 /* POPGeometry.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3515851F45C9BB3FFDDD122095FF7797 /* Pods-TabBarPicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8799FDC6BF3E75DA73CA794715159657 /* Pods-TabBarPicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		384CE5874312610CF1414126D6E41435 /* POPAnimationEventInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 16F3CE6BFFF06C74BF585D45BFB7E170 /* POPAnimationEventInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		38792B4D4276C59B21ACF9B4DE6ED4F5 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFA4BCE4B185A782DD016F84B3BE0CF /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		399306C358953571B5B236714BAC0F0B /* SharedLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 69A66B68532816A729F8D7B45A344A3D /* SharedLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C2F3F5F1497E202882DF7598F703088 /* POPAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6805F6C4A24C2AAAB6A33C0A97652E03 /* POPAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FC1CA95A408FA5E1A57AC93B0C8A988 /* TabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 74ED984E73B0A43CE00E8EF6E51000BC /* TabBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4878C076CDFE4C3EA1F69EA060123C59 /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 989E7B3B998C2F701E914FC9BCEA3C4E /* TabBarItem.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		48D0C42EEA0F59047616F9D4F51FBD10 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C37744310F9F865551677E6AC8149112 /* NSArray+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4A629B0B3B3C72CBCC07FC57FEB9FFB5 /* POPSpringAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91AC81FCA64DB06998A2D6C93292E3D0 /* POPSpringAnimation.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4BD95F156CB439EB08218A9B1BC10F87 /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA088A284A23B3AC39221F16A6CB0D9 /* TransformationMatrix.cpp */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4EBD0FC5A72489379615C5E2E3A9C03D /* Pods-TabBarPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE46CEDD332B7011600234C346A4003F /* Pods-TabBarPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5408B931355E2EB35B43B6E44EC7075C /* POPAnimator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9B6EE12FEF6DED0AB56B1443E7B346F0 /* POPAnimator.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5894F10E4EE16E60EFEA6CAF8F39BEAC /* TabBarPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8B993D010B7CF17F9E9291557AF882E /* TabBarPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0EB7072D641D8EBF0FF6E2866DAF7B /* POPBasicAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B51C1620215D22739C0E7668D0FCFA91 /* POPBasicAnimation.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5E9A8D95ECF3F7371BCEA9B70C879960 /* POPPropertyAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76962B10AC94EB35A7FEA32B4946FD52 /* POPPropertyAnimation.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		60616CBC5FED53D41E314BD96036FCA0 /* POPAnimationTracerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = DB1EE7FB0A32127BFDF50BF82107F0F4 /* POPAnimationTracerInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		610E3F00DD9A11CF2B3AB4ACDF9F2C88 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1993462D9F57783E626EE12A22DA6E /* ALView+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6115D515692E38D8D809451232B83C52 /* TabBarPickerSubItemsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BDFBF8EAD1D91F7F7C98AE097F6AD54 /* TabBarPickerSubItemsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62AF98DE098B6AE453132CE1AA19765E /* POPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6215B243DFD151285F9B12CE2368A2 /* POPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6354BF1C514445C33F9B65DD18205535 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 913E7306AD4E255661D418473382CF54 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		688F8F6C1B7515A7008E28C8 /* UIButton+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 688F8F681B7515A7008E28C8 /* UIButton+BackgroundColor.h */; };
-		688F8F6D1B7515A7008E28C8 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 688F8F691B7515A7008E28C8 /* UIButton+BackgroundColor.m */; };
-		688F8F6E1B7515A7008E28C8 /* UIImage+Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 688F8F6A1B7515A7008E28C8 /* UIImage+Color.h */; };
-		688F8F6F1B7515A7008E28C8 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 688F8F6B1B7515A7008E28C8 /* UIImage+Color.m */; };
+		688DF0C01B833D0D00FE093C /* ToucheableScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 688DF0BE1B833D0D00FE093C /* ToucheableScrollView.h */; };
+		688DF0C11B833D0D00FE093C /* ToucheableScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 688DF0BF1B833D0D00FE093C /* ToucheableScrollView.m */; };
 		6BFFC7205011A11472F6457F6D6B489C /* POPAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24FD90CF8C651053BFFF6A3EAF117125 /* POPAnimation.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6C4B81E2699A8266AAB7C85824999897 /* POPSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = A103939D06A87FED0BE43F0CF5F5056A /* POPSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DBFBBAB5805C21D1665893E655EA4FD /* POPDecayAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0092F18589478DBE2AE13D966D9CCD17 /* POPDecayAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6E03012F2843C461762C74A9A046EF2E /* Pods-TabBarPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F734DA62746E7AC7FD2CFE5D80E55708 /* Pods-TabBarPicker_Example-dummy.m */; };
-		6F1FE5900883A92AFA28F808B14E8726 /* TabBarPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFA73876E348EE6186525790CF479F1 /* TabBarPicker-dummy.m */; };
 		728A5FCB02E1760C95DEA5ED83A2C1C5 /* POPSpringSolver.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D5C46DAC6E6475ADEE87A8601A25F /* POPSpringSolver.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7391D8870EF96C08872561E1821F1085 /* TabBarPickerSubItemsView.h in Headers */ = {isa = PBXBuildFile; fileRef = F7CFC725DB20421AA2759A672603A491 /* TabBarPickerSubItemsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73F5A493933876566BFE1C7557D058E0 /* POPCGUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C7853AD5F572083A52914090850AD2 /* POPCGUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		758F4837B21699E995B3DA7873BE5AB9 /* POPDecayAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F5618A4CE99E55855B1013DEF653BF8 /* POPDecayAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7635805E27D4F352CC4AC4F3E0B2228C /* POPDecayAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2FCF37642A72A24ECA53BF3ECE2C522 /* POPDecayAnimation.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7687E83DA7BAC649B3BFB96A702B8EF7 /* POPBasicAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1099449FD06DCA3B85854337EBB014 /* POPBasicAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		787808E143D0036BA6D65469240A1653 /* TabBarPickerSubItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE418ABC02DF7186BCDA0CE8F42A6E /* TabBarPickerSubItemsView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7997BBF6E3FBC7DF5295ABF7224B89A4 /* POPVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = F47C77B6247FFF4294E595C4EBF035F5 /* POPVector.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7BE5B65C18977D405062ACF22B6EF38C /* POPMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18127D4692F3B261AE3BC9F683442BE0 /* POPMath.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7C632502864E8AE6F403AE489B593056 /* POPAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D90E0DD88BBD1478B0E18109767F8FA /* POPAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7C6672FF5BC14E5A632F38FBCF4D84F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D512E3B6436A1426D782F6DC1DFD3E7D /* Foundation.framework */; };
 		7D895EB8CC992C0E734A1AC7E73F7D41 /* POPAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AB9A4F96F4D3194C37C06DB13F00F1E /* POPAction.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7DCA23DE188D729056E041F49C521C1B /* POPLayerExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AEB7B6CD1ED86E0DB49046266B5D /* POPLayerExtras.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7DDBA8DBAAFFC333C9196889504A8897 /* MMCPSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7A9BEF575A7AF5C663E711314C1F6 /* MMCPSScrollView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		800AE2604DB4E050529B32FB08E5D2CF /* POPAnimationEvent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 033ADB81C6199DE3DFA0C0515F6D0787 /* POPAnimationEvent.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		85005EF9A1EFBDE7B923C85541044847 /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C843EFA8C32E452322B0ECA1629290A /* POPAnimatableProperty.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		860781420B1293C292A4A3D52E9F50F0 /* TabBarSubItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A142C2387752EB8F0CBA87864EC1D9F /* TabBarSubItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8684DD0504E7EC38B91A22B510C6A01D /* TabBarPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 904079A84D927539A414BED833C527E3 /* TabBarPicker-dummy.m */; };
 		870316C705D226E9990777155D6AC4EC /* POPAnimationEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7469EB00631C681CEE752F2D41DAD63C /* POPAnimationEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B9B75C7523CEBCAF2D86154DDFA98AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D512E3B6436A1426D782F6DC1DFD3E7D /* Foundation.framework */; };
 		8E2CDC7269B59EAC84AEA46D5E28B826 /* POP.h in Headers */ = {isa = PBXBuildFile; fileRef = EE3EC944F1DABE1BFA56ABCC8CE2A9F7 /* POP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FB29797E35802BE65A888432368F471 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17DA7E900B1E7945C8B8CE59D225F706 /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93B87741D4207E22B2E5DDB582C68829 /* TabBarPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4CD19F38BD35C5439EA45425BF343692 /* TabBarPicker.bundle */; };
 		93F5920F69AC785B428577FC0BE0882B /* POPLayerExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FCE3E65371359592CB606E1790BC86 /* POPLayerExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95540F361B7B0ADA359C7E7FDD208D1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D512E3B6436A1426D782F6DC1DFD3E7D /* Foundation.framework */; };
+		96D7ABD08A98128E60E0F50069359FC0 /* TabBarPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4CD19F38BD35C5439EA45425BF343692 /* TabBarPicker.bundle */; };
 		987758B8CC9AE1B9722212C159E99125 /* Pods-TabBarPicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C8FC99E26E968A362BE3183813868F /* Pods-TabBarPicker_Tests-dummy.m */; };
+		9891293FB5D8A4C867C6FE6108C67500 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC2E2B2AD148D2E4BBC115DDA61EFD5 /* UIImage+Color.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		98DE61629DE81688A6D460FF03DD172A /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E05779740DB7A4882324BB0CC77FE83 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1F2D95F436714051CFE1601C09ACAE9 /* NSString+HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 87FF45FA0B37BD605BC79D61F412B4DE /* NSString+HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1A922D53B283BE53F75515F470D2755 /* TabBarSubItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6194B637DF6CFA16E42BCABF5348C38B /* TabBarSubItem.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A30219FCF9EC37ABE44DC610005C2595 /* UIView-Overlay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6809F9933FBA0B384C97E424F36A254 /* UIView-Overlay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7A6A047CA9F0ADFA09FA3F58E8DA1E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D512E3B6436A1426D782F6DC1DFD3E7D /* Foundation.framework */; };
-		AE6D434ED9230B1D615A2DD259CB6038 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D512E3B6436A1426D782F6DC1DFD3E7D /* Foundation.framework */; };
 		AEB41D63ACB6BAF7B6DA8EAB5DBFDFEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D512E3B6436A1426D782F6DC1DFD3E7D /* Foundation.framework */; };
-		B020FF612A093F9D08267D37E81E8A10 /* TabBarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5316CF84EF6CC8F29F5C8F65E47C6EE0 /* TabBarPicker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B2E46B8E61B80795CD4E94081F3A51C2 /* POPAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E99C094867FA40E6CAACB3552C51A71 /* POPAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B373D36B22355D41ABB9B75F3EA0BBF2 /* POPCustomAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 34D6F57DE4FC243021043F443C43B2E7 /* POPCustomAnimation.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B4DBAE098AA6F80CDCDFB1BFB6F6A7AE /* POPAnimationExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = C63094D0493DD4114649FBDA3A330311 /* POPAnimationExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B65A29FBEECF62A70B2A981ED1AE3BC9 /* UIButton+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE7CFA8B928239B1CC73E2FC274AB17 /* UIButton+BackgroundColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B807414C5B82738C9AE261FC4BD35633 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 151D476EC8A8F451EAA5F3E69FC4757F /* UIButton+BackgroundColor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B80B8212180CFDFFDCA9568F41595AE0 /* TabBarSubItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F770FF888D56EB719C45BF38EB5479 /* TabBarSubItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA97F812224F556023C97037E1B9B768 /* TabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADAE502D9B0B386DFB546F956BC81BA /* TabBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCFE039CCE625E616A25871D8BB2601D /* UIView+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF36C9DEBBB22EE208BC6986E44F18B /* UIView+Overlay.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BE8FD01BD558BC524643D9691934BCDF /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 574DA8A9A0215386DE1A03D64F9ABA59 /* PureLayout-dummy.m */; };
 		C07804D5CAE775845193B0BDEAE8153A /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 13DC162AF7BEBCA584CAF9D9CEAD8319 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C83D6A4F894219C63C6ED47E108D3EB3 /* TabBarPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 52CE09C3405F59D40C2BD3971985CF59 /* TabBarPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6B77498010DFE75E70431CBF7896FCC /* NSString+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F188C3F24D664F9CEA0905C2C40C0F2 /* NSString+HexColor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C3B4357DC8723B40B75036643935EBD7 /* MMCPSScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = C0AB0659065645807D7D24A071F9C843 /* MMCPSScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBC724E48D4294B56D03568A11D05FF1 /* UIImage+Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 84377DDAEA9C569BF6EBCF717BDE81E7 /* UIImage+Color.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCBEA17C33C968D4115035DFD75D03C7 /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E1272C77ED4CCB0F280E4DFB2B75B7E1 /* TabBarItem.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D905A57ED65F1E5DFD546AA26BBA6632 /* POPAnimationTracer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5952D2A0EA0D05DC8D692098AC51A7 /* POPAnimationTracer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF28F428A637429E12D16D55801D4916 /* TabBarPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A39F245747851F74126D6C816A9EF2A /* TabBarPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E01D81DAECC949E0D350DEF8A8DEF9DA /* POPMath.h in Headers */ = {isa = PBXBuildFile; fileRef = D59AE80D8F830B2B594F27731251395F /* POPMath.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E0C2B1971770264E2BC030EBFA522C67 /* POPPropertyAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6474C99DA6F95FB4A031EA234BA3CF12 /* POPPropertyAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2B4468A72DF980C1B77E6CC18DC82F5 /* POPAnimationExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3F30E099AB50F0BB210A7F6B6ED1A /* POPAnimationExtras.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -101,65 +104,66 @@
 		ED5C0B5FD3B73C3015AC56C9E5FACA48 /* TransformationMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = C3C90B76A43FA38EA58794A9C84FD81D /* TransformationMatrix.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EDC72938DF5998BBBC017B2FE8B20768 /* POPCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 33A75E30986D83691C56B0833666F7CA /* POPCustomAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3A5427CD0560096A6A82144B8B59C70 /* pop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B49BE5CA6EA26F192340AE3F2471BF /* pop-dummy.m */; };
+		F6440C1C9D4ADB1F5FE7CB2B1D54E343 /* TabBarPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 848C982AABCEC351952AA25A9E612B3B /* TabBarPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7D70C0E25A8123CCE6495EF0CF7FB85 /* POPSpringAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = C23A73774E96D3E6946E0D8F33A031C8 /* POPSpringAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F80CE9A6A3DFE7A013E36693BEE14EAE /* POPGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 61276C8A6D4336801FA57D715D633F8A /* POPGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F959AAD4573A311BB8F79F1AF6BF166E /* TabBarPickerSubItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6682B426E85C9170F1FA5919B0BD809D /* TabBarPickerSubItemsView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F983A03430606378AE8DC27E4BF8436A /* POPPropertyAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A6B4950E1673296D328FFBED288D4CB /* POPPropertyAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F9A3864238BEAF7F67E75EF7417D7AF4 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FBC3E333821E19620FAC1463F61C533 /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA42222184104F516C9AF6AB85A48787 /* POPCGUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = F628DCE86E47F4C94CFDEB115F7A6469 /* POPCGUtils.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FDE2C76578028195B819883E6A76B5B2 /* MMCPSScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A74066159202FC8BA84394854A1116D /* MMCPSScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		21714EBF452DB85A216D38E2672E44B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F1D148434467C1B78F92DD483480D390;
-			remoteInfo = TabBarPicker;
-		};
-		39095C2F0D844AC1B8E8E286164D6CDD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3DA374BB5346C86BB9E37D7D8A3F9705;
-			remoteInfo = pop;
-		};
-		83FF373FD2C1D0B14B1A0607CDF77E30 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F1D148434467C1B78F92DD483480D390;
-			remoteInfo = TabBarPicker;
-		};
-		9C6221A93B45097747C1A14AAC94A539 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8240A687A12B3496C485DFBEB80E79E2;
-			remoteInfo = PureLayout;
-		};
-		A345134A6D386FDE4AF4A8F9E01EBD10 /* PBXContainerItemProxy */ = {
+		083B093D10F9DF2FDAD39AE5222A2FB2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 31D04736AA8F72A7EDD28D5A60339B0F;
 			remoteInfo = "UIView-Overlay";
 		};
-		CA4CD391A67ADA84167445460CB86CEE /* PBXContainerItemProxy */ = {
+		2422694340FEE734A32BAEADDC2EDAA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A3EDD948F9BE0382C98E8FCC6F145936;
-			remoteInfo = "TabBarPicker-TabBarPicker";
+			remoteGlobalIDString = 0B43C8BA292D04592FCAA7AB434DD80C;
+			remoteInfo = TabBarPicker;
 		};
-		CE8A779771949E83F912B98700B02CC3 /* PBXContainerItemProxy */ = {
+		4F92234C46EF40937512047DE1C68200 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3DA374BB5346C86BB9E37D7D8A3F9705;
 			remoteInfo = pop;
 		};
-		DDC22788C49D6AA37AFF4B7A7175DCA8 /* PBXContainerItemProxy */ = {
+		54E7978A31596E0942D9395655EB6B6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8240A687A12B3496C485DFBEB80E79E2;
+			remoteInfo = PureLayout;
+		};
+		6DC4045376991B2F4FE77D1CFF871503 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DA374BB5346C86BB9E37D7D8A3F9705;
+			remoteInfo = pop;
+		};
+		718DAA8C463F278C51EFAE2FE4DBB153 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3EDD948F9BE0382C98E8FCC6F145936;
+			remoteInfo = "TabBarPicker-TabBarPicker";
+		};
+		9EB5C63E5A8712567D26F5DDF85E9408 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B43C8BA292D04592FCAA7AB434DD80C;
+			remoteInfo = TabBarPicker;
+		};
+		F1E65B36CE83A735C24042E5B005DB98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -176,18 +180,20 @@
 		08BA99EE1EB2BCFFBB80871284FBB089 /* Pods-TabBarPicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TabBarPicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		090ED9CFCA52EB517831504E40655C5E /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
 		09D0BE9B95DC0AB1A10C5C5CBF007372 /* pop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = pop.modulemap; sourceTree = "<group>"; };
-		0E0DF9726324591447BF3C7A6CC8F6FD /* TabBarSubItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarSubItem.m; sourceTree = "<group>"; };
 		0FBC3E333821E19620FAC1463F61C533 /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
 		12B38B170D3912EDE7922B720C20619D /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
 		13DC162AF7BEBCA584CAF9D9CEAD8319 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		151D476EC8A8F451EAA5F3E69FC4757F /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
 		16F3CE6BFFF06C74BF585D45BFB7E170 /* POPAnimationEventInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationEventInternal.h; path = pop/POPAnimationEventInternal.h; sourceTree = "<group>"; };
 		17DA7E900B1E7945C8B8CE59D225F706 /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
 		17F13764CB2CA131B25559F8C59ADD62 /* pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18127D4692F3B261AE3BC9F683442BE0 /* POPMath.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPMath.mm; path = pop/POPMath.mm; sourceTree = "<group>"; };
+		1ADAE502D9B0B386DFB546F956BC81BA /* TabBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarItem.h; sourceTree = "<group>"; };
 		1E99C094867FA40E6CAACB3552C51A71 /* POPAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimator.h; path = pop/POPAnimator.h; sourceTree = "<group>"; };
 		1F1993462D9F57783E626EE12A22DA6E /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
 		24FD90CF8C651053BFFF6A3EAF117125 /* POPAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimation.mm; path = pop/POPAnimation.mm; sourceTree = "<group>"; };
 		2ADFB66E931B6A5F3701C265EBC50E57 /* POPBasicAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimation.h; path = pop/POPBasicAnimation.h; sourceTree = "<group>"; };
+		2BDFBF8EAD1D91F7F7C98AE097F6AD54 /* TabBarPickerSubItemsView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarPickerSubItemsView.h; sourceTree = "<group>"; };
 		2D4A93EFD78DA51324BCEB8E21CF837C /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		2E30818E45DD33C5E4BDFDEE442335F8 /* UIView-Overlay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView-Overlay-prefix.pch"; sourceTree = "<group>"; };
 		33A75E30986D83691C56B0833666F7CA /* POPCustomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCustomAnimation.h; path = pop/POPCustomAnimation.h; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 		34D6F57DE4FC243021043F443C43B2E7 /* POPCustomAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCustomAnimation.mm; path = pop/POPCustomAnimation.mm; sourceTree = "<group>"; };
 		3A6B4950E1673296D328FFBED288D4CB /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimationInternal.h; path = pop/POPPropertyAnimationInternal.h; sourceTree = "<group>"; };
 		3C02A77BF4130FE56E0F02566F747AD2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		3C16B835C951C428E453293C841C3377 /* TabBarPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabBarPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3F2CC5BA61A83A08179F1B5E6EC8EE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C5952D2A0EA0D05DC8D692098AC51A7 /* POPAnimationTracer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = pop/POPAnimationTracer.h; sourceTree = "<group>"; };
 		3D833E7748B3655AA714241999C94DC4 /* Pods_TabBarPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,8 +211,7 @@
 		4CD19F38BD35C5439EA45425BF343692 /* TabBarPicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE3F30E099AB50F0BB210A7F6B6ED1A /* POPAnimationExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationExtras.mm; path = pop/POPAnimationExtras.mm; sourceTree = "<group>"; };
 		4E3A05FFC672571219996826F2422FC3 /* TabBarPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TabBarPicker.xcconfig; sourceTree = "<group>"; };
-		52CE09C3405F59D40C2BD3971985CF59 /* TabBarPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarPicker.h; sourceTree = "<group>"; };
-		5316CF84EF6CC8F29F5C8F65E47C6EE0 /* TabBarPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarPicker.m; sourceTree = "<group>"; };
+		5198D727327607E4FCEA3F8B223AE56C /* NSString+HexColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+HexColor.h"; sourceTree = "<group>"; };
 		5400657DC452384B43BD2099AC8BDC49 /* UIView-Overlay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "UIView-Overlay.modulemap"; sourceTree = "<group>"; };
 		56CBBA1282670189371B75E1895ADFC7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E7469FDD8353F98B7D18192EC48657 /* UIView-Overlay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIView-Overlay.xcconfig"; sourceTree = "<group>"; };
@@ -216,44 +222,43 @@
 		5D90E0DD88BBD1478B0E18109767F8FA /* POPAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationInternal.h; path = pop/POPAnimationInternal.h; sourceTree = "<group>"; };
 		5E359F9185BEAD84D8CE15A4D0B4B472 /* Pods_TabBarPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61276C8A6D4336801FA57D715D633F8A /* POPGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPGeometry.h; path = pop/POPGeometry.h; sourceTree = "<group>"; };
+		6194B637DF6CFA16E42BCABF5348C38B /* TabBarSubItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarSubItem.m; sourceTree = "<group>"; };
 		633EE7D34BF44B52CE606FF762ECFDF4 /* Pods-TabBarPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TabBarPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		63FCE3E65371359592CB606E1790BC86 /* POPLayerExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = pop/POPLayerExtras.h; sourceTree = "<group>"; };
 		6474C99DA6F95FB4A031EA234BA3CF12 /* POPPropertyAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimation.h; path = pop/POPPropertyAnimation.h; sourceTree = "<group>"; };
+		6682B426E85C9170F1FA5919B0BD809D /* TabBarPickerSubItemsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarPickerSubItemsView.m; sourceTree = "<group>"; };
 		6805F6C4A24C2AAAB6A33C0A97652E03 /* POPAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimation.h; path = pop/POPAnimation.h; sourceTree = "<group>"; };
-		688F8F681B7515A7008E28C8 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
-		688F8F691B7515A7008E28C8 /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
-		688F8F6A1B7515A7008E28C8 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
-		688F8F6B1B7515A7008E28C8 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
-		6A74066159202FC8BA84394854A1116D /* MMCPSScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MMCPSScrollView.h; sourceTree = "<group>"; };
+		688DF0BE1B833D0D00FE093C /* ToucheableScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToucheableScrollView.h; sourceTree = "<group>"; };
+		688DF0BF1B833D0D00FE093C /* ToucheableScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToucheableScrollView.m; sourceTree = "<group>"; };
+		69A66B68532816A729F8D7B45A344A3D /* SharedLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SharedLocationManager.h; sourceTree = "<group>"; };
+		6C4407C962E1D98312FB510D7F5BA8D7 /* SharedLocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SharedLocationManager.m; sourceTree = "<group>"; };
 		6E05779740DB7A4882324BB0CC77FE83 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
 		73CE6B07292175B9D39CBFFC0DB41A60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7469EB00631C681CEE752F2D41DAD63C /* POPAnimationEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationEvent.h; path = pop/POPAnimationEvent.h; sourceTree = "<group>"; };
 		74C01BE8B9F51803976D94221A90D9B0 /* Pods-TabBarPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		74ED984E73B0A43CE00E8EF6E51000BC /* TabBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarItem.h; sourceTree = "<group>"; };
 		76962B10AC94EB35A7FEA32B4946FD52 /* POPPropertyAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPPropertyAnimation.mm; path = pop/POPPropertyAnimation.mm; sourceTree = "<group>"; };
 		76E4E222A31EB57B3FAE7BD127882279 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
 		79BC08E450E450A6BB7385AAE26BD967 /* POPAnimationRuntime.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationRuntime.mm; path = pop/POPAnimationRuntime.mm; sourceTree = "<group>"; };
 		79ED7F11B8B30282685F622BDF426547 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DE7A9BEF575A7AF5C663E711314C1F6 /* MMCPSScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MMCPSScrollView.m; sourceTree = "<group>"; };
 		7EC4CA78903DD6994C05A85DCF5F68DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84377DDAEA9C569BF6EBCF717BDE81E7 /* UIImage+Color.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		845F67AAF14F34F0F944FCABA8A1C95F /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		848C982AABCEC351952AA25A9E612B3B /* TabBarPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarPicker.h; sourceTree = "<group>"; };
 		86E5E9B8FECE12A7A4E167D580EFC67B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
 		8799FDC6BF3E75DA73CA794715159657 /* Pods-TabBarPicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Tests-umbrella.h"; sourceTree = "<group>"; };
-		87FF45FA0B37BD605BC79D61F412B4DE /* NSString+HexColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+HexColor.h"; sourceTree = "<group>"; };
-		8A39F245747851F74126D6C816A9EF2A /* TabBarPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TabBarPicker-umbrella.h"; sourceTree = "<group>"; };
+		892712A2B0521F4472AE53DB17FFA5ED /* TabBarPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarPicker.m; sourceTree = "<group>"; };
+		89F770FF888D56EB719C45BF38EB5479 /* TabBarSubItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarSubItem.h; sourceTree = "<group>"; };
 		8AB9A4F96F4D3194C37C06DB13F00F1E /* POPAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAction.h; path = pop/POPAction.h; sourceTree = "<group>"; };
 		8C843EFA8C32E452322B0ECA1629290A /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimatableProperty.mm; path = pop/POPAnimatableProperty.mm; sourceTree = "<group>"; };
 		8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TabBarPicker-Private.xcconfig"; sourceTree = "<group>"; };
 		8ECA1560097ECE6BE55C9A9F8FE9A481 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		8F188C3F24D664F9CEA0905C2C40C0F2 /* NSString+HexColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexColor.m"; sourceTree = "<group>"; };
 		8F5618A4CE99E55855B1013DEF653BF8 /* POPDecayAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimation.h; path = pop/POPDecayAnimation.h; sourceTree = "<group>"; };
+		904079A84D927539A414BED833C527E3 /* TabBarPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TabBarPicker-dummy.m"; sourceTree = "<group>"; };
 		913E7306AD4E255661D418473382CF54 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
 		91AC81FCA64DB06998A2D6C93292E3D0 /* POPSpringAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPSpringAnimation.mm; path = pop/POPSpringAnimation.mm; sourceTree = "<group>"; };
 		9326A1634F9D8759718BF9F5AE1342E8 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
 		93687FABCF55D0A5D679C928BA78DAB4 /* POPVector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPVector.h; path = pop/POPVector.h; sourceTree = "<group>"; };
 		967EC1A8094613A64436935A32CE393E /* UIView-Overlay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView-Overlay-dummy.m"; sourceTree = "<group>"; };
-		989E7B3B998C2F701E914FC9BCEA3C4E /* TabBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarItem.m; sourceTree = "<group>"; };
-		9A142C2387752EB8F0CBA87864EC1D9F /* TabBarSubItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarSubItem.h; sourceTree = "<group>"; };
 		9B6EE12FEF6DED0AB56B1443E7B346F0 /* POPAnimator.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimator.mm; path = pop/POPAnimator.mm; sourceTree = "<group>"; };
 		9CD3AB8195F74BFC43D6997F61F6F298 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
 		9DC406894CD352D5DAFB3D4071DB8955 /* TabBarPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TabBarPicker-prefix.pch"; sourceTree = "<group>"; };
@@ -268,7 +273,6 @@
 		A6809F9933FBA0B384C97E424F36A254 /* UIView-Overlay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView-Overlay-umbrella.h"; sourceTree = "<group>"; };
 		A959F8AA2353F159B247BFFC208D79AE /* POPAnimationTracer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationTracer.mm; path = pop/POPAnimationTracer.mm; sourceTree = "<group>"; };
 		AB6C4481A0062CA32EB0EEFE44EE97B7 /* Pods-TabBarPicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabBarPicker_Tests-resources.sh"; sourceTree = "<group>"; };
-		AFFA73876E348EE6186525790CF479F1 /* TabBarPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TabBarPicker-dummy.m"; sourceTree = "<group>"; };
 		B272664DCD146C22996C135571D9379B /* Pods-TabBarPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TabBarPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		B2781EC2F90E0368E9A2C0DEAA9E2D8E /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
 		B2C8FC99E26E968A362BE3183813868F /* Pods-TabBarPicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabBarPicker_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -277,9 +281,11 @@
 		B79E8F04B0085DB7B07E18E9E4BF7165 /* Pods-TabBarPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B7C7853AD5F572083A52914090850AD2 /* POPCGUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCGUtils.h; path = pop/POPCGUtils.h; sourceTree = "<group>"; };
 		B861FEB396B49AFBE01AC2B10E0ACAB5 /* UIView+Overlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Overlay.h"; sourceTree = "<group>"; };
+		B8B993D010B7CF17F9E9291557AF882E /* TabBarPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TabBarPicker-umbrella.h"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAC2E2B2AD148D2E4BBC115DDA61EFD5 /* UIImage+Color.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		BB49801C2A1FC4A6C872E30D1EBDF2D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCCE418ABC02DF7186BCDA0CE8F42A6E /* TabBarPickerSubItemsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarPickerSubItemsView.m; sourceTree = "<group>"; };
+		C0AB0659065645807D7D24A071F9C843 /* MMCPSScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MMCPSScrollView.h; sourceTree = "<group>"; };
 		C23A73774E96D3E6946E0D8F33A031C8 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = pop/POPSpringAnimationInternal.h; sourceTree = "<group>"; };
 		C37744310F9F865551677E6AC8149112 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
 		C3978B4F00206A1AE1010E30F106D1F7 /* UIView-Overlay-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIView-Overlay-Private.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +294,7 @@
 		C6BAA705428D5D2A736281C39E74E46F /* Pods-TabBarPicker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabBarPicker_Example-resources.sh"; sourceTree = "<group>"; };
 		C860C342641452046FDF204ED4FB25D3 /* POPGeometry.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPGeometry.mm; path = pop/POPGeometry.mm; sourceTree = "<group>"; };
 		CBF36C9DEBBB22EE208BC6986E44F18B /* UIView+Overlay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Overlay.m"; sourceTree = "<group>"; };
+		CC4882E403503DE9288AF3969E260251 /* PureLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PureLayout-Private.xcconfig"; sourceTree = "<group>"; };
 		CE0D5C46DAC6E6475ADEE87A8601A25F /* POPSpringSolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringSolver.h; path = pop/POPSpringSolver.h; sourceTree = "<group>"; };
 		CE46CEDD332B7011600234C346A4003F /* Pods-TabBarPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarPicker_Example-umbrella.h"; sourceTree = "<group>"; };
 		CF5420961A10DC2B4F9B46189C6E1001 /* Pods-TabBarPicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TabBarPicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -301,31 +308,24 @@
 		DAE0AEB7B6CD1ED86E0DB49046266B5D /* POPLayerExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = pop/POPLayerExtras.mm; sourceTree = "<group>"; };
 		DAFA4BCE4B185A782DD016F84B3BE0CF /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
 		DB1EE7FB0A32127BFDF50BF82107F0F4 /* POPAnimationTracerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracerInternal.h; path = pop/POPAnimationTracerInternal.h; sourceTree = "<group>"; };
-		DB64D1F778418D691AE66E2A01EAD44E /* PureLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PureLayout-Private.xcconfig"; sourceTree = "<group>"; };
 		DEFCECEAD24242A4D391D84B7417A5F0 /* Pods-TabBarPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TabBarPicker_Tests.modulemap"; sourceTree = "<group>"; };
 		DFA088A284A23B3AC39221F16A6CB0D9 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = TransformationMatrix.cpp; path = pop/WebCore/TransformationMatrix.cpp; sourceTree = "<group>"; };
+		E1272C77ED4CCB0F280E4DFB2B75B7E1 /* TabBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TabBarItem.m; sourceTree = "<group>"; };
 		E44E0425616E7E04E1AB9E751AA6AE53 /* FloatConversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = pop/WebCore/FloatConversion.h; sourceTree = "<group>"; };
+		E74ECC4D12B3ABD32F0D9603ABE541B8 /* MMCPSScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MMCPSScrollView.m; sourceTree = "<group>"; };
 		E9B49BE5CA6EA26F192340AE3F2471BF /* pop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "pop-dummy.m"; sourceTree = "<group>"; };
 		EB6215B243DFD151285F9B12CE2368A2 /* POPDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDefines.h; path = pop/POPDefines.h; sourceTree = "<group>"; };
-		ECA1326C4D14AEBFBFBBD48CA93B60C2 /* TabBarPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabBarPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE7CFA8B928239B1CC73E2FC274AB17 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
+		ED289C824091E9CC3700069DEB5B7133 /* NSString+HexColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexColor.m"; sourceTree = "<group>"; };
 		EE3EC944F1DABE1BFA56ABCC8CE2A9F7 /* POP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POP.h; path = pop/POP.h; sourceTree = "<group>"; };
 		EF2A7544C3995B3943AA4BC07DAB51D1 /* POPAnimationPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationPrivate.h; path = pop/POPAnimationPrivate.h; sourceTree = "<group>"; };
 		F47C77B6247FFF4294E595C4EBF035F5 /* POPVector.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPVector.mm; path = pop/POPVector.mm; sourceTree = "<group>"; };
 		F628DCE86E47F4C94CFDEB115F7A6469 /* POPCGUtils.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCGUtils.mm; path = pop/POPCGUtils.mm; sourceTree = "<group>"; };
 		F734DA62746E7AC7FD2CFE5D80E55708 /* Pods-TabBarPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabBarPicker_Example-dummy.m"; sourceTree = "<group>"; };
-		F7CFC725DB20421AA2759A672603A491 /* TabBarPickerSubItemsView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TabBarPickerSubItemsView.h; sourceTree = "<group>"; };
 		FBE55426C8613986F9DE17C08EC4E7CF /* POPAnimationRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationRuntime.h; path = pop/POPAnimationRuntime.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		49A164E6EC1A044A459D0E7CD8DA59C1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE6D434ED9230B1D615A2DD259CB6038 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D982826564F33040944F955F4866DBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,6 +339,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				29B97DBB30EE19D048BEC6E25E9F9F14 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAAA4342085DEFE61C54EF9A4F0AC88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B9B75C7523CEBCAF2D86154DDFA98AD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,22 +399,12 @@
 				9FF196DA16906822D150C60295CBB88E /* TabBarPicker.modulemap */,
 				4E3A05FFC672571219996826F2422FC3 /* TabBarPicker.xcconfig */,
 				8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */,
-				AFFA73876E348EE6186525790CF479F1 /* TabBarPicker-dummy.m */,
+				904079A84D927539A414BED833C527E3 /* TabBarPicker-dummy.m */,
 				9DC406894CD352D5DAFB3D4071DB8955 /* TabBarPicker-prefix.pch */,
-				8A39F245747851F74126D6C816A9EF2A /* TabBarPicker-umbrella.h */,
+				B8B993D010B7CF17F9E9291557AF882E /* TabBarPicker-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/TabBarPicker";
-			sourceTree = "<group>";
-		};
-		053B4D0E654296CC9889A04F89A345BD /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				977370A91AC8B677022217B6F7096E4E /* MMCPSScrollView */,
-				FFBEFBD8E8214E18E4714B2658CAC8CB /* NSString+HexColor */,
-				688F8F671B7515A7008E28C8 /* UIButton+BackgroundColor */,
-			);
-			path = Vendor;
 			sourceTree = "<group>";
 		};
 		0CC341720DA3391596A41DBFC029A2AA /* Pods */ = {
@@ -454,6 +452,15 @@
 			path = "UIView-Overlay";
 			sourceTree = "<group>";
 		};
+		2B50D3C0ACD825270CCC306CD51D20E7 /* MMCPSScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C0AB0659065645807D7D24A071F9C843 /* MMCPSScrollView.h */,
+				E74ECC4D12B3ABD32F0D9603ABE541B8 /* MMCPSScrollView.m */,
+			);
+			path = MMCPSScrollView;
+			sourceTree = "<group>";
+		};
 		367B0AEA5A5B892E97114FB4088CA6CA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,15 +502,25 @@
 			path = "Target Support Files/Pods-TabBarPicker_Example";
 			sourceTree = "<group>";
 		};
-		688F8F671B7515A7008E28C8 /* UIButton+BackgroundColor */ = {
+		688DF0BD1B833D0D00FE093C /* TouchableScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				688F8F681B7515A7008E28C8 /* UIButton+BackgroundColor.h */,
-				688F8F691B7515A7008E28C8 /* UIButton+BackgroundColor.m */,
-				688F8F6A1B7515A7008E28C8 /* UIImage+Color.h */,
-				688F8F6B1B7515A7008E28C8 /* UIImage+Color.m */,
+				688DF0BE1B833D0D00FE093C /* ToucheableScrollView.h */,
+				688DF0BF1B833D0D00FE093C /* ToucheableScrollView.m */,
 			);
-			path = "UIButton+BackgroundColor";
+			path = TouchableScrollView;
+			sourceTree = "<group>";
+		};
+		6F07576C2E19EA1A65B4E924DB9FD5C7 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				688DF0BD1B833D0D00FE093C /* TouchableScrollView */,
+				2B50D3C0ACD825270CCC306CD51D20E7 /* MMCPSScrollView */,
+				D32A21F857D4479FF01EE37CF833E9CD /* NSString+HexColor */,
+				8AE381098F77067F0AD825096898C950 /* SharedLocationManager */,
+				C5E5D49215D38A6AA1E588A6676237A7 /* UIButton+BackgroundColor */,
+			);
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -518,20 +535,13 @@
 			);
 			sourceTree = "<group>";
 		};
-		7F35927A828371685E9A0F8F706AFB47 /* Classes */ = {
+		8AE381098F77067F0AD825096898C950 /* SharedLocationManager */ = {
 			isa = PBXGroup;
 			children = (
-				74ED984E73B0A43CE00E8EF6E51000BC /* TabBarItem.h */,
-				989E7B3B998C2F701E914FC9BCEA3C4E /* TabBarItem.m */,
-				52CE09C3405F59D40C2BD3971985CF59 /* TabBarPicker.h */,
-				5316CF84EF6CC8F29F5C8F65E47C6EE0 /* TabBarPicker.m */,
-				F7CFC725DB20421AA2759A672603A491 /* TabBarPickerSubItemsView.h */,
-				BCCE418ABC02DF7186BCDA0CE8F42A6E /* TabBarPickerSubItemsView.m */,
-				9A142C2387752EB8F0CBA87864EC1D9F /* TabBarSubItem.h */,
-				0E0DF9726324591447BF3C7A6CC8F6FD /* TabBarSubItem.m */,
-				053B4D0E654296CC9889A04F89A345BD /* Vendor */,
+				69A66B68532816A729F8D7B45A344A3D /* SharedLocationManager.h */,
+				6C4407C962E1D98312FB510D7F5BA8D7 /* SharedLocationManager.m */,
 			);
-			path = Classes;
+			path = SharedLocationManager;
 			sourceTree = "<group>";
 		};
 		8E3BA7AF84CB1FD13CBE41AD45E2F68D /* Support Files */ = {
@@ -540,7 +550,7 @@
 				56CBBA1282670189371B75E1895ADFC7 /* Info.plist */,
 				4479B35E973BC64612AFE56A67C3A7E4 /* PureLayout.modulemap */,
 				845F67AAF14F34F0F944FCABA8A1C95F /* PureLayout.xcconfig */,
-				DB64D1F778418D691AE66E2A01EAD44E /* PureLayout-Private.xcconfig */,
+				CC4882E403503DE9288AF3969E260251 /* PureLayout-Private.xcconfig */,
 				574DA8A9A0215386DE1A03D64F9ABA59 /* PureLayout-dummy.m */,
 				76E4E222A31EB57B3FAE7BD127882279 /* PureLayout-prefix.pch */,
 				17DA7E900B1E7945C8B8CE59D225F706 /* PureLayout-umbrella.h */,
@@ -549,13 +559,20 @@
 			path = "../Target Support Files/PureLayout";
 			sourceTree = "<group>";
 		};
-		977370A91AC8B677022217B6F7096E4E /* MMCPSScrollView */ = {
+		9AC469C3421DF2E3B1A8A25A16BEAFB4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6A74066159202FC8BA84394854A1116D /* MMCPSScrollView.h */,
-				7DE7A9BEF575A7AF5C663E711314C1F6 /* MMCPSScrollView.m */,
+				1ADAE502D9B0B386DFB546F956BC81BA /* TabBarItem.h */,
+				E1272C77ED4CCB0F280E4DFB2B75B7E1 /* TabBarItem.m */,
+				848C982AABCEC351952AA25A9E612B3B /* TabBarPicker.h */,
+				892712A2B0521F4472AE53DB17FFA5ED /* TabBarPicker.m */,
+				2BDFBF8EAD1D91F7F7C98AE097F6AD54 /* TabBarPickerSubItemsView.h */,
+				6682B426E85C9170F1FA5919B0BD809D /* TabBarPickerSubItemsView.m */,
+				89F770FF888D56EB719C45BF38EB5479 /* TabBarSubItem.h */,
+				6194B637DF6CFA16E42BCABF5348C38B /* TabBarSubItem.m */,
+				6F07576C2E19EA1A65B4E924DB9FD5C7 /* Vendor */,
 			);
-			path = MMCPSScrollView;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		A2C47666731599FCB6D3E3CC764B23F3 /* PureLayout */ = {
@@ -678,6 +695,17 @@
 			path = "Target Support Files/Pods-TabBarPicker_Tests";
 			sourceTree = "<group>";
 		};
+		C5E5D49215D38A6AA1E588A6676237A7 /* UIButton+BackgroundColor */ = {
+			isa = PBXGroup;
+			children = (
+				EBE7CFA8B928239B1CC73E2FC274AB17 /* UIButton+BackgroundColor.h */,
+				151D476EC8A8F451EAA5F3E69FC4757F /* UIButton+BackgroundColor.m */,
+				84377DDAEA9C569BF6EBCF717BDE81E7 /* UIImage+Color.h */,
+				BAC2E2B2AD148D2E4BBC115DDA61EFD5 /* UIImage+Color.m */,
+			);
+			path = "UIButton+BackgroundColor";
+			sourceTree = "<group>";
+		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -686,11 +714,20 @@
 				3D833E7748B3655AA714241999C94DC4 /* Pods_TabBarPicker_Tests.framework */,
 				34BE0BA12096455AB6760CFDF1005D58 /* PureLayout.framework */,
 				4CD19F38BD35C5439EA45425BF343692 /* TabBarPicker.bundle */,
-				ECA1326C4D14AEBFBFBBD48CA93B60C2 /* TabBarPicker.framework */,
+				3C16B835C951C428E453293C841C3377 /* TabBarPicker.framework */,
 				A08C793E1F109494ED9A12FB0A0E9469 /* UIView_Overlay.framework */,
 				17F13764CB2CA131B25559F8C59ADD62 /* pop.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D32A21F857D4479FF01EE37CF833E9CD /* NSString+HexColor */ = {
+			isa = PBXGroup;
+			children = (
+				5198D727327607E4FCEA3F8B223AE56C /* NSString+HexColor.h */,
+				ED289C824091E9CC3700069DEB5B7133 /* NSString+HexColor.m */,
+			);
+			path = "NSString+HexColor";
 			sourceTree = "<group>";
 		};
 		DB7A392AE20A92DE460668D10ACDC19F /* Pods */ = {
@@ -714,39 +751,14 @@
 		F8F2526D81FAB6C81731BCF9D9B94F11 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				7F35927A828371685E9A0F8F706AFB47 /* Classes */,
+				9AC469C3421DF2E3B1A8A25A16BEAFB4 /* Classes */,
 			);
 			path = Pod;
-			sourceTree = "<group>";
-		};
-		FFBEFBD8E8214E18E4714B2658CAC8CB /* NSString+HexColor */ = {
-			isa = PBXGroup;
-			children = (
-				87FF45FA0B37BD605BC79D61F412B4DE /* NSString+HexColor.h */,
-				8F188C3F24D664F9CEA0905C2C40C0F2 /* NSString+HexColor.m */,
-			);
-			path = "NSString+HexColor";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		02B67A76CB09FB21493A0D4C8E7EBE41 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDE2C76578028195B819883E6A76B5B2 /* MMCPSScrollView.h in Headers */,
-				A1F2D95F436714051CFE1601C09ACAE9 /* NSString+HexColor.h in Headers */,
-				3FC1CA95A408FA5E1A57AC93B0C8A988 /* TabBarItem.h in Headers */,
-				DF28F428A637429E12D16D55801D4916 /* TabBarPicker-umbrella.h in Headers */,
-				688F8F6C1B7515A7008E28C8 /* UIButton+BackgroundColor.h in Headers */,
-				C83D6A4F894219C63C6ED47E108D3EB3 /* TabBarPicker.h in Headers */,
-				688F8F6E1B7515A7008E28C8 /* UIImage+Color.h in Headers */,
-				7391D8870EF96C08872561E1821F1085 /* TabBarPickerSubItemsView.h in Headers */,
-				860781420B1293C292A4A3D52E9F50F0 /* TabBarSubItem.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7E48A959C6852B35F3EB10C01C5C0188 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -804,6 +816,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D00A1DFA85EA261569DB5E74C27FD88A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B4357DC8723B40B75036643935EBD7 /* MMCPSScrollView.h in Headers */,
+				688DF0C01B833D0D00FE093C /* ToucheableScrollView.h in Headers */,
+				2A65286B5726E4AF0A5395E6B035F614 /* NSString+HexColor.h in Headers */,
+				399306C358953571B5B236714BAC0F0B /* SharedLocationManager.h in Headers */,
+				BA97F812224F556023C97037E1B9B768 /* TabBarItem.h in Headers */,
+				5894F10E4EE16E60EFEA6CAF8F39BEAC /* TabBarPicker-umbrella.h in Headers */,
+				F6440C1C9D4ADB1F5FE7CB2B1D54E343 /* TabBarPicker.h in Headers */,
+				6115D515692E38D8D809451232B83C52 /* TabBarPickerSubItemsView.h in Headers */,
+				B80B8212180CFDFFDCA9568F41595AE0 /* TabBarSubItem.h in Headers */,
+				B65A29FBEECF62A70B2A981ED1AE3BC9 /* UIButton+BackgroundColor.h in Headers */,
+				CBC724E48D4294B56D03568A11D05FF1 /* UIImage+Color.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6A8EB0B19838A8E6F05524B3A33BF15 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -849,14 +879,33 @@
 			buildRules = (
 			);
 			dependencies = (
-				263F085CC5D8A00D39FC39FF4FDE846B /* PBXTargetDependency */,
-				556AFBD628162756239A7A3C81EAF400 /* PBXTargetDependency */,
-				BC58D711EAA1035DD7B4043385568300 /* PBXTargetDependency */,
-				D20626EC1B98DD9FB0F4E57895207498 /* PBXTargetDependency */,
+				1E6DB4ADD8E4F56131BF9CAB4F13D6BF /* PBXTargetDependency */,
+				53E7F8729FC986EE540050643AD0E415 /* PBXTargetDependency */,
+				E124F360BE28DC21A6F1DD0F2AF89D2F /* PBXTargetDependency */,
+				2D2FEF8E39272D422784ABBE1FFEDF86 /* PBXTargetDependency */,
 			);
 			name = "Pods-TabBarPicker_Example";
 			productName = "Pods-TabBarPicker_Example";
 			productReference = 5E359F9185BEAD84D8CE15A4D0B4B472 /* Pods_TabBarPicker_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0B43C8BA292D04592FCAA7AB434DD80C /* TabBarPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA9B566CC07BD9C0890426A19B907D94 /* Build configuration list for PBXNativeTarget "TabBarPicker" */;
+			buildPhases = (
+				C271834FA45F83107B54D32A95DCB323 /* Sources */,
+				AAAAA4342085DEFE61C54EF9A4F0AC88 /* Frameworks */,
+				DA9C3525A98CC766A7329A89399C38FC /* Resources */,
+				D00A1DFA85EA261569DB5E74C27FD88A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4ACBE616CF3D2242EFDF2DF55B55BF5C /* PBXTargetDependency */,
+			);
+			name = TabBarPicker;
+			productName = TabBarPicker;
+			productReference = 3C16B835C951C428E453293C841C3377 /* TabBarPicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		31D04736AA8F72A7EDD28D5A60339B0F /* UIView-Overlay */ = {
@@ -887,7 +936,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D353DC8A1B3A57D87730ABC8C5045347 /* PBXTargetDependency */,
+				4C87918BA58D1D2EC71689576920C36D /* PBXTargetDependency */,
 			);
 			name = "Pods-TabBarPicker_Tests";
 			productName = "Pods-TabBarPicker_Tests";
@@ -945,25 +994,6 @@
 			productReference = 4CD19F38BD35C5439EA45425BF343692 /* TabBarPicker.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		F1D148434467C1B78F92DD483480D390 /* TabBarPicker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E2A3F482B92B850797D51004F0CAA8E1 /* Build configuration list for PBXNativeTarget "TabBarPicker" */;
-			buildPhases = (
-				78872F90B87B97BA37967B24DDA2A728 /* Sources */,
-				49A164E6EC1A044A459D0E7CD8DA59C1 /* Frameworks */,
-				8A64F6AD39E28FECB63367033055C3DB /* Resources */,
-				02B67A76CB09FB21493A0D4C8E7EBE41 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7A50392FF78A36CA0C15F6A53BA3169D /* PBXTargetDependency */,
-			);
-			name = TabBarPicker;
-			productName = TabBarPicker;
-			productReference = ECA1326C4D14AEBFBFBBD48CA93B60C2 /* TabBarPicker.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		FFB59F3179C8BDA9D0F4229CBA2D227B /* Pods */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B406DCC2604A6093F81FC863CD22CF3F /* Build configuration list for PBXNativeTarget "Pods" */;
@@ -975,8 +1005,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				9B78FF26A80DD918CE5742D80BB2C8F1 /* PBXTargetDependency */,
-				53E7C4F4F479EFEBB2A85A246A5ECCC0 /* PBXTargetDependency */,
+				94F9B9912FD5C449AF656F780E2958DD /* PBXTargetDependency */,
+				78739E10EACFB20BE6EF8078A3D971B6 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
@@ -1008,7 +1038,7 @@
 				02B85A901C978E0651A76D08AD317C82 /* Pods-TabBarPicker_Example */,
 				32560F18B1ECECAEDFCE9D7F91247BDF /* Pods-TabBarPicker_Tests */,
 				8240A687A12B3496C485DFBEB80E79E2 /* PureLayout */,
-				F1D148434467C1B78F92DD483480D390 /* TabBarPicker */,
+				0B43C8BA292D04592FCAA7AB434DD80C /* TabBarPicker */,
 				A3EDD948F9BE0382C98E8FCC6F145936 /* TabBarPicker-TabBarPicker */,
 				31D04736AA8F72A7EDD28D5A60339B0F /* UIView-Overlay */,
 				3DA374BB5346C86BB9E37D7D8A3F9705 /* pop */,
@@ -1017,18 +1047,18 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8A64F6AD39E28FECB63367033055C3DB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93B87741D4207E22B2E5DDB582C68829 /* TabBarPicker.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BAE690F24B9F8B27A81D68DD3BE79823 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9C3525A98CC766A7329A89399C38FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96D7ABD08A98128E60E0F50069359FC0 /* TabBarPicker.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1093,27 +1123,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78872F90B87B97BA37967B24DDA2A728 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7DDBA8DBAAFFC333C9196889504A8897 /* MMCPSScrollView.m in Sources */,
-				688F8F6D1B7515A7008E28C8 /* UIButton+BackgroundColor.m in Sources */,
-				D6B77498010DFE75E70431CBF7896FCC /* NSString+HexColor.m in Sources */,
-				4878C076CDFE4C3EA1F69EA060123C59 /* TabBarItem.m in Sources */,
-				6F1FE5900883A92AFA28F808B14E8726 /* TabBarPicker-dummy.m in Sources */,
-				B020FF612A093F9D08267D37E81E8A10 /* TabBarPicker.m in Sources */,
-				688F8F6F1B7515A7008E28C8 /* UIImage+Color.m in Sources */,
-				787808E143D0036BA6D65469240A1653 /* TabBarPickerSubItemsView.m in Sources */,
-				2E7293FA79CA8E73693C7D7C838206AD /* TabBarSubItem.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C174BA4E26F85DF204DC43D6E023477E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6E03012F2843C461762C74A9A046EF2E /* Pods-TabBarPicker_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C271834FA45F83107B54D32A95DCB323 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				141AA641914936AB790CE6FCB178B1D7 /* MMCPSScrollView.m in Sources */,
+				07501B134439D43A603B50365BAB8C36 /* NSString+HexColor.m in Sources */,
+				2D696A7493C3B7A7DC34C3857719B884 /* SharedLocationManager.m in Sources */,
+				CCBEA17C33C968D4115035DFD75D03C7 /* TabBarItem.m in Sources */,
+				688DF0C11B833D0D00FE093C /* ToucheableScrollView.m in Sources */,
+				8684DD0504E7EC38B91A22B510C6A01D /* TabBarPicker-dummy.m in Sources */,
+				27612C6A0F69DAD74E0FEB17816B9E15 /* TabBarPicker.m in Sources */,
+				F959AAD4573A311BB8F79F1AF6BF166E /* TabBarPickerSubItemsView.m in Sources */,
+				A1A922D53B283BE53F75515F470D2755 /* TabBarSubItem.m in Sources */,
+				B807414C5B82738C9AE261FC4BD35633 /* UIButton+BackgroundColor.m in Sources */,
+				9891293FB5D8A4C867C6FE6108C67500 /* UIImage+Color.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,57 +1163,84 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		263F085CC5D8A00D39FC39FF4FDE846B /* PBXTargetDependency */ = {
+		1E6DB4ADD8E4F56131BF9CAB4F13D6BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PureLayout;
 			target = 8240A687A12B3496C485DFBEB80E79E2 /* PureLayout */;
-			targetProxy = 9C6221A93B45097747C1A14AAC94A539 /* PBXContainerItemProxy */;
+			targetProxy = F1E65B36CE83A735C24042E5B005DB98 /* PBXContainerItemProxy */;
 		};
-		53E7C4F4F479EFEBB2A85A246A5ECCC0 /* PBXTargetDependency */ = {
+		2D2FEF8E39272D422784ABBE1FFEDF86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = pop;
 			target = 3DA374BB5346C86BB9E37D7D8A3F9705 /* pop */;
-			targetProxy = 39095C2F0D844AC1B8E8E286164D6CDD /* PBXContainerItemProxy */;
+			targetProxy = 6DC4045376991B2F4FE77D1CFF871503 /* PBXContainerItemProxy */;
 		};
-		556AFBD628162756239A7A3C81EAF400 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TabBarPicker;
-			target = F1D148434467C1B78F92DD483480D390 /* TabBarPicker */;
-			targetProxy = 21714EBF452DB85A216D38E2672E44B4 /* PBXContainerItemProxy */;
-		};
-		7A50392FF78A36CA0C15F6A53BA3169D /* PBXTargetDependency */ = {
+		4ACBE616CF3D2242EFDF2DF55B55BF5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "TabBarPicker-TabBarPicker";
 			target = A3EDD948F9BE0382C98E8FCC6F145936 /* TabBarPicker-TabBarPicker */;
-			targetProxy = CA4CD391A67ADA84167445460CB86CEE /* PBXContainerItemProxy */;
+			targetProxy = 718DAA8C463F278C51EFAE2FE4DBB153 /* PBXContainerItemProxy */;
 		};
-		9B78FF26A80DD918CE5742D80BB2C8F1 /* PBXTargetDependency */ = {
+		4C87918BA58D1D2EC71689576920C36D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PureLayout;
-			target = 8240A687A12B3496C485DFBEB80E79E2 /* PureLayout */;
-			targetProxy = DDC22788C49D6AA37AFF4B7A7175DCA8 /* PBXContainerItemProxy */;
+			name = TabBarPicker;
+			target = 0B43C8BA292D04592FCAA7AB434DD80C /* TabBarPicker */;
+			targetProxy = 2422694340FEE734A32BAEADDC2EDAA1 /* PBXContainerItemProxy */;
 		};
-		BC58D711EAA1035DD7B4043385568300 /* PBXTargetDependency */ = {
+		53E7F8729FC986EE540050643AD0E415 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "UIView-Overlay";
-			target = 31D04736AA8F72A7EDD28D5A60339B0F /* UIView-Overlay */;
-			targetProxy = A345134A6D386FDE4AF4A8F9E01EBD10 /* PBXContainerItemProxy */;
+			name = TabBarPicker;
+			target = 0B43C8BA292D04592FCAA7AB434DD80C /* TabBarPicker */;
+			targetProxy = 9EB5C63E5A8712567D26F5DDF85E9408 /* PBXContainerItemProxy */;
 		};
-		D20626EC1B98DD9FB0F4E57895207498 /* PBXTargetDependency */ = {
+		78739E10EACFB20BE6EF8078A3D971B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = pop;
 			target = 3DA374BB5346C86BB9E37D7D8A3F9705 /* pop */;
-			targetProxy = CE8A779771949E83F912B98700B02CC3 /* PBXContainerItemProxy */;
+			targetProxy = 4F92234C46EF40937512047DE1C68200 /* PBXContainerItemProxy */;
 		};
-		D353DC8A1B3A57D87730ABC8C5045347 /* PBXTargetDependency */ = {
+		94F9B9912FD5C449AF656F780E2958DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TabBarPicker;
-			target = F1D148434467C1B78F92DD483480D390 /* TabBarPicker */;
-			targetProxy = 83FF373FD2C1D0B14B1A0607CDF77E30 /* PBXContainerItemProxy */;
+			name = PureLayout;
+			target = 8240A687A12B3496C485DFBEB80E79E2 /* PureLayout */;
+			targetProxy = 54E7978A31596E0942D9395655EB6B6B /* PBXContainerItemProxy */;
+		};
+		E124F360BE28DC21A6F1DD0F2AF89D2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIView-Overlay";
+			target = 31D04736AA8F72A7EDD28D5A60339B0F /* UIView-Overlay */;
+			targetProxy = 083B093D10F9DF2FDAD39AE5222A2FB2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		13E6E78F0B8C8788746F00FCD7A371A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TabBarPicker/TabBarPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TabBarPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TabBarPicker/TabBarPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		2066CCDBDB87AD21E4D2D89AC51217E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C02A77BF4130FE56E0F02566F747AD2 /* Pods.release.xcconfig */;
@@ -1252,25 +1311,25 @@
 			};
 			name = Debug;
 		};
-		35828C8A7F9216B42DE47E2CB3635497 /* Release */ = {
+		4B0B1BF0388DEA06DE8DF1B21F4B00AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */;
+			baseConfigurationReference = CC4882E403503DE9288AF3969E260251 /* PureLayout-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 3.0.0;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TabBarPicker/TabBarPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TabBarPicker/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TabBarPicker/TabBarPicker.modulemap";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TabBarPicker;
+				PRODUCT_NAME = PureLayout;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1329,33 +1388,6 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6BB8C8F248F889CF0F50B1CEE04505D3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.0;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TabBarPicker/TabBarPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TabBarPicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TabBarPicker/TabBarPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TabBarPicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1445,33 +1477,6 @@
 			};
 			name = Release;
 		};
-		A6561B358E01BFF5FB5CA58D277CEB4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB64D1F778418D691AE66E2A01EAD44E /* PureLayout-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2.0.6;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 2;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PureLayout;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1540,14 +1545,14 @@
 			};
 			name = Release;
 		};
-		D2508CF669B09E50DB3CA24B7DF1C4AA /* Debug */ = {
+		DB5C373F43D2E2027D3302E3EB9783D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB64D1F778418D691AE66E2A01EAD44E /* PureLayout-Private.xcconfig */;
+			baseConfigurationReference = CC4882E403503DE9288AF3969E260251 /* PureLayout-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2.0.6;
+				CURRENT_PROJECT_VERSION = 3.0.0;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 2;
+				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1559,6 +1564,33 @@
 				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E2350BC1B3EDD0429A21A55B90AFEEEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TabBarPicker/TabBarPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TabBarPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TabBarPicker/TabBarPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TabBarPicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1684,8 +1716,8 @@
 		29946541803109559D5B69F86E5F2398 /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D2508CF669B09E50DB3CA24B7DF1C4AA /* Debug */,
-				A6561B358E01BFF5FB5CA58D277CEB4B /* Release */,
+				DB5C373F43D2E2027D3302E3EB9783D7 /* Debug */,
+				4B0B1BF0388DEA06DE8DF1B21F4B00AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1744,11 +1776,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2A3F482B92B850797D51004F0CAA8E1 /* Build configuration list for PBXNativeTarget "TabBarPicker" */ = {
+		EA9B566CC07BD9C0890426A19B907D94 /* Build configuration list for PBXNativeTarget "TabBarPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6BB8C8F248F889CF0F50B1CEE04505D3 /* Debug */,
-				35828C8A7F9216B42DE47E2CB3635497 /* Release */,
+				E2350BC1B3EDD0429A21A55B90AFEEEB /* Debug */,
+				13E6E78F0B8C8788746F00FCD7A371A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

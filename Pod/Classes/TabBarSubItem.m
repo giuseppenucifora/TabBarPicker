@@ -19,28 +19,28 @@
 @implementation TabBarSubItem
 
 
-- (instancetype) initWithName:(NSString *) name {
+- (instancetype) initWithName:(NSString *) name andValue:(id)value {
     
     self = [self initForAutoLayout];
     if (self) {
         
-         [[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
+         //[[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
         
         _name = name;
-        
         _subItemButton = [[UIButton alloc] initForAutoLayout];
         [_subItemButton setTitle:_name forState:UIControlStateNormal];
+        _value = value;
     }
     return self;
 }
 
-+ (instancetype) tabBarSubItemWithName:(NSString*)name {
-    return [[self alloc] initWithName:name];
++ (instancetype) tabBarSubItemWithName:(NSString*)name andValue:(id)value {
+    return [[self alloc] initWithName:name andValue:value];
 }
 
 - (void) setName:(NSString *)name {
     _name = name;
-    [_subItemButton setTitle:name forState:UIControlStateNormal];
+    [_subItemButton setTitle:_name forState:UIControlStateNormal];
 }
 
 

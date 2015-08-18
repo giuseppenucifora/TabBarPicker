@@ -9,7 +9,7 @@
 #import "TabBarPicker.h"
 #import <PureLayout/PureLayout.h>
 #import "TabBarPickerSubItemsView.h"
-#import "MMCPSScrollView.h"
+#import "ToucheableScrollView.h"
 #import <UIView-Overlay/UIView+Overlay.h>
 #import "NSString+HexColor.h"
 
@@ -24,7 +24,9 @@
 @property (nonatomic, strong) NSLayoutConstraint *hideConstraint;
 @property (nonatomic, strong) NSMutableArray *tabBarItemsConstraints;
 @property (nonatomic, strong) TabBarItem *selectedTabBarItem;
-@property (nonatomic, strong) MMCPSScrollView *subItemScrollView;
+
+@property (nonatomic, strong) ToucheableScrollView *subItemScrollView;
+@property (assign, nonatomic) int totalPages;
 
 @end
 
@@ -46,7 +48,7 @@
     
     self = [self initForAutoLayout];
     if (self) {
-
+        [self setUserInteractionEnabled:YES];
         _itemSpacing = 10;
         _layoutRelation = relation;
         _position = position;
@@ -77,47 +79,12 @@
             }
         }
         
-        _subItemScrollView = [[MMCPSScrollView alloc] initForAutoLayout];
-        [_subItemScrollView setType:MMCPSScrollHorizontal];
-        [_subItemScrollView setMMCPSDelegate:self];
+        _subItemScrollView = [[ToucheableScrollView alloc] initForAutoLayout];
         [_subItemScrollView setPagingEnabled:YES];
         [_subItemScrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+        [_subItemScrollView setUserInteractionEnabled:YES];
         
         [self addSubview:_subItemScrollView];
-        
-        if ([_tabBarItems count] > 0) {
-            int i = 0;
-            for (TabBarItem *item in _tabBarItems) {
-                TabBarPickerSubItemsView *subItemSelector = [[TabBarPickerSubItemsView alloc] init];
-                [subItemSelector setDelegate:self];
-                switch (i) {
-                    case 0:
-                        [subItemSelector setBackgroundColor:[UIColor lightGrayColor]];
-                        break;
-                    case 1:{
-                        [subItemSelector setBackgroundColor:[UIColor redColor]];
-                    }
-                        break;
-                    case 2:{
-                        [subItemSelector setBackgroundColor:[UIColor greenColor]];
-                    }
-                        break;
-                    case 3: {
-                        [subItemSelector setBackgroundColor:[UIColor yellowColor]];
-                    }
-                        break;
-                    default:{
-                        [subItemSelector setBackgroundColor:[UIColor blueColor]];
-                    }
-                        break;
-                }
-                i++;
-                [_subItemScrollView addSubview:subItemSelector];
-                
-                [_subItemSelectors addObject:subItemSelector];
-            }
-            [_subItemScrollView setPageSize:1];
-        }
     }
     
     [self updateConstraintsIfNeeded];
@@ -126,7 +93,7 @@
 }
 
 - (void) layoutSubviews {
-   
+    
     if (!_didSetupConstraints) {
         
         switch (_position) {
@@ -185,23 +152,71 @@
                 
                 [_tabBarItemsConstraints addObjectsFromArray:[_tabBarItems autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:_itemSpacing insetSpacing:YES matchedSizes:YES]];
                 
-                
-                
                 [_subItemScrollView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self];
                 [_subItemScrollView autoSetDimension:ALDimensionHeight toSize:343];
                 [_subItemScrollView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:[_tabBarItems firstObject]];
                 [_subItemScrollView autoAlignAxisToSuperviewAxis:ALAxisVertical];
                 
-                //[_subItemScrollView setPageSize:343];
-                [_subItemScrollView setSegmentSize:[[UIScreen mainScreen] bounds].size.width];
+                if ([_tabBarItems count] > 0) {
+                    int i = 0;
+                    
+                    TabBarItem *prevItem;
+                    for (TabBarItem *item in _tabBarItems) {
+                        
+                        if ([item itemSubView]) {
+                            
+                            [[item itemSubView] setDelegate:self];
+                            [[item itemSubView] setTabBarItemReference:self];
+                            switch (i) {
+                                case 0:
+                                    [[item itemSubView] setBackgroundColor:[UIColor lightGrayColor]];
+                                    break;
+                                case 1:{
+                                    [[item itemSubView] setBackgroundColor:[UIColor redColor]];
+                                }
+                                    break;
+                                case 2:{
+                                    [[item itemSubView] setBackgroundColor:[UIColor greenColor]];
+                                }
+                                    break;
+                                case 3: {
+                                    [[item itemSubView] setBackgroundColor:[UIColor yellowColor]];
+                                }
+                                    break;
+                                default:{
+                                    [[item itemSubView] setBackgroundColor:[UIColor blueColor]];
+                                }
+                                    break;
+                            }
+                            i++;
+                            [_subItemScrollView addSubview:[item itemSubView]];
+                            
+                            [_subItemSelectors addObject:[item itemSubView]];
+                            
+                            if (!prevItem) {
+                                // Align to contentView
+                                [pageLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+                            } else {
+                                // Align to prev label
+                                [pageLabel autoConstrainAttribute:ALAttributeLeading toAttribute:ALAttributeTrailing ofView:prevLabel];
+                            }
+                            
+                            if (i == pages - 1) {
+                                // Last page
+                                [pageLabel autoPinEdgeToSuperviewEdge:ALEdgeRight];
+                            }
+                            
+                            prevItem = item;
+                        }
+                    }
+                    [_subItemScrollView setPageSize:1];
+                }
                 
-                [_subItemSelectors autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:0 insetSpacing:YES matchedSizes:YES];
-                [_subItemSelectors autoSetViewsDimension:ALDimensionHeight toSize:343];
-                [_subItemSelectors autoSetViewsDimension:ALDimensionWidth toSize:[[UIScreen mainScreen] bounds].size.width];
+                //[_subItemSelectors autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSpacing:0 insetSpacing:YES matchedSizes:YES];
                 
-                [[_subItemSelectors firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+                //[[_subItemSelectors firstObject] autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
                 
-                [_subItemScrollView setContentSize:CGSizeMake([_subItemSelectors count]*[[UIScreen mainScreen] bounds].size.width , 343)];
+                //[_subItemScrollView layoutIfNeeded];
                 
             }
                 break;
@@ -209,7 +224,7 @@
         
         
         _didSetupConstraints = YES;
-        
+
         [self updateConstraintsIfNeeded];
     }
 }
@@ -374,7 +389,7 @@
     }
     _selectedTabBarItem = selectedItem;
     
-    [_subItemScrollView scrollToPage:[_tabBarItems indexOfObject:_selectedTabBarItem]];
+    [_subItemScrollView scrollToPage:[_tabBarItems indexOfObject:_selectedTabBarItem]+1];
 }
 
 #pragma mark -

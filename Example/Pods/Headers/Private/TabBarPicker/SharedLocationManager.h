@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/Vendor/SharedLocationManager/SharedLocationManager.h
