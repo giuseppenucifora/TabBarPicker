@@ -4,11 +4,17 @@ use_frameworks!
 inhibit_all_warnings!
 pod 'PureLayout'
 pod 'pop', '~> 1.0'
+pod 'UIActionSheet-Blocks'
+pod 'UIAlertViewBlockExtension'
 
 target 'TabBarPicker_Example', :exclusive => true do
   pod "TabBarPicker", :path => "../"
   pod 'PureLayout'
   pod 'pop', '~> 1.0'
+  pod 'UIView-Overlay'
+  pod 'UIActionSheet-Blocks'
+  pod 'UIAlertViewBlockExtension'
+  
 end
 
 target 'TabBarPicker_Tests', :exclusive => true do
