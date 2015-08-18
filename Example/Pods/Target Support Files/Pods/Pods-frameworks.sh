@@ -53,9 +53,13 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods/PureLayout.framework'
+  install_framework 'Pods/UIActionSheet_Blocks.framework'
+  install_framework 'Pods/UIAlertViewBlockExtension.framework'
   install_framework 'Pods/pop.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods/PureLayout.framework'
+  install_framework 'Pods/UIActionSheet_Blocks.framework'
+  install_framework 'Pods/UIAlertViewBlockExtension.framework'
   install_framework 'Pods/pop.framework'
 fi

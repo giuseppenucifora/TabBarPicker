@@ -53,12 +53,16 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-TabBarPicker_Example/PureLayout.framework'
+  install_framework 'Pods-TabBarPicker_Example/UIActionSheet_Blocks.framework'
+  install_framework 'Pods-TabBarPicker_Example/UIAlertViewBlockExtension.framework'
   install_framework 'Pods-TabBarPicker_Example/pop.framework'
   install_framework 'Pods-TabBarPicker_Example/TabBarPicker.framework'
   install_framework 'Pods-TabBarPicker_Example/UIView_Overlay.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-TabBarPicker_Example/PureLayout.framework'
+  install_framework 'Pods-TabBarPicker_Example/UIActionSheet_Blocks.framework'
+  install_framework 'Pods-TabBarPicker_Example/UIAlertViewBlockExtension.framework'
   install_framework 'Pods-TabBarPicker_Example/pop.framework'
   install_framework 'Pods-TabBarPicker_Example/TabBarPicker.framework'
   install_framework 'Pods-TabBarPicker_Example/UIView_Overlay.framework'

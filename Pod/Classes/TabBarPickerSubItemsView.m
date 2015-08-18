@@ -11,6 +11,7 @@
 #import "TabBarItem.h"
 #import "NSString+HexColor.h"
 #import "SharedLocationManager.h"
+#import "UIAlertView+BlockExtension.h"
 
 @interface TabBarPickerSubItemsView()
 
@@ -153,11 +154,18 @@
 
 - (void)openSettings
 {
-    BOOL canOpenSettings = (&UIApplicationOpenSettingsURLString != NULL);
-    if (canOpenSettings) {
-        NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-        [[UIApplication sharedApplication] openURL:url];
-    }
+    UIAlertView *alert = [UIAlertView alertViewWithTitle:NSLocalizedString(@"Settings", @"") message:NSLocalizedString(@"Open Settings?", @"")];
+    
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"") actionBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+        BOOL canOpenSettings = (&UIApplicationOpenSettingsURLString != NULL);
+        if (canOpenSettings) {
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            [[UIApplication sharedApplication] openURL:url];
+        }
+    }];
+    [alert addCancelButtonWithTitle:NSLocalizedString(@"CANCEL", @"") actionBlock:nil];
+    [alert show];
+    
 }
 
 - (void)changeSwitch:(UISwitch*)sender{
