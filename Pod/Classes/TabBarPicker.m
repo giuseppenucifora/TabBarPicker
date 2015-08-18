@@ -12,6 +12,7 @@
 #import "MMCPSScrollView.h"
 #import <UIView-Overlay/UIView+Overlay.h>
 #import "NSString+HexColor.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface TabBarPicker() <TabBarPickerSubItemsViewDelegate,TabBarItemDelegate>
 
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) NSMutableArray *tabBarItemsConstraints;
 @property (nonatomic, strong) TabBarItem *selectedTabBarItem;
 
+@property (nonatomic, strong) UIView *separator;
 @property (nonatomic, strong) UIView *tabBarView;
 @property (nonatomic, strong) MMCPSScrollView *subItemScrollView;
 
@@ -72,7 +74,11 @@
         
         _tabBarView = [[UIView alloc] initForAutoLayout];
         
-        [self addSubview:_tabBarView];
+        _separator = [[UIView alloc] initForAutoLayout];
+        [_separator.layer setMasksToBounds:NO];
+        [_separator setBackgroundColor:[[UIColor lightGrayColor] colorWithAlphaComponent:0.3]];
+        
+        
         
         for (NSObject *item in items) {
             if (item && [item isKindOfClass:[TabBarItem class]]) {
@@ -93,6 +99,10 @@
         [_subItemScrollView setPageSize:1];
         
         [self addSubview:_subItemScrollView];
+        
+        [self addSubview:_tabBarView];
+        
+        [self addSubview:_separator];
     }
     
     [self updateConstraintsIfNeeded];
@@ -159,6 +169,10 @@
                 [_tabBarView autoSetDimension:ALDimensionHeight toSize:44];
                 [_tabBarView autoAlignAxisToSuperviewAxis:ALAxisVertical];
                 [_tabBarView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self];
+                
+                [_separator autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.superview];
+                [_separator autoSetDimension:ALDimensionHeight toSize:1];
+                [_separator autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_tabBarView];
                 
                 [_tabBarItems autoSetViewsDimension:ALDimensionHeight toSize:44.0];
                 
@@ -394,11 +408,32 @@
 #pragma mark MMCPSScrollViewDelegate
 
 - (void)scrollView:(MMCPSScrollView *)scrollView didScrollToPage:(NSUInteger)pageIndex {
-    NSLog(@"The MMCPSScrollView is now on page %i.", pageIndex);
+    if ([scrollView currentPage] > 0 && [scrollView currentPage] <= [_tabBarItems count]) {
+        TabBarItem *selectedItem = [_tabBarItems objectAtIndex:[scrollView currentPage]-1];
+        
+        for (TabBarItem *item in _tabBarItems) {
+            if (![item isEqual:selectedItem]) {
+                [item setHighlighted:NO];
+            }
+            else {
+                [item setHighlighted:YES];
+            }
+        }
+        
+        if (!_isShow) {
+            [self show];
+        }
+        else {
+            if(![_selectedTabBarItem isEqual:selectedItem]) {
+                
+            }
+        }
+        _selectedTabBarItem = selectedItem;
+    }
 }
 
 - (void)scrollView:(MMCPSScrollView *)scrollView willScrollToPage:(NSUInteger)pageIndex {
-    NSLog(@"The MMCPSScrollView is now going to page %i.", pageIndex);
+
 }
 
 #pragma mark -

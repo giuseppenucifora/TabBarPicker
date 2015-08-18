@@ -51,4 +51,5 @@ typedef NS_ENUM(NSInteger, TabBarPickerSubItemsViewType) {
 
 - (instancetype) initWithType:(TabBarPickerSubItemsViewType) type subItems:(NSArray*) subItems needsLocalization:(BOOL) needsLocalization;
 
+- (void) setItemName:(NSString *) itemName;
 @end

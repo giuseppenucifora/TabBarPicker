@@ -23,6 +23,7 @@
 @property (nonatomic, strong) UILabel *switchBarLabel;
 @property (nonatomic, strong) UIButton *localizationButton;
 @property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) NSString *name;
 
 @end
 
@@ -45,7 +46,6 @@
         
         _switchBarLabel     = [[UILabel alloc] initForAutoLayout];
         [_switchBarLabel setTextColor:[@"999999" colorFromHex]];
-        [_switchBarLabel setText:NSLocalizedString(@"Distance", @"")];
         [_switchBarView addSubview:_switchBarLabel];
         
         _itemSwich          = [[UISwitch alloc] initForAutoLayout];
@@ -65,7 +65,7 @@
         if (_needsLocalization) {
             
             _localizationView   = [[UIView alloc] initForAutoLayout];
-            [_localizationView setBackgroundColor:[UIColor purpleColor]];
+            [_localizationView setBackgroundColor:[UIColor whiteColor]];
             [_localizationView setAlpha:0];
             
             _localizationButton = [[UIButton alloc] initForAutoLayout];
@@ -98,6 +98,8 @@
     
     [UIView animateWithDuration:0.5 animations:^{
         [_localizationView setAlpha:[[NSNumber numberWithBool:[[SharedLocationManager sharedManager] localizationIsAuthorized]] floatValue]];
+        [_itemSwich setUserInteractionEnabled:NO];
+        [_itemSwich setOn:NO];
     }];
     
     if (!_didSetupConstraints) {
@@ -186,6 +188,10 @@
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     [super touchesBegan: touches withEvent:event];
+}
+
+- (void) setItemName:(NSString *) itemName {
+	[_switchBarLabel setText:itemName];
 }
 
 @end

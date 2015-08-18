@@ -45,7 +45,7 @@
         [_itemButton setBackgroundColor:[@"ff4e50" colorFromHex] forState:UIControlStateHighlighted];
         
         [self addSubview:_itemButton];
-
+        
     }
     return self;
 }
@@ -92,6 +92,10 @@
 
 - (void) setHighlighted:(BOOL) highlighted {
     [_itemButton setHighlighted:highlighted];
+}
+
+- (void) setItemName:(NSString *)itemName {
+    [_itemSubView setItemName:itemName];
 }
 
 - (void) itemButtonTapped {
