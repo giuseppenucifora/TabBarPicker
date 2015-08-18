@@ -40,44 +40,39 @@
         [location setSelectedImage:[UIImage imageNamed:@"location_selected"]];
         [location setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        TabBarPickerSubItemsView *calendarSubView = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        TabBarPickerSubItemsView *locationSubview1 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
-        TabBarItem *calendar = [[TabBarItem alloc] initWithSubItemView:calendarSubView];
-        [calendar setItemName:@"Calendar"];
-        [calendar setImage:[UIImage imageNamed:@"calendar"]];
-        [calendar setSelectedImage:[UIImage imageNamed:@"calendar_selected"]];
-        [calendar setHighlightedImage:[UIImage imageNamed:@"calendar_highlighted"]];
+        TabBarItem *location1 = [[TabBarItem alloc] initWithSubItemView:locationSubview1];
+        [location1 setItemName:@"Location2"];
+        [location1 setImage:[UIImage imageNamed:@"location"]];
+        [location1 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
+        [location1 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        TabBarPickerSubItemsView *typeSubView = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        TabBarPickerSubItemsView *locationSubview2 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
-        TabBarItem *type = [[TabBarItem alloc] initWithSubItemView:typeSubView];
-        [type setItemName:@"Type"];
-        [type setImage:[UIImage imageNamed:@"type"]];
-        [type setSelectedImage:[UIImage imageNamed:@"type_selected"]];
-        [type setHighlightedImage:[UIImage imageNamed:@"type_highlighted"]];
+        TabBarItem *location2 = [[TabBarItem alloc] initWithSubItemView:locationSubview2];
+        [location2 setItemName:@"Location3"];
+        [location2 setImage:[UIImage imageNamed:@"location"]];
+        [location2 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
+        [location2 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        TabBarPickerSubItemsView *priceSubView = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        TabBarPickerSubItemsView *locationSubview3 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
-        TabBarItem *price =[[TabBarItem alloc] initWithSubItemView:priceSubView];
-        [price setItemName:@"Price"];
-        [price setImage:[UIImage imageNamed:@"price"]];
-        [price setSelectedImage:[UIImage imageNamed:@"price_selected"]];
-        [price setHighlightedImage:[UIImage imageNamed:@"price_highlighted"]];
+        TabBarItem *location3 = [[TabBarItem alloc] initWithSubItemView:locationSubview3];
+        [location3 setItemName:@"Location4"];
+        [location3 setImage:[UIImage imageNamed:@"location"]];
+        [location3 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
+        [location3 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        TabBarPickerSubItemsView *allergenSubView = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
+        TabBarPickerSubItemsView *locationSubview4 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
-        TabBarItem *allergen = [[TabBarItem alloc] initWithSubItemView:allergenSubView];
-        [allergen setItemName:@"Allergen"];
-        [allergen setImage:[UIImage imageNamed:@"allergen"]];
-        [allergen setSelectedImage:[UIImage imageNamed:@"allergen_selected"]];
-        [allergen setHighlightedImage:[UIImage imageNamed:@"allergen_highlighted"]];
+        TabBarItem *location4 = [[TabBarItem alloc] initWithSubItemView:locationSubview4];
+        [location4 setItemName:@"Location5"];
+        [location4 setImage:[UIImage imageNamed:@"location"]];
+        [location4 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
+        [location4 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        /*TabBarItem *allergen2 = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
-        [allergen2 setItemName:@"Allergen"];
-        [allergen2 setImage:[UIImage imageNamed:@"allergen"]];
-        [allergen2 setSelectedImage:[UIImage imageNamed:@"allergen_selected"]];
-        */
-        tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,calendar,type,price,allergen] forPosition:TabBarPickerPositionBottom];
+        tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,location1,location2,location3,location4] forPosition:TabBarPickerPositionBottom];
         [tabbar setItemSpacing:0];
         [tabbar setBackgroundColor:[UIColor whiteColor]];
         
