@@ -1,7 +1,7 @@
 PODS:
   - pop (1.0.7)
   - PureLayout (3.0.0)
-  - TabBarPicker (0.1.0)
+  - TabBarPicker (0.3.0)
   - UIActionSheet-Blocks (1.0.1)
   - UIAlertViewBlockExtension (1.0.1)
   - UIView-Overlay (0.1)
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   PureLayout: 270dfee2236f697ab1d5e2771c2e5c248495fa0d
-  TabBarPicker: 0b8b0c04ad47ed9c740cef5d31cac7fefe6cb273
+  TabBarPicker: 4f6e765ac6ee7b07ef46ac3f98e6d5ec0999d847
   UIActionSheet-Blocks: a5781709d4c7e1bf81e0498caf187ab0535e5caf
   UIAlertViewBlockExtension: b4b0a1e62c94170bacce519a2b16afbc81673714
   UIView-Overlay: 95e42e733f6fdcfca523a399ba7907d0ca4570a0

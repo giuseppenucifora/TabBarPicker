@@ -1,6 +1,6 @@
 {
   "name": "TabBarPicker",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "summary": "TabBarPicker.",
   "homepage": "https://github.com/giuseppenucifora/TabBarPicker",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/giuseppenucifora/TabBarPicker.git",
-    "tag": "0.1.0"
+    "tag": "0.3.0"
   },
   "platforms": {
     "ios": "8.0"
