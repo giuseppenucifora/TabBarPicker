@@ -124,84 +124,84 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1156D619B3818E297D0D12E9548FE9C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C0BF957FAF71CC8A3C616196CE12BE11;
-			remoteInfo = UIAlertViewBlockExtension;
-		};
-		39BEC4C359890CC3BD92704DA1A15F77 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3DA374BB5346C86BB9E37D7D8A3F9705;
-			remoteInfo = pop;
-		};
-		4A6726B6AB132BED7AA77B26F94A3AFB /* PBXContainerItemProxy */ = {
+		1A0216D5A68EF18925A58D8898A40500 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8240A687A12B3496C485DFBEB80E79E2;
 			remoteInfo = PureLayout;
 		};
-		5B21EDF65D581DDBCE165947B38A8EC8 /* PBXContainerItemProxy */ = {
+		231D11EE05A157B50E61C08A50D562F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3DA374BB5346C86BB9E37D7D8A3F9705;
 			remoteInfo = pop;
 		};
-		9904DE571308F6DB1539A36EDE7EF689 /* PBXContainerItemProxy */ = {
+		4A7AF9BC946B50A8BC2CFF1204DF7D78 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0B43C8BA292D04592FCAA7AB434DD80C;
 			remoteInfo = TabBarPicker;
 		};
-		ACBE1C00D7835522A99B7823A65EE366 /* PBXContainerItemProxy */ = {
+		58B8312D7E70A13FF744582A9D5C33C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B8AFD9D9A9DD2282FC523C9360E3FD0B;
-			remoteInfo = "UIActionSheet-Blocks";
+			remoteGlobalIDString = 8240A687A12B3496C485DFBEB80E79E2;
+			remoteInfo = PureLayout;
 		};
-		B47859329A14B07C93E9F50FD5839803 /* PBXContainerItemProxy */ = {
+		59634A5E02FA6D19A93D2EA7FFD61980 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0BF957FAF71CC8A3C616196CE12BE11;
+			remoteInfo = UIAlertViewBlockExtension;
+		};
+		765E5A6C7EC62062C86499C436755122 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 31D04736AA8F72A7EDD28D5A60339B0F;
 			remoteInfo = "UIView-Overlay";
 		};
-		BE0EA4BEE4746C80AA92E99613AC8AC2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A3EDD948F9BE0382C98E8FCC6F145936;
-			remoteInfo = "TabBarPicker-TabBarPicker";
-		};
-		BFD6B69F1954471793C25AA47BF47984 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8240A687A12B3496C485DFBEB80E79E2;
-			remoteInfo = PureLayout;
-		};
-		C0EC88B859F3AC62E2FF2F63C5EED979 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0B43C8BA292D04592FCAA7AB434DD80C;
-			remoteInfo = TabBarPicker;
-		};
-		C20F0D51880A805056D8DD360E87BB89 /* PBXContainerItemProxy */ = {
+		A095472E80FEC47D8D83667BA570A9BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C0BF957FAF71CC8A3C616196CE12BE11;
 			remoteInfo = UIAlertViewBlockExtension;
 		};
-		CE7788D9F3896FA98A2BFE332E9A531E /* PBXContainerItemProxy */ = {
+		AC84369D6321CD0D64AF72BB47BA0620 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8AFD9D9A9DD2282FC523C9360E3FD0B;
+			remoteInfo = "UIActionSheet-Blocks";
+		};
+		C4614558DC5479A4A33C81C2E8C6ACB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DA374BB5346C86BB9E37D7D8A3F9705;
+			remoteInfo = pop;
+		};
+		C52BF0121E5E9F1BC77EDB06E5CF5950 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B43C8BA292D04592FCAA7AB434DD80C;
+			remoteInfo = TabBarPicker;
+		};
+		D56F9AD6AF62022E3E46DDCE1873D53E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3EDD948F9BE0382C98E8FCC6F145936;
+			remoteInfo = "TabBarPicker-TabBarPicker";
+		};
+		D59F622049A0852987C8BF21FA82F520 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -1018,7 +1018,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C3345A82F0B69FB504B9BE68810BCDFA /* PBXTargetDependency */,
+				CF70228EECA89048ED837ACCE109E7E0 /* PBXTargetDependency */,
 			);
 			name = TabBarPicker;
 			productName = TabBarPicker;
@@ -1053,7 +1053,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				7CCFCA3730A3048294DF40C61BF63C0D /* PBXTargetDependency */,
+				985CF393361B86AC14EC54CED92CDBDD /* PBXTargetDependency */,
 			);
 			name = "Pods-TabBarPicker_Tests";
 			productName = "Pods-TabBarPicker_Tests";
@@ -1088,10 +1088,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				A6DD22ABB2393DAD641B588D1A9D87E7 /* PBXTargetDependency */,
-				83B8BBBFDFFA75C48A6E596CAFB262D4 /* PBXTargetDependency */,
-				1BD795CEBD560087FCB23185F96F9EC9 /* PBXTargetDependency */,
-				F60977E207F8E11EC03DA8CBE382B3FD /* PBXTargetDependency */,
+				13430F3531C3BB70CADAEC8CCE218411 /* PBXTargetDependency */,
+				76F823F3A26A863473CF49898F5C57C5 /* PBXTargetDependency */,
+				F8F04722CA996F04C32D7A54C8128FBE /* PBXTargetDependency */,
+				E9D2A8229662994DDA79E21C477B05D0 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
@@ -1177,12 +1177,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				1B1776404F4F6D17A344E94C2598E9C8 /* PBXTargetDependency */,
-				8C881F00330A91E3FB6D0D432752061C /* PBXTargetDependency */,
-				59AD200419C8E26272159EF58D8358A3 /* PBXTargetDependency */,
-				830ACCC3BA12B1428631B8CB054B40A0 /* PBXTargetDependency */,
-				7D1B6C595AD4DBA341CB1D70D7E4C53C /* PBXTargetDependency */,
-				49F431A4869DECEA381AEE266DB79DFF /* PBXTargetDependency */,
+				00B1CD5CB1F712D0A3C2AC2B6CB15398 /* PBXTargetDependency */,
+				53286976D73B02A825AD63A3FDA29081 /* PBXTargetDependency */,
+				0B4BE7FAA9223D5E4429CC1A682013E0 /* PBXTargetDependency */,
+				E63DCB444B52B76CB2992A8FE9FFCB1A /* PBXTargetDependency */,
+				A9FBB5ACB984B12F90B02DCEB67794CA /* PBXTargetDependency */,
+				F32978865DCDECDF3D2833024F6E7AD9 /* PBXTargetDependency */,
 			);
 			name = "Pods-TabBarPicker_Example";
 			productName = "Pods-TabBarPicker_Example";
@@ -1359,77 +1359,77 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1B1776404F4F6D17A344E94C2598E9C8 /* PBXTargetDependency */ = {
+		00B1CD5CB1F712D0A3C2AC2B6CB15398 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PureLayout;
 			target = 8240A687A12B3496C485DFBEB80E79E2 /* PureLayout */;
-			targetProxy = BFD6B69F1954471793C25AA47BF47984 /* PBXContainerItemProxy */;
+			targetProxy = 1A0216D5A68EF18925A58D8898A40500 /* PBXContainerItemProxy */;
 		};
-		1BD795CEBD560087FCB23185F96F9EC9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UIAlertViewBlockExtension;
-			target = C0BF957FAF71CC8A3C616196CE12BE11 /* UIAlertViewBlockExtension */;
-			targetProxy = C20F0D51880A805056D8DD360E87BB89 /* PBXContainerItemProxy */;
-		};
-		49F431A4869DECEA381AEE266DB79DFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = pop;
-			target = 3DA374BB5346C86BB9E37D7D8A3F9705 /* pop */;
-			targetProxy = 5B21EDF65D581DDBCE165947B38A8EC8 /* PBXContainerItemProxy */;
-		};
-		59AD200419C8E26272159EF58D8358A3 /* PBXTargetDependency */ = {
+		0B4BE7FAA9223D5E4429CC1A682013E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "UIActionSheet-Blocks";
 			target = B8AFD9D9A9DD2282FC523C9360E3FD0B /* UIActionSheet-Blocks */;
-			targetProxy = ACBE1C00D7835522A99B7823A65EE366 /* PBXContainerItemProxy */;
+			targetProxy = D59F622049A0852987C8BF21FA82F520 /* PBXContainerItemProxy */;
 		};
-		7CCFCA3730A3048294DF40C61BF63C0D /* PBXTargetDependency */ = {
+		13430F3531C3BB70CADAEC8CCE218411 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = 8240A687A12B3496C485DFBEB80E79E2 /* PureLayout */;
+			targetProxy = 58B8312D7E70A13FF744582A9D5C33C8 /* PBXContainerItemProxy */;
+		};
+		53286976D73B02A825AD63A3FDA29081 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TabBarPicker;
 			target = 0B43C8BA292D04592FCAA7AB434DD80C /* TabBarPicker */;
-			targetProxy = C0EC88B859F3AC62E2FF2F63C5EED979 /* PBXContainerItemProxy */;
+			targetProxy = 4A7AF9BC946B50A8BC2CFF1204DF7D78 /* PBXContainerItemProxy */;
 		};
-		7D1B6C595AD4DBA341CB1D70D7E4C53C /* PBXTargetDependency */ = {
+		76F823F3A26A863473CF49898F5C57C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIActionSheet-Blocks";
+			target = B8AFD9D9A9DD2282FC523C9360E3FD0B /* UIActionSheet-Blocks */;
+			targetProxy = AC84369D6321CD0D64AF72BB47BA0620 /* PBXContainerItemProxy */;
+		};
+		985CF393361B86AC14EC54CED92CDBDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TabBarPicker;
+			target = 0B43C8BA292D04592FCAA7AB434DD80C /* TabBarPicker */;
+			targetProxy = C52BF0121E5E9F1BC77EDB06E5CF5950 /* PBXContainerItemProxy */;
+		};
+		A9FBB5ACB984B12F90B02DCEB67794CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "UIView-Overlay";
 			target = 31D04736AA8F72A7EDD28D5A60339B0F /* UIView-Overlay */;
-			targetProxy = B47859329A14B07C93E9F50FD5839803 /* PBXContainerItemProxy */;
+			targetProxy = 765E5A6C7EC62062C86499C436755122 /* PBXContainerItemProxy */;
 		};
-		830ACCC3BA12B1428631B8CB054B40A0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UIAlertViewBlockExtension;
-			target = C0BF957FAF71CC8A3C616196CE12BE11 /* UIAlertViewBlockExtension */;
-			targetProxy = 1156D619B3818E297D0D12E9548FE9C6 /* PBXContainerItemProxy */;
-		};
-		83B8BBBFDFFA75C48A6E596CAFB262D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UIActionSheet-Blocks";
-			target = B8AFD9D9A9DD2282FC523C9360E3FD0B /* UIActionSheet-Blocks */;
-			targetProxy = CE7788D9F3896FA98A2BFE332E9A531E /* PBXContainerItemProxy */;
-		};
-		8C881F00330A91E3FB6D0D432752061C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TabBarPicker;
-			target = 0B43C8BA292D04592FCAA7AB434DD80C /* TabBarPicker */;
-			targetProxy = 9904DE571308F6DB1539A36EDE7EF689 /* PBXContainerItemProxy */;
-		};
-		A6DD22ABB2393DAD641B588D1A9D87E7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PureLayout;
-			target = 8240A687A12B3496C485DFBEB80E79E2 /* PureLayout */;
-			targetProxy = 4A6726B6AB132BED7AA77B26F94A3AFB /* PBXContainerItemProxy */;
-		};
-		C3345A82F0B69FB504B9BE68810BCDFA /* PBXTargetDependency */ = {
+		CF70228EECA89048ED837ACCE109E7E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "TabBarPicker-TabBarPicker";
 			target = A3EDD948F9BE0382C98E8FCC6F145936 /* TabBarPicker-TabBarPicker */;
-			targetProxy = BE0EA4BEE4746C80AA92E99613AC8AC2 /* PBXContainerItemProxy */;
+			targetProxy = D56F9AD6AF62022E3E46DDCE1873D53E /* PBXContainerItemProxy */;
 		};
-		F60977E207F8E11EC03DA8CBE382B3FD /* PBXTargetDependency */ = {
+		E63DCB444B52B76CB2992A8FE9FFCB1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIAlertViewBlockExtension;
+			target = C0BF957FAF71CC8A3C616196CE12BE11 /* UIAlertViewBlockExtension */;
+			targetProxy = A095472E80FEC47D8D83667BA570A9BE /* PBXContainerItemProxy */;
+		};
+		E9D2A8229662994DDA79E21C477B05D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = pop;
 			target = 3DA374BB5346C86BB9E37D7D8A3F9705 /* pop */;
-			targetProxy = 39BEC4C359890CC3BD92704DA1A15F77 /* PBXContainerItemProxy */;
+			targetProxy = 231D11EE05A157B50E61C08A50D562F4 /* PBXContainerItemProxy */;
+		};
+		F32978865DCDECDF3D2833024F6E7AD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pop;
+			target = 3DA374BB5346C86BB9E37D7D8A3F9705 /* pop */;
+			targetProxy = C4614558DC5479A4A33C81C2E8C6ACB7 /* PBXContainerItemProxy */;
+		};
+		F8F04722CA996F04C32D7A54C8128FBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIAlertViewBlockExtension;
+			target = C0BF957FAF71CC8A3C616196CE12BE11 /* UIAlertViewBlockExtension */;
+			targetProxy = 59634A5E02FA6D19A93D2EA7FFD61980 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1455,33 +1455,6 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		13E6E78F0B8C8788746F00FCD7A371A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.0;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TabBarPicker/TabBarPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TabBarPicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TabBarPicker/TabBarPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TabBarPicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1585,6 +1558,33 @@
 			};
 			name = Debug;
 		};
+		466F0FA8DF35DECA9BD6F7C593D53F72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.3.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.3.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TabBarPicker/TabBarPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TabBarPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TabBarPicker/TabBarPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		4B0B1BF0388DEA06DE8DF1B21F4B00AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC4882E403503DE9288AF3969E260251 /* PureLayout-Private.xcconfig */;
@@ -1667,6 +1667,33 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		7120BF423EE62E1AB2D84AEBE846630C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.3.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.3.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TabBarPicker/TabBarPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TabBarPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TabBarPicker/TabBarPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TabBarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		741C768B9D20203171F89E904F8DBA84 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1900,33 +1927,6 @@
 			};
 			name = Debug;
 		};
-		E2350BC1B3EDD0429A21A55B90AFEEEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.0;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TabBarPicker/TabBarPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TabBarPicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TabBarPicker/TabBarPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TabBarPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		EAC45E7C968E7C99C6DDDCA7118C6046 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8DB3F2E1C8B7BF5C0D77433F80F485E1 /* TabBarPicker-Private.xcconfig */;
@@ -2125,8 +2125,8 @@
 		EA9B566CC07BD9C0890426A19B907D94 /* Build configuration list for PBXNativeTarget "TabBarPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2350BC1B3EDD0429A21A55B90AFEEEB /* Debug */,
-				13E6E78F0B8C8788746F00FCD7A371A3 /* Release */,
+				466F0FA8DF35DECA9BD6F7C593D53F72 /* Debug */,
+				7120BF423EE62E1AB2D84AEBE846630C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

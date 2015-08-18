@@ -47,7 +47,7 @@ typedef enum {
 
 @property (nonatomic) NSUInteger currentPage;
 
-@property (nonatomic, retain) id<MMCPSScrollViewDelegate> MMCPSDelegate;
+@property (nonatomic, assign) id<MMCPSScrollViewDelegate> MMCPSDelegate;
 
 - (id)initWithFrame:(CGRect)frame andType:(MMCPSScrollType) type;
 

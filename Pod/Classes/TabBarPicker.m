@@ -77,9 +77,11 @@
         for (NSObject *item in items) {
             if (item && [item isKindOfClass:[TabBarItem class]]) {
                 
-                [_tabBarItems addObject:item];
-                [(TabBarItem*)item setDelegate:self];
-                [_tabBarView addSubview:item];
+                TabBarItem *_item = (TabBarItem*)item;
+                
+                [_tabBarItems addObject:_item];
+                [(TabBarItem*)_item setDelegate:self];
+                [_tabBarView addSubview:_item];
             }
         }
         
