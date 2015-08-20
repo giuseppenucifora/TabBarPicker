@@ -32,7 +32,7 @@
         TabBarSubItem *subItem6 = [TabBarSubItem tabBarSubItemWithName:@"Peppe5" andValue:@"Peppe5"];
         TabBarSubItem *subItem7 = [TabBarSubItem tabBarSubItemWithName:@"Peppe6" andValue:@"Peppe6"];
         
-        TabBarPickerSubItemsView *locationSubview = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:YES];
+        TabBarPickerSubItemsView *locationSubview = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeDistance subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:YES];
         
         TabBarItem *location = [[TabBarItem alloc] initWithSubItemView:locationSubview];
         [location setItemName:@"Location"];
@@ -40,7 +40,7 @@
         [location setSelectedImage:[UIImage imageNamed:@"location_selected"]];
         [location setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        TabBarPickerSubItemsView *locationSubview1 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
+        TabBarPickerSubItemsView *locationSubview1 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeDateAndTime subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
         TabBarItem *location1 = [[TabBarItem alloc] initWithSubItemView:locationSubview1];
         [location1 setItemName:@"Location2"];
@@ -48,7 +48,7 @@
         [location1 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
         [location1 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        TabBarPickerSubItemsView *locationSubview2 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
+        TabBarPickerSubItemsView *locationSubview2 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeCheckBox subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
         TabBarItem *location2 = [[TabBarItem alloc] initWithSubItemView:locationSubview2];
         [location2 setItemName:@"Location3"];
@@ -56,7 +56,7 @@
         [location2 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
         [location2 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        TabBarPickerSubItemsView *locationSubview3 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
+        TabBarPickerSubItemsView *locationSubview3 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypePrice subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
         TabBarItem *location3 = [[TabBarItem alloc] initWithSubItemView:locationSubview3];
         [location3 setItemName:@"Location4"];
@@ -64,7 +64,7 @@
         [location3 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
         [location3 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        TabBarPickerSubItemsView *locationSubview4 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
+        TabBarPickerSubItemsView *locationSubview4 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButton subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
         TabBarItem *location4 = [[TabBarItem alloc] initWithSubItemView:locationSubview4];
         [location4 setItemName:@"Location5"];

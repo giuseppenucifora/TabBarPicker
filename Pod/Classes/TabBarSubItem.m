@@ -19,23 +19,26 @@
 @implementation TabBarSubItem
 
 
-- (instancetype) initWithName:(NSString *) name andValue:(id)value {
+- (instancetype) initWithName:(NSString *) name firstValue:(id)firstValue secondValue:(id) secondValue {
     
     self = [self initForAutoLayout];
     if (self) {
         
-         //[[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
-        
         _name = name;
         _subItemButton = [[UIButton alloc] initForAutoLayout];
         [_subItemButton setTitle:_name forState:UIControlStateNormal];
-        _value = value;
+        _firstValue = ( firstValue ? firstValue : @"");
+        _secondValue = ( secondValue ? secondValue : @"");
     }
     return self;
 }
 
 + (instancetype) tabBarSubItemWithName:(NSString*)name andValue:(id)value {
-    return [[self alloc] initWithName:name andValue:value];
+    return [[self alloc] initWithName:name firstValue:value secondValue:nil];
+}
+
++ (instancetype) initWithName:(NSString *) name firstValue:(id)firstValue secondValue:(id) secondValue {
+    return [[self alloc] initWithName:name firstValue:firstValue secondValue:secondValue];
 }
 
 - (void) setName:(NSString *)name {
@@ -43,12 +46,18 @@
     [_subItemButton setTitle:_name forState:UIControlStateNormal];
 }
 
-
-- (void)deviceOrientationDidChange:(NSNotification *)notification {
-    //Obtain current device orientation
-    _orientation = [[UIDevice currentDevice] orientation];
+- (NSUInteger) numberOfValues {
+    NSUInteger response = 0;
     
-    [self layoutSubviews];
+    if (_firstValue) {
+        response++;
+    }
+    
+    if (_secondValue) {
+        response++;
+    }
+    
+    return response;
 }
 
 - (void) layoutSubviews {

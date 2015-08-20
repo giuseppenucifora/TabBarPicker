@@ -14,10 +14,11 @@
 
 typedef NS_ENUM(NSInteger, TabBarPickerSubItemsViewType) {
     // Informational
-    TabBarPickerSubItemsViewTypeData,
-    TabBarPickerSubItemsViewTypeString,
-    TabBarPickerSubItemsViewTypeButtons,
-    TabBarPickerSubItemsViewTypeCheckBox
+    TabBarPickerSubItemsViewTypeDistance,
+    TabBarPickerSubItemsViewTypeDateAndTime,
+    TabBarPickerSubItemsViewTypePrice,
+    TabBarPickerSubItemsViewTypeCheckBox,
+    TabBarPickerSubItemsViewTypeButton,
 };
 
 @protocol TabBarPickerSubItemsViewDelegate <NSObject>
