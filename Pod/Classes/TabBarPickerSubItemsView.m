@@ -13,7 +13,7 @@
 #import "SharedLocationManager.h"
 #import "UIAlertView+BlockExtension.h"
 
-@interface TabBarPickerSubItemsView()
+@interface TabBarPickerSubItemsView() <UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property (nonatomic, assign) BOOL didSetupConstraints;
 @property (nonatomic) TabBarPickerSubItemsViewType type;
@@ -23,6 +23,11 @@
 @property (nonatomic, strong) UILabel *switchBarLabel;
 @property (nonatomic, strong) UIButton *localizationButton;
 @property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) NSString *name;
+
+@property (nonatomic, strong) UIView *HUD;
+@property (nonatomic, strong) UIPickerView *pickerView;
+
 
 @end
 
@@ -38,6 +43,15 @@
     
     if (self) {
         [self setUserInteractionEnabled:YES];
+        
+        _subItems = [[NSMutableArray alloc] init];
+        
+        for (NSObject *subItem in subItems) {
+            if ([subItem isKindOfClass:[TabBarSubItem class]]) {
+                [_subItems addObject:subItem];
+            }
+        }
+        
         _type               = type;
         _needsLocalization  = needsLocalization;
         _switchBarView      = [[UIView alloc] initForAutoLayout];
@@ -45,7 +59,6 @@
         
         _switchBarLabel     = [[UILabel alloc] initForAutoLayout];
         [_switchBarLabel setTextColor:[@"999999" colorFromHex]];
-        [_switchBarLabel setText:NSLocalizedString(@"Distance", @"")];
         [_switchBarView addSubview:_switchBarLabel];
         
         _itemSwich          = [[UISwitch alloc] initForAutoLayout];
@@ -62,10 +75,43 @@
         
         [self addSubview:_contentView];
         
+        _HUD = [[UIView alloc] initForAutoLayout];
+        <[_HUD setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0.25]];
+        
+        [_contentView addSubview:_HUD];
+        
+        
+        switch (_type) {
+            case TabBarPickerSubItemsViewTypeDateAndTime: {
+                
+                break;
+            }
+            case TabBarPickerSubItemsViewTypeCheckBox: {
+                
+                break;
+            }
+            case TabBarPickerSubItemsViewTypeDistance: {
+                _pickerView = [[UIPickerView alloc] initForAutoLayout];
+                [_pickerView setDelegate:self];
+                [_pickerView setDataSource:self];
+                
+                [_contentView addSubview:_pickerView];
+                
+                break;
+            }
+            case TabBarPickerSubItemsViewTypePrice: {
+                
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+        
         if (_needsLocalization) {
             
             _localizationView   = [[UIView alloc] initForAutoLayout];
-            [_localizationView setBackgroundColor:[UIColor purpleColor]];
+            [_localizationView setBackgroundColor:[UIColor whiteColor]];
             [_localizationView setAlpha:0];
             
             _localizationButton = [[UIButton alloc] initForAutoLayout];
@@ -96,9 +142,21 @@
 
 - (void) layoutSubviews {
     
-    [UIView animateWithDuration:0.5 animations:^{
-        [_localizationView setAlpha:[[NSNumber numberWithBool:[[SharedLocationManager sharedManager] localizationIsAuthorized]] floatValue]];
-    }];
+    //NSAssert(_dataSource, @"TabBarPickerSubItemsView needs datasource");
+    
+    if (_needsLocalization) {
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            [_localizationView setAlpha:[[NSNumber numberWithBool:![[SharedLocationManager sharedManager] localizationIsAuthorized]] floatValue]];
+            if ([[SharedLocationManager sharedManager] localizationIsAuthorized]) {
+                [_itemSwich setUserInteractionEnabled:[[SharedLocationManager sharedManager] localizationIsAuthorized]];
+            }
+            else {
+                [_itemSwich setUserInteractionEnabled:[[SharedLocationManager sharedManager] localizationIsAuthorized]];
+                [_itemSwich setOn:[[SharedLocationManager sharedManager] localizationIsAuthorized]];
+            }
+        }];
+    }
     
     if (!_didSetupConstraints) {
         
@@ -121,6 +179,11 @@
         [_contentView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self];
         [_contentView autoAlignAxisToSuperviewAxis:ALAxisVertical];
         
+        [_HUD autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:_contentView];
+        [_HUD autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:_contentView];
+        [_HUD autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [_HUD autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_contentView];
+        
         if (_needsLocalization) {
             
             [_localizationView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_contentView];
@@ -134,6 +197,7 @@
             [_localizationButton autoSetDimension:ALDimensionHeight toSize:44 relation:NSLayoutRelationLessThanOrEqual];
             [_localizationButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self withMultiplier:0.8];
         }
+        
         _didSetupConstraints = YES;
     }
     
@@ -170,12 +234,13 @@
 
 - (void)changeSwitch:(UISwitch*)sender{
     
+    [_HUD setAlpha:[[NSNumber numberWithBool:![sender isOn]] floatValue]];
     if([sender isOn]){
         NSLog(@"Switch is ON");
+        
     } else{
         NSLog(@"Switch is OFF");
     }
-    
 }
 
 - (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event
@@ -187,5 +252,54 @@
     
     [super touchesBegan: touches withEvent:event];
 }
+
+- (void) setItemName:(NSString *) itemName {
+    [_switchBarLabel setText:itemName];
+}
+
+#pragma mark UIPickerViewDataSource
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    if ([_subItems count] > 0) {
+        [(TabBarSubItem*)[_subItems firstObject] numberOfValues];
+    }
+    return 0;
+}
+
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    
+}
+
+#pragma mark -
+
+#pragma mark UIPickerViewDelegate
+
+/*
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
+    
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+}
+
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+}
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+}
+*/
+
+#pragma mark -
 
 @end

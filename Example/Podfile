@@ -4,6 +4,7 @@ use_frameworks!
 inhibit_all_warnings!
 pod 'PureLayout'
 pod 'pop', '~> 1.0'
+pod 'UIView-Overlay'
 pod 'UIActionSheet-Blocks'
 pod 'UIAlertViewBlockExtension'
 
