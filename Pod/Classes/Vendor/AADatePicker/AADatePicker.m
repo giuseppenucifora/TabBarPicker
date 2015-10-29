@@ -256,14 +256,14 @@
             break;
         }
         case 1:{
-            int max = (int)[_calendar maximumRangeOfUnit:NSCalendarUnitHour].length;
-            [lblDate setText:[NSString stringWithFormat:@"%02d",(row % max)]]; // 02d = pad with leading zeros to 2 digits
+            NSInteger max = (int)[_calendar maximumRangeOfUnit:NSCalendarUnitHour].length;
+            [lblDate setText:[NSString stringWithFormat:@"%02ld",(long)(row % max)]]; // 02d = pad with leading zeros to 2 digits
             lblDate.textAlignment = NSTextAlignmentCenter;
             break;
         }
         case 2:{
-            int max = (int)[_calendar maximumRangeOfUnit:NSCalendarUnitMinute].length;
-            [lblDate setText:[NSString stringWithFormat:@"%02d",(row % max)]];
+            NSInteger max = (int)[_calendar maximumRangeOfUnit:NSCalendarUnitMinute].length;
+            [lblDate setText:[NSString stringWithFormat:@"%02ld",(long)(row % max)]];
             lblDate.textAlignment = NSTextAlignmentLeft;
             break;
         }
