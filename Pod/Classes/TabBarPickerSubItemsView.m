@@ -76,8 +76,7 @@
         [self addSubview:_contentView];
         
         _HUD = [[UIView alloc] initForAutoLayout];
-        [_HUD setAlpha:0];
-        [_HUD setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0.25]];
+        <[_HUD setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0.25]];
         
         [_contentView addSubview:_HUD];
         
