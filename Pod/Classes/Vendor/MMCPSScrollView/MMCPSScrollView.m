@@ -148,7 +148,7 @@
     // height is the height/width for one segment
     // index is the index of the page
     // size is the number of segments that present one page
-    int value = height * index * size;
+    NSInteger value = height * index * size;
     
     // check if the page where the user wants so scroll to is in the contentSize of the ScrollView
     if (!(value + [self frameSize:self] < [self contentScrollSize:self])) {
@@ -308,9 +308,9 @@
         if (!_enableFitScreen && !((int)contentSize.height % (_pageSize * _segmentSize) == 0)) {
 
             // Calculate how much 'white space' is needed.
-            int currentContentSize = [self contentSize:contentSize];
-            int sizeOnePage = (_pageSize * _segmentSize);
-            int canSomebodyPleaseRenameThisValueIfHeOrSheFindsOutHowToCallIt = ((int)[self contentSize:contentSize] % (_pageSize * _segmentSize));
+            NSInteger currentContentSize = [self contentSize:contentSize];
+            NSInteger sizeOnePage = (_pageSize * _segmentSize);
+            NSInteger canSomebodyPleaseRenameThisValueIfHeOrSheFindsOutHowToCallIt = ((int)[self contentSize:contentSize] % (_pageSize * _segmentSize));
             
             CGFloat value = sizeOnePage - canSomebodyPleaseRenameThisValueIfHeOrSheFindsOutHowToCallIt + currentContentSize;
             contentSize = [self setCGSize:contentSize withValue:value];

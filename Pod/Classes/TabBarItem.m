@@ -12,7 +12,7 @@
 #import "UIButton+BackgroundColor.h"
 #import <UIKit/UIKit.h>
 
-@interface TabBarItem() <TabBarPickerSubItemsViewDelegate>
+@interface TabBarItem()
 
 
 @property (nonatomic, strong) UIButton *itemButton;
