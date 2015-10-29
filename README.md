@@ -18,6 +18,10 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "TabBarPicker" , :git => 'https://github.com/giuseppenucifora/TabBarPicker.git'
+
+OR
+
+pod "TabBarPicker"
 ```
 
 ## Author
