@@ -45,7 +45,7 @@ typedef enum {
 // Time it takes to scroll to next page
 @property (nonatomic) CGFloat scrollingTime;
 
-@property (nonatomic) NSUInteger currentPage;
+@property (nonatomic) NSInteger currentPage;
 
 @property (nonatomic, assign) id<MMCPSScrollViewDelegate> MMCPSDelegate;
 
