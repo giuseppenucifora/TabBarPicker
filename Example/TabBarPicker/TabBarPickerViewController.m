@@ -7,8 +7,8 @@
 //
 
 #import "TabBarPickerViewController.h"
-#import "TabBarPicker.h"
 #import <PureLayout/PureLayout.h>
+#import <TabBarPicker/TabBarPicker.h>
 
 @interface TabBarPickerViewController () {
     TabBarPicker *tabbar;
@@ -23,60 +23,106 @@
     self = [super init];
     
     if (self) {
-       
-        TabBarSubItem *subItem1 = [TabBarSubItem tabBarSubItemWithName:@"Peppe" andValue:@"Peppe"];
-        TabBarSubItem *subItem2 = [TabBarSubItem tabBarSubItemWithName:@"Peppe1" andValue:@"Peppe1"];
-        TabBarSubItem *subItem3 = [TabBarSubItem tabBarSubItemWithName:@"Peppe2" andValue:@"Peppe2"];
-        TabBarSubItem *subItem4 = [TabBarSubItem tabBarSubItemWithName:@"Peppe3" andValue:@"Peppe3"];
-        TabBarSubItem *subItem5 = [TabBarSubItem tabBarSubItemWithName:@"Peppe4" andValue:@"Peppe4"];
-        TabBarSubItem *subItem6 = [TabBarSubItem tabBarSubItemWithName:@"Peppe5" andValue:@"Peppe5"];
-        TabBarSubItem *subItem7 = [TabBarSubItem tabBarSubItemWithName:@"Peppe6" andValue:@"Peppe6"];
         
-        TabBarPickerSubItemsView *locationSubview = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:YES];
+        TabBarSubItem *subItem1 = [TabBarSubItem tabBarSubItemWithName:@"1 Km" value:[NSNumber numberWithInt:1] andReference:[NSNumber numberWithInt:1]];
+        TabBarSubItem *subItem2 = [TabBarSubItem tabBarSubItemWithName:@"5 Km" value:[NSNumber numberWithInt:5] andReference:[NSNumber numberWithInt:5]];
+        TabBarSubItem *subItem3 = [TabBarSubItem tabBarSubItemWithName:@"10 Km" value:[NSNumber numberWithInt:10] andReference:[NSNumber numberWithInt:10]];
+        TabBarSubItem *subItem4 = [TabBarSubItem tabBarSubItemWithName:@"20 Km" value:[NSNumber numberWithInt:20] andReference:[NSNumber numberWithInt:20]];
+        TabBarSubItem *subItem5 = [TabBarSubItem tabBarSubItemWithName:@"30 Km" value:[NSNumber numberWithInt:30] andReference:[NSNumber numberWithInt:30]];
+        TabBarSubItem *subItem6 = [TabBarSubItem tabBarSubItemWithName:@"50 Km" value:[NSNumber numberWithInt:50] andReference:[NSNumber numberWithInt:50]];
+        TabBarSubItem *subItem7 = [TabBarSubItem tabBarSubItemWithName:@"100 Km" value:[NSNumber numberWithInt:100] andReference:[NSNumber numberWithInt:100]];
+        TabBarSubItem *subItem8 = [TabBarSubItem tabBarSubItemWithName:@"150 Km" value:[NSNumber numberWithInt:150] andReference:[NSNumber numberWithInt:150]];
+        TabBarSubItem *subItem9 = [TabBarSubItem tabBarSubItemWithName:@"200 Km" value:[NSNumber numberWithInt:200] andReference:[NSNumber numberWithInt:200]];
+        
+        TabBarPickerSubItemsView *locationSubview = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeDistance subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7,subItem8,subItem9] needsLocalization:YES];
         
         TabBarItem *location = [[TabBarItem alloc] initWithSubItemView:locationSubview];
-        [location setItemName:@"Location"];
+        [location setItemName:NSLocalizedString(@"Distanza", @"")];
+        [location setItemSearchKey:@"location"];
         [location setImage:[UIImage imageNamed:@"location"]];
         [location setSelectedImage:[UIImage imageNamed:@"location_selected"]];
         [location setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        TabBarPickerSubItemsView *locationSubview1 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
+        TabBarPickerSubItemsView *calendarSubView = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeDateAndTime subItems:nil];
         
-        TabBarItem *location1 = [[TabBarItem alloc] initWithSubItemView:locationSubview1];
-        [location1 setItemName:@"Location2"];
-        [location1 setImage:[UIImage imageNamed:@"location"]];
-        [location1 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
-        [location1 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
+        TabBarItem *calendar = [[TabBarItem alloc] initWithSubItemView:calendarSubView];
+        [calendar setItemName:NSLocalizedString(@"Data e ora", @"")];
+        [calendar setItemSearchKey:@"reservationEndTime"];
+        [calendar setImage:[UIImage imageNamed:@"location"]];
+        [calendar setSelectedImage:[UIImage imageNamed:@"location_selected"]];
+        [calendar setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
         
-        TabBarPickerSubItemsView *locationSubview2 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
-        TabBarItem *location2 = [[TabBarItem alloc] initWithSubItemView:locationSubview2];
-        [location2 setItemName:@"Location3"];
-        [location2 setImage:[UIImage imageNamed:@"location"]];
-        [location2 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
-        [location2 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
+        NSMutableArray *typesArray = [[NSMutableArray alloc] init];
         
-        TabBarPickerSubItemsView *locationSubview3 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
-        TabBarItem *location3 = [[TabBarItem alloc] initWithSubItemView:locationSubview3];
-        [location3 setItemName:@"Location4"];
-        [location3 setImage:[UIImage imageNamed:@"location"]];
-        [location3 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
-        [location3 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
+        for (NSInteger i=0; i<100; i++) {
+            
+            TabBarSubItem *item = [TabBarSubItem tabBarSubItemWithName:[NSString stringWithFormat:@"Type %ld",i] value:[NSString stringWithFormat:@"Type %ld",i] andReference:@"Type %ld" forType:TabBarSubItemsViewTypeCheckBox];
+            
+            [typesArray addObject:item];
+        }
         
-        TabBarPickerSubItemsView *locationSubview4 = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButtons subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7] needsLocalization:NO];
         
-        TabBarItem *location4 = [[TabBarItem alloc] initWithSubItemView:locationSubview4];
-        [location4 setItemName:@"Location5"];
-        [location4 setImage:[UIImage imageNamed:@"location"]];
-        [location4 setSelectedImage:[UIImage imageNamed:@"location_selected"]];
-        [location4 setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
+        TabBarPickerSubItemsView *typeSubView = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeCheckBox subItems:typesArray];
         
-        tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,location1,location2,location3,location4] forPosition:TabBarPickerPositionBottom];
+        TabBarItem *type = [[TabBarItem alloc] initWithSubItemView:typeSubView];
+        [type setItemName:NSLocalizedString(@"Custom Type", @"")];
+        [type setItemSearchKey:@"custom"];
+        [type setImage:[UIImage imageNamed:@"location"]];
+        [type setSelectedImage:[UIImage imageNamed:@"location_selected"]];
+        [type setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
+        
+        NSMutableArray *subItemsArray = [[NSMutableArray alloc] init];
+        
+        for (int i =0; i< 30; i++) {
+            TabBarSubItem *item;
+            if (i < 30-1) {
+                item = [TabBarSubItem tabBarSubItemWithName:@"€" firstValue:[NSNumber numberWithInteger:i] secondValue:[NSNumber numberWithInteger:i+1] andReference:nil];
+                
+            }
+            else {
+                item = [TabBarSubItem tabBarSubItemWithName:@"€" firstValue:[NSNumber numberWithInteger:i] secondValue:@"MAX" andReference:nil];
+                [item setIsLast:YES];
+            }
+            [subItemsArray addObject:item];
+        }
+        
+        
+        TabBarPickerSubItemsView *priceSubView = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypePrice subItems:subItemsArray];
+        
+        TabBarItem *price =[[TabBarItem alloc] initWithSubItemView:priceSubView];
+        [price setItemName:NSLocalizedString(@"Prezzo", @"")];
+        [price setItemSearchKey:@"price"];
+        [price setImage:[UIImage imageNamed:@"location"]];
+        [price setSelectedImage:[UIImage imageNamed:@"location_selected"]];
+        [price setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
+        
+        
+        NSMutableArray *customsArray = [[NSMutableArray alloc] init];
+        
+        
+        for (NSInteger i=0; i<100; i++) {
+            
+            TabBarSubItem *item = [TabBarSubItem tabBarSubItemWithName:[NSString stringWithFormat:@"Custom %ld",i] value:[NSString stringWithFormat:@"Custom %ld",i] andReference:@"Custom %ld"];
+            
+            [customsArray addObject:item];
+        }
+        
+        TabBarPickerSubItemsView *customSubView = [[TabBarPickerSubItemsView alloc] initWithType:TabBarPickerSubItemsViewTypeButton subItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7,subItem8,subItem9]];
+        
+        TabBarItem *custom = [[TabBarItem alloc] initWithSubItemView:customSubView];
+        [custom setItemName:NSLocalizedString(@"Custom", @"")];
+        [custom setItemSearchKey:@"customs"];
+        [custom setImage:[UIImage imageNamed:@"location"]];
+        [custom setSelectedImage:[UIImage imageNamed:@"location_selected"]];
+        [custom setHighlightedImage:[UIImage imageNamed:@"location_highlighted"]];
+        
+        tabbar = [[TabBarPicker alloc] initWithTabBarItems:@[location,calendar,type,price,custom] forPosition:TabBarPickerPositionBottom];
         [tabbar setItemSpacing:0];
         [tabbar setBackgroundColor:[UIColor whiteColor]];
         
-        //[tabbar addItem:allergen2];
+        //[tabbar addItem:custom2];
     }
     return self;
 }
@@ -99,61 +145,11 @@
     [super viewDidLoad];
     
     //[self.view setBackgroundColor:[UIColor lightGrayColor]];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    
-    //[tabbar selectItem:0];
-    
-    /*TabBarSubItem *subItem1 = [TabBarSubItem tabBarSubItemWithName:@"Peppe"];
-    TabBarSubItem *subItem2 = [TabBarSubItem tabBarSubItemWithName:@"Peppe1"];
-    TabBarSubItem *subItem3 = [TabBarSubItem tabBarSubItemWithName:@"Peppe2"];
-    TabBarSubItem *subItem4 = [TabBarSubItem tabBarSubItemWithName:@"Peppe3"];
-    TabBarSubItem *subItem5 = [TabBarSubItem tabBarSubItemWithName:@"Peppe4"];
-    TabBarSubItem *subItem6 = [TabBarSubItem tabBarSubItemWithName:@"Peppe5"];
-    TabBarSubItem *subItem7 = [TabBarSubItem tabBarSubItemWithName:@"Peppe6"];
-    
-    TabBarItem *allergen = [[TabBarItem alloc] initWithSubItems:@[subItem1,subItem2,subItem3,subItem4,subItem5,subItem6,subItem7]];
-    [allergen setItemName:@"Allergen"];
-    [allergen setImage:[UIImage imageNamed:@"allergen"]];
-    [allergen setSelectedImage:[UIImage imageNamed:@"allergen_selected"]];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tabbar addItem:allergen];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tabbar show];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tabbar hide];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tabbar show];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(12 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tabbar hide];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tabbar show];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(18 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tabbar hide];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(21 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tabbar show];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(24 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tabbar hide];
-    });*/
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning

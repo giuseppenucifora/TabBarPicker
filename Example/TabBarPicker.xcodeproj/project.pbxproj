@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C82E12AA6B21B9923F1513B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8391D3904F99D24AFC56B7 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		179C33542C5CE15556FFE8AB /* Pods_TabBarPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB67354A0F6C45C1B502A65 /* Pods_TabBarPicker_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0C82E12AA6B21B9923F1513B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8391D3904F99D24AFC56B7 /* Pods.framework */; };
+		179C33542C5CE15556FFE8AB /* Pods_TabBarPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB67354A0F6C45C1B502A65 /* Pods_TabBarPicker_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -24,7 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		68934F521B579CC0000022DE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68934F511B579CC0000022DE /* Media.xcassets */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		C80475EA65AD1B9A0B206ACD /* Pods_TabBarPicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AADF60077A50EEA12BCBBD1 /* Pods_TabBarPicker_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C80475EA65AD1B9A0B206ACD /* Pods_TabBarPicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AADF60077A50EEA12BCBBD1 /* Pods_TabBarPicker_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,7 +251,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = TabBarPicker;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Giuseppe Nucifora";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -460,6 +460,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -525,6 +526,7 @@
 				INFOPLIST_FILE = "TabBarPicker/TabBarPicker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -541,6 +543,7 @@
 				INFOPLIST_FILE = "TabBarPicker/TabBarPicker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -563,6 +566,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabBarPicker_Example.app/TabBarPicker_Example";
 				WRAPPER_EXTENSION = xctest;
@@ -582,6 +586,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabBarPicker_Example.app/TabBarPicker_Example";
 				WRAPPER_EXTENSION = xctest;

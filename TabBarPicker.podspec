@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
     s.name                  = "TabBarPicker"
-    s.version               = "0.3.0"
+    s.version               = "1.0"
     s.summary               = "TabBarPicker."
   #s.description          = ""
     s.homepage              = "https://github.com/giuseppenucifora/TabBarPicker"

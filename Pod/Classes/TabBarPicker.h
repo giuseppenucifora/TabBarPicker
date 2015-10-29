@@ -11,6 +11,15 @@
 #import "TabBarSubItem.h"
 #import "TabBarPickerSubItemsView.h"
 
+@class TabBarPicker;
+
+@protocol TabBarPickerDelegate <NSObject>
+
+- (void) TabBarPicker:(TabBarPicker*) picker filtersDidChanges:(NSDictionary *) filtersEnabled;
+
+@end
+
+
 typedef NS_ENUM(NSInteger, TabBarPickerPosition) {
     // Informational
     TabBarPickerPositionLeft,
@@ -31,6 +40,9 @@ typedef NS_ENUM(NSInteger, TabBarPickerPosition) {
 @property (nonatomic, readonly) CGFloat subItemHeight;
 @property (nonatomic) BOOL dimWhenShow;
 @property (nonatomic, strong) UIColor * dimColor;
+@property (nonatomic, assign) id<TabBarPickerDelegate> delegate;
+
+@property (nonatomic, strong,readonly) NSMutableDictionary *filtersEnabled;
 
 /**
  *  Init TabBarPicker with items. When is selected an item the picher show down subitems.

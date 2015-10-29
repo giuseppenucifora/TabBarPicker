@@ -12,7 +12,7 @@
 #import "UIButton+BackgroundColor.h"
 #import <UIKit/UIKit.h>
 
-@interface TabBarItem()
+@interface TabBarItem() <TabBarPickerSubItemsViewDelegate>
 
 
 @property (nonatomic, strong) UIButton *itemButton;
@@ -39,20 +39,20 @@
         
         _orientation = [[UIDevice currentDevice] orientation];
         _itemSubView = itemSubView;
-        
-        _itemButton = [[UIButton alloc] initForAutoLayout];
+        _highlightedColor = [@"ff4e50" colorFromHex];
+        _itemButton = [UIButton newAutoLayoutView];
         [_itemButton addTarget:self action:@selector(itemButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-        [_itemButton setBackgroundColor:[@"ff4e50" colorFromHex] forState:UIControlStateHighlighted];
+        [_itemButton setBackgroundColor:_highlightedColor forState:UIControlStateHighlighted];
+        [_itemButton setBackgroundColor:_highlightedColor forState:UIControlStateSelected|UIControlStateHighlighted];
         
         [self addSubview:_itemButton];
-
+        
     }
     return self;
 }
 
 - (void) layoutSubviews {
     
-    //[_itemButton autoPinEdgesToSuperviewMargins];
     if (!_didSetupConstraints) {
         [_itemButton autoCenterInSuperview];
         [_itemButton autoSetDimension:ALDimensionHeight toSize:44];
@@ -60,6 +60,14 @@
 
         _didSetupConstraints = YES;
     }
+}
+
+- (void) setTag:(NSInteger)tag {
+    [super setTag:tag];
+    for (UIView *subView in self.subviews) {
+        [subView setTag:tag];
+    }
+    [_itemSubView setTag:tag];
 }
 
 - (void)deviceOrientationDidChange:(NSNotification *)notification {
@@ -76,29 +84,40 @@
 - (void) setSelectedImage:(UIImage *)selectedImage {
     
     [_itemButton setImage:selectedImage forState:UIControlStateSelected];
-    [_itemButton setImage:selectedImage forState:UIControlStateSelected|UIControlStateHighlighted];
+    //[_itemButton setImage:selectedImage forState:UIControlStateSelected|UIControlStateHighlighted];
 }
 
 - (void) setHighlightedImage:(UIImage *)highlightedImage {
     [_itemButton setImage:highlightedImage forState:UIControlStateHighlighted];
     [_itemButton setImage:highlightedImage forState:UIControlStateHighlighted|UIControlStateNormal];
+    [_itemButton setImage:highlightedImage forState:UIControlStateSelected|UIControlStateHighlighted];
 }
 
 - (void) setHighlightedColor:(UIColor *)highlightedColor {
     
     _highlightedColor = highlightedColor;
     [_itemButton setBackgroundColor:_highlightedColor forState:UIControlStateHighlighted];
+    
 }
 
 - (void) setHighlighted:(BOOL) highlighted {
     [_itemButton setHighlighted:highlighted];
 }
 
+- (void) setSelected:(BOOL)selected {
+    [_itemButton setSelected:selected];
+}
+
+- (void) setItemName:(NSString *)itemName {
+    [_itemSubView setItemName:itemName];
+    _itemName = itemName;
+}
+
 - (void) itemButtonTapped {
     if (_delegate && [_delegate respondsToSelector:@selector(tabBarItemSelected:)]) {
         [_delegate tabBarItemSelected:self];
     }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.00001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.000001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self setHighlighted:YES];
     });
 }

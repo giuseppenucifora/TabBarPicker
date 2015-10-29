@@ -20,5 +20,19 @@
     "TabBarPicker": [
       "Pod/Assets/*.png"
     ]
+  },
+  "dependencies": {
+    "PureLayout": [
+
+    ],
+    "UIView-Overlay": [
+
+    ],
+    "UIActionSheet-Blocks": [
+
+    ],
+    "UIAlertViewBlockExtension": [
+
+    ]
   }
 }
